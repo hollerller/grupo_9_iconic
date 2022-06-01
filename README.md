@@ -1,8 +1,10 @@
 # grupo_9_iconic
 
+### Propósito del e-commerce y público objetivo:
+
 En este market place vamos a ofrecer ropa casual y accesorios para público juvenil (edades entre 20 y 35 años).
 
-El equipo está integrado por: 
+### El equipo está integrado por: 
 
 Belén Aldana
 
@@ -12,7 +14,7 @@ David Tobasura
 
 Flavia Lemos
 
---> Sitios de Referencia: 
+### --> Sitios de Referencia: 
 
 https://mercadolibre.com/
 
@@ -23,3 +25,4 @@ https://www.ae.com/us/en
 https://www.levi.com.ar/
 
 https://www.superdry.com.co/
+
