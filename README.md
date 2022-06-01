@@ -4,18 +4,22 @@ En este market place vamos a ofrecer ropa casual y accesorios para público juve
 
 El equipo está integrado por: 
 
-Belén Aldana 
+Belén Aldana
+
 Daniel López
+
 David Tobasura
+
 Flavia Lemos
 
 --> Sitios de Referencia: 
 
 https://mercadolibre.com/
+
 https://www.mattelsa.net/
+
 https://www.ae.com/us/en
+
 https://www.levi.com.ar/
+
 https://www.superdry.com.co/
-
-
-
