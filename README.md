@@ -4,6 +4,7 @@
 Somos Iconic, nuestro equipo se propone comercializar indumentaria para todos los gustos y preferencias, procurando que el cliente encuentre lo que gusta y lo/la hace ser el/ella mism@.
 
 En este market place vamos a ofrecer ropa casual y accesorios para público juvenil, apuntamos a hombres y mujeres de entre 20 y 35 años que busquen indumentaria que les hagan sentir cómod@s y trendy.
+Nuestros pilares son la diversidad y la calidad. Si bien podríamos elegir un lugar específico para orientar nuestra propuesta a las personas que viven allí, optamos por ampliar nuestra audiencia a la mayor cantidad de paises/ubicaciones que nos sea posible, procurando globalizar la clientela y los proveedores.
 
 ### El equipo está integrado por: 
 
