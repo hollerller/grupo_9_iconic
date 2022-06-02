@@ -7,11 +7,11 @@ En este market place vamos a ofrecer ropa casual y accesorios para público juve
 
 ### El equipo está integrado por: 
 
-Belén López de Salta (Argentina), nueva en programación pero con muchas ganas de aprender y aportar ideas que hagan avanzar al equipo.
+Belén López: Soy Belu, tengo 26 años, soy de Argentina y una apasionada de los viajes, el montañismo y pasar el tiempo con los que quiero. 
 
-Daniel López
+Daniel López: Soy Daniel. Soy Mexicano. Me gusta mucho pasarla con mis amigos y mi familia, hacer ejercicio, viajar, la música y las series.
 
-David Tobasura
+David Tobasura: Soy David, me gusta la música y los viajes. También me gusta mucho la naturaleza y en especial las plantas.
 
 Flavia Lemos
 
