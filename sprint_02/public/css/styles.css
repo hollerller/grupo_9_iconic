@@ -18,3 +18,154 @@ Helvética: https://es.wikipedia.org/wiki/Helv%C3%A9tica
 Futura: https://es.wikipedia.org/wiki/Futura
 
 */
+*{
+        margin: 0px;
+        box-sizing: border-box;
+}
+
+.header-mobile{
+        font-family: 'Roboto', Helvetica, sans-serif;
+        background-color: #D8D8D8;
+        color: #7A7474;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 20px;
+        width: 100vw;
+        box-sizing: border-box;
+        
+}
+.logo img{
+        display: inline-block;
+        max-width: 40%;
+       
+}
+.logo{
+        display: inline;
+        align-items: center;
+        width: 70%;
+        text-align: center;
+        
+}
+.navbar{
+        list-style: none;
+        display:none
+}
+.navbar li a{
+        text-decoration: none;
+        color: black;
+
+}
+.burger-menu{
+        justify-content: flex-start;
+        align-self: center;
+        font-size: 10px;
+        padding: 10px;
+        width: 10%;
+}
+.lupa,
+.carrito-compras{
+        width: 10%;
+        text-align: end;
+        color: #7A7474;
+        padding: 4px;
+        align-self: center;
+        font-size: 20px;
+}
+main{
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        font-family: 'Roboto', Helvetica, sans-serif;
+}
+.slider img{
+        max-width: 100%;
+    
+}
+.slider{
+        margin-bottom: 20px;
+}
+.new-arrivals{
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+}
+.tituloNA{
+        justify-content: center;
+        display: flex;
+        width: 80%;
+        background-color:#9B0000;
+
+}
+.tituloNA h6,
+.tituloNA i{
+        text-align: center;
+        display: inline;
+        margin: 10px;   
+        color: #FFFFFF;
+}
+article{
+        justify-content: center;
+        margin: 20px;
+        padding: 10px;
+}
+article p{
+        display: flex;
+        text-align: right;
+        margin: 10px;
+        font-size: 9px;
+        font-weight: normal;
+        color: #7A7474;
+}
+article img{
+        width: 80%;
+        margin: auto;
+        display: block;
+}
+.vender{
+        font-family: 'Roboto', Helvetica, sans-serif;
+        display: flex;
+        background-color: #9B0000;
+        color: #FFFFFF;
+        padding: 20px;      
+        justify-content: center;
+        margin: auto;
+} 
+.vender i,
+.vender h6{
+        margin-left: 6px;
+        display: inline;
+        text-align: center;
+}      
+.footer-mobile{
+        background-color: #7A7474;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+}
+footer .redes-sociales{
+        display: inline;
+        margin: auto;
+        justify-content: right;
+        font-size: larger;
+}
+.footer-mobile ul{
+        list-style: none;
+        font-family: 'Roboto', Helvetica, sans-serif;
+        padding: 10px;
+}
+.footer-mobile ul a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 12px;
+}
+
+@media (min-width:361px){
+.navbar{
+        display: inline;
+}
+}
