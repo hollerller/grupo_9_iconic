@@ -32,36 +32,36 @@
 
 
     </header>
-    </header>
     <main>
         <form class="formulario" action="/register" method="post">
             <label for="nombre-apellido">Nombre y apellido:</label>
-                <input class="input" type="text" name="nombreYApellido" id="nombre-apellido" required minlength= 10 required>
+                <input class="input-text" type="text" name="nombreYApellido" id="nombre-apellido" required minlength= 10 required>
             <label for="usuario">Usuari@:</label>
-                <input class="input" type="text" id="usuario" name="usuario" required minlength=6>
+                <input class="input-text" type="text" id="usuario" name="usuario" required minlength=6>
             <label for="fechaNacimiento">Fecha de nacimiento</label>
-                <input class="input" type="date" id="fechaNacimiento" name="fechaNacimiento">
+                <input  type="date" id="fechaNacimiento" name="fechaNacimiento">
             <label for="domicilio">Domicilio:</label>
-                <input class="input" type="text" id="domicilio" name="domicilio">
+                <input class="input-text" type="text" id="domicilio" name="domicilio">
             <label  for="perfilUsuario">¿Preferís comprar o vender?</label><br>
                 <label>
                         <input type="radio" id="perfilUsuario" name="perfil" value="Comprar">Comprar</label>
                 <label>
                     <input type="radio" id="perfilUsuario" name="perfil" value="Vender">Vender</label>
-           <label for="intereses">Seleccioná las categorías de tu interés</label>
+           <div class="checkbox">
+                <label for="intereses">Seleccioná las categorías de tu interés</label>
                 
                     <label for="electro"> <input  type="checkbox" value="electro" id="electro" name="intereses" > Electro</label>
                     <label for="moda"> <input  type="checkbox" value="moda" id="moda" name="intereses" > Moda</label>
                     <label for="hogar"> <input  type="checkbox" value="hogar" id="hogar" name="intereses" > Hogar</label>
                     <label for="jugueteria"> <input  type="checkbox" value="jugueteria" id="jugueteria" name="intereses" > Jugueteria</label>
                     <label for="vidaSana"> <input  type="checkbox" value="vidaSana" id="vidaSana" name="intereses" > Vida sana</label>
-                
+            </div>
             <br><label for="fotoPerfil">Seleccioná tu foto de perfil</label>
                 <input type="file" name="avatar" id="fotoPerfil">
             <label for="contraseña">Contraseña</label>
-                <input class="input" type="password" name="contraseña" id="contraseña" required minlength=8 required>
+                <input class="input-text" type="password" name="contraseña" id="contraseña" required minlength=8 required>
             <label for="contraseñaConfirmada">Confirmá la contraseña</label>
-                <input class="input" type="password" name="contraseñaConf" id="contraseñaConfirmada" required minlength=8 required>
+                <input class="input-text" type="password" name="contraseñaConf" id="contraseñaConfirmada" required minlength=8 required>
             <button class="enviar" type="submit" ><a href="/"><p>Enviar</p></a></button>
             
 

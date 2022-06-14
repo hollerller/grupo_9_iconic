@@ -164,6 +164,44 @@ footer .redes-sociales{
         font-weight: bold;
         font-size: 12px;
 }
+.formulario{
+        width: 90%;
+        justify-content: left;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #e4b6b6 ;
+        align-items: center;
+}
+.formulario label{
+        display: block;
+        margin: 5px;
+}
+.input-text{
+        display: block;
+        width: 100%;
+        border: none;
+        font-size: 12px;
+        margin: 10px;
+}
+
+.checkbox{
+        display: block;
+}
+.boton{
+        display: inline;
+        border-radius: 5%;
+        border: none;
+        margin: auto;
+        
+}
+.boton p{
+        color: #7A7474;
+        padding: 9px;
+}
+.boton a{
+        text-decoration: none;
+}
 
 @media (min-width:361px){
         .logo{
