@@ -1,10 +1,10 @@
 /*
 Colores: 
-        #E5080 Rojo
+        #9B0000 Rojo
         #7A7474 Gris Oscuro
         #FFFFFF Blanco
         #000000 Negro
-        #ADA1A1 Gris claro
+        #D8D8D8 Gris claro
         #1269D Azul (destacados y promos)
         #FF5B1 Naranja (destacados y promos)
 
@@ -23,7 +23,7 @@ Futura: https://es.wikipedia.org/wiki/Futura
         box-sizing: border-box;
 }
 
-.header-mobile{
+.main-header{
         font-family: 'Roboto', Helvetica, sans-serif;
         background-color: #D8D8D8;
         color: #7A7474;
@@ -53,7 +53,7 @@ Futura: https://es.wikipedia.org/wiki/Futura
 }
 .navbar li a{
         text-decoration: none;
-        color: black;
+        color: #000000;
 
 }
 .burger-menu{
@@ -71,6 +71,7 @@ Futura: https://es.wikipedia.org/wiki/Futura
         padding: 4px;
         align-self: center;
         font-size: 20px;
+        
 }
 main{
         width: 100vw;
@@ -120,8 +121,8 @@ article p{
         font-weight: normal;
         color: #7A7474;
 }
-article img{
-        width: 80%;
+.foto-producto{
+        width: 100%;
         margin: auto;
         display: block;
 }
@@ -159,13 +160,68 @@ footer .redes-sociales{
 }
 .footer-mobile ul a{
         text-decoration: none;
-        color: black;
+        color: #000000;
         font-weight: bold;
         font-size: 12px;
 }
 
 @media (min-width:361px){
-.navbar{
-        display: inline;
+        .logo{
+                width: 80%;
+        }
+        .burger-menu{
+                display: none;
+        }
+        .navbar{
+                display: flex;
+                flex-wrap: wrap;
+                width: 90vw;
+                justify-content: space-around;
+                padding: 0;
+                margin: 10px; 
+                font-size: 15px;  
+        }
+        .navbar li{
+                padding: 5px;
+        }
+        .barra-herramientas{
+                width: 100%;
+                display: flex;
+                flex-wrap:wrap;
+                
+        }
+        main{
+            justify-content: center;
+            width: 100vw;   
+
+        }
+        .slider img{
+                width: 100%;
+                margin: auto;
+                max-width: 400px;
+        }
+        .new-arrivals{
+                display: flex;
+                flex-wrap: wrap;
+                flex-grow: 1;
+                width: 100%;
+                padding: 5px;
+                justify-content: space-around;
+        }
+        .tituloNA{
+                margin: 5px;
+        }
+        .producto{
+                padding:0px;
+                width: 45%;
+                max-width: 210px;
+                margin: 0px;
+        }
+        .foto-producto{
+                width: 100%;
+                max-width: 200px;
+        }
 }
+@media (min-width:769px){
+        
 }

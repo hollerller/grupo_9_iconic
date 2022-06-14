@@ -12,10 +12,12 @@
     <title>Iconic</title>
 </head>
 <body>
-    <header class="header-mobile">
+    <header class="main-header">
         <div class="burger-menu"><i class="fas fa-bars"></i></div>
         <div class="logo"><img  src="/images/logo.png"></div>
-        <div>
+        <div class="lupa"><i class="fas fa-search"></i></div>
+        <a class="carrito-compras" href='#'><i class="fas fa-shopping-cart"></i></a>
+        <div class="barra-herramientas">
             <ul class="navbar">
                 <li> <a href='#'> Productos</a></li>
                 <li><a href='#'>Galería</a></li> 
@@ -25,28 +27,34 @@
         
             </ul>
         </div>
-        <div class="lupa"><i class="fas fa-search"></i></div>
-        <a class="carrito-compras" href='#'><i class="fas fa-shopping-cart"></i></a>
-       
-
-
     </header>
-<footer>
-    <section class="footer-mobile">
-        <ul class="links">
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Política de devoluciones</a></li>
-            <li><a href="#">Envíos</a></li>
-            <li><a href="#">Nosotros</a></li>
-        </ul>
-        <div class="redes-sociales"> 
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-whatsapp"></i>
-            <i class="fab fa-youtube"></i>
-    </div>
-    </section>
-</footer>
+    <main>
+        <form action="/login" method="get">
+            <form class="formulario" action="/login" method="post">
+                <label for="nombreUsuario">Nombre de usuario:</label>
+                    <input class="input" type="text" id="nombreUsuario" name="usuario" required minlength=6>
+                <label for="contraseña">Contraseña:</label>
+                    <input class="input" type="password" id="contraseña" name="contraseña">
+                <button class="enviar" type="submit" ><a href="/"><p>Enviar</p></a></button>
+        </form>
+
+    </main>
+    <footer>
+        <section class="footer-mobile">
+            <ul class="links">
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Política de devoluciones</a></li>
+                <li><a href="#">Envíos</a></li>
+                <li><a href="#">Nosotros</a></li>
+            </ul>
+            <div class="redes-sociales"> 
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-youtube"></i>
+        </div>
+        </section>
+    </footer>
 </body>
 </html>
