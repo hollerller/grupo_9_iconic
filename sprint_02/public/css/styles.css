@@ -296,7 +296,34 @@ cursor: pointer;
                 width: 100%;
                 max-width: 200px;
         }
+
+        .formulario{
+                width:90%;
+        }
 }
+
+
+@media (min-width:450px){
+
+        .formulario{
+                width: 70%;
+
+        }
+}
+
 @media (min-width:769px){
-        
+
+        .formulario{
+                width: 60%;
+        }       
 }
+
+@media (min-width:1000px){
+        .formulario{
+                width: 40%;
+        }
+}
+
+
+
+
