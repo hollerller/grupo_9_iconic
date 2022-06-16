@@ -165,24 +165,60 @@ footer .redes-sociales{
         font-size: 12px;
 }
 .formulario{
-        width: 90%;
+        
+        width: 40%;
         justify-content: left;
-        padding: 15px;
+        padding: 30px;
         display: flex;
         flex-wrap: wrap;
-        background-color: #e4b6b6 ;
+        background-color: #ffffff ;
         align-items: center;
+        font-family: calibri;
+        color: #000000;
+        box-shadow: 4px 11px 30px #000;
+        border-radius: 7px;
 }
 .formulario label{
         display: block;
         margin: 5px;
+
 }
-.input-text{
+ /*e4b6b6*/
+.input-text{    
+        background-color: #fdfdfd;
+        padding: 10px;
         display: block;
         width: 100%;
-        border: none;
-        font-size: 12px;
-        margin: 10px;
+        border: 1px solid #000000;
+        border-radius: 4px;
+        font-size: 18px;
+        font-family: calibri;
+        margin: 15px;
+}
+
+.boton-registrarme{
+width: 100%;
+background: black;
+padding: 10px;
+border-radius: 4px;
+margin-bottom: 16px;
+border: none;
+margin: 16px 0;
+font-size: 16px;
+color: white;
+}
+
+.terminos{
+        line-height: 30px;
+        padding-left: 10px;
+        height: 30px;
+}
+
+
+.titulo-formulario{
+        
+        font-size: 21px;
+        margin: 16px;
 }
 
 .checkbox{
