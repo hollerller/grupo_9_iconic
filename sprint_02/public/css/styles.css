@@ -239,7 +239,11 @@ cursor: pointer;
 .boton a{
         text-decoration: none;
 }
-
+/* detalle de producto 
+.product-detail {
+        display: flex;
+}
+*/
 @media (min-width:361px){
         .logo{
                 width: 80%;
