@@ -25,7 +25,7 @@ Futura: https://es.wikipedia.org/wiki/Futura
 
 .main-header{
         font-family: 'Roboto', Helvetica, sans-serif;
-        background-color: #D8D8D8;
+        background-color: #FFFFFF;
         color: #7A7474;
         display: flex;
         flex-wrap: wrap;
@@ -35,9 +35,18 @@ Futura: https://es.wikipedia.org/wiki/Futura
         box-sizing: border-box;
         
 }
+.top-bar{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+}
+.search-form{
+        display: none;
+}
+ 
 .logo img{
         display: inline-block;
-        max-width: 40%;
+        max-width: 50%;
        
 }
 .logo{
@@ -60,18 +69,27 @@ Futura: https://es.wikipedia.org/wiki/Futura
         justify-content: flex-start;
         align-self: center;
         font-size: 10px;
-        padding: 10px;
-        width: 10%;
+        
+        width: auto;
 }
-.lupa,
-.carrito-compras{
+.search-buttom,
+.carrito-compras,
+.login-icon{
         width: 10%;
         text-align: end;
         color: #7A7474;
-        padding: 4px;
+        padding: 9px;
         align-self: center;
         font-size: 20px;
-        
+        text-align: center;
+}
+.search-buttom a,
+.login-icon a{
+        text-decoration: none;
+        color: #7A7474;
+}
+.carrito-compras{
+        display: none;
 }
 main{
         width: 100vw;
@@ -92,26 +110,20 @@ main{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        
+        align-items: center;
 }
 .tituloNA{
-        justify-content: center;
-        display: flex;
-        width: 80%;
-        background-color:#9B0000;
-
-}
-.tituloNA h6,
-.tituloNA i{
+        width: 100%;
         text-align: center;
-        display: inline;
-        margin: 10px;   
-        color: #FFFFFF;
+        bottom:20px;
 }
-article{
+
+
+.producto{
         justify-content: center;
-        margin: 20px;
+        margin: 20px 0px;
         padding: 10px;
+        width: 100%;
 }
 article p{
         display: flex;
@@ -166,7 +178,7 @@ footer .redes-sociales{
 }
 .formulario{
         
-        width: 40%;
+        width: 100%;
         justify-content: left;
         padding: 30px;
         display: flex;
@@ -315,8 +327,11 @@ cursor: pointer;
 }
 */
 @media (min-width:361px){
+        .carrito-compras{
+                display: inline;
+        }
         .logo{
-                width: 80%;
+                text-align: left;
         }
         .burger-menu{
                 display: none;
@@ -337,7 +352,7 @@ cursor: pointer;
                 width: 100%;
                 display: flex;
                 flex-wrap:wrap;
-                
+                justify-content: space-around;
         }
         main{
             justify-content: center;
@@ -374,6 +389,7 @@ cursor: pointer;
         .formulario{
                 width:90%;
         }
+        
 }
 
 
@@ -386,17 +402,42 @@ cursor: pointer;
 }
 
 @media (min-width:769px){
-
+        .logo{
+                width: auto;
+                
+        }
+        .search{
+                display: flex;
+                width: auto;
+                
+        }
+        .search-form{
+                display: flex;
+                flex-wrap: wrap;
+        }    
+        .search-form input{
+                display: inline;
+        }  
+        .search-buttom{
+                display: none;
+        }
         .formulario{
                 width: 60%;
         }       
 }
 
-@media (min-width:1000px){
+@media (min-width:1200px){
         .formulario{
                 width: 40%;
         }
+
+        .search,
+        .carrito-compras{
+                max-width: 40px;
+                width: auto;
+        }
 }
+      
 
 
 

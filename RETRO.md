@@ -3,3 +3,4 @@
     No obstante esos contratiempos, entiendo que el grupo tiene iniciativa y compromiso para el desarrollo del proyecto. Es destacable la capacida de organización a la hora de sentar bases para el trabajo a realizar por cada uno, y la buena predisposición de cada uno de los miembros.
     Un aspecto que necesitaríamos trabajar como grupo es el dedicarle más tiempo al trabajo individual, optimizando al máximo el trabajo previo de sentar acuerdos y organizar cómo se dividen las tareas.
     
+    Otro aspecto en el cual necesitamos hacer mayor foco es la comunicación. No obstante haberse formado un grupo de whatsapp, sería conveniente idear un esquema de videollamadas semanales/diarias, dependiendo de la cantidad de trabajo a realizar y de la disponibilidad de los miembros.

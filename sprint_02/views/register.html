@@ -12,23 +12,34 @@
     <title>Crea tu cuenta</title>
 </head>
 <body>
-    <header class="main-header">
-        <div class="burger-menu"><i class="fas fa-bars"></i></div>
-        <div class="logo"><img  src="/images/logo.png"></div>
-        <div class="lupa"><i class="fas fa-search"></i></div>
-        <a class="carrito-compras" href='#'><i class="fas fa-shopping-cart"></i></a>
-        <div class="barra-herramientas">
-            <ul class="navbar">
-                <li> <a href='#'> Productos</a></li>
-                <li><a href='#'>Galería</a></li> 
-                <li><a href='#'>FW 2022</a></li> 
-                <li><a href='#'>Nosotros</a></li> 
-                <li><a href='#'>Ayuda</a></li> 
-        
-            </ul>
+    <header>
+        <div class="main-header">
+          <div class="top-bar">
+                <div class="burger-menu"><i class="fas fa-bars"></i></div>
+                <div class="logo"><img  src="/images/logo.png"></div>
+                <div class="search">
+                    <form action="/" method="get" class ="search-form">   
+                        <label for="search"></label>  
+                        <input type="text" id="search" placeholder="Buscar por categorías, productos..." name="busqueda">
+                        <button class="boton-buscar" type="submit"><i class="fas fa-search" ></i></button>
+                    </form> 
+                </div> 
+                <div class="search-buttom"> <a href="#"><i class="fas fa-search"></i></a> </div>   
+                <div class="login-icon"><a href="/login"><i class="far fa-user"></i></a></div>
+                <a class="carrito-compras" href='#'><i class="fas fa-shopping-cart"></i></a> 
+            </div>
+            <div class="barra-herramientas">
+                <ul class="navbar">
+                    <li> <a href='#'>Categorías</a></li>
+                    <li><a href='#'>Galería</a></li> 
+                    <li><a href='#'>FW 2022</a></li> 
+                    <li><a href='#'>Nosotros</a></li> 
+                    <li><a href='#'>Ayuda</a></li> 
+            
+                </ul>
+            </div>
         </div>
-        
- </header>
+        </header>
     <main>
         <form class="formulario" action="/register" method="post">
 
