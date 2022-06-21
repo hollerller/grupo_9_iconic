@@ -321,11 +321,69 @@ cursor: pointer;
         padding: 15px;
 }
 
-/* detalle de producto 
-.product-detail {
-        display: flex;
+/* detalle de producto */
+
+
+.price-desc {
+        padding: 5px;
+        margin-left: 5px;
 }
-*/
+
+.qty-size {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px 10px 10px 5px;
+}
+
+.boton-comprar {
+        border: none;
+        background-color: #9B0000;
+        color: #fdfdfd;
+        font-weight: bold;
+        border-radius: 4px;
+        padding: 15px;
+        justify-content: center;
+}
+
+.buy-form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
+.input-qty {
+        border: #7A7474 solid 1px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px;
+        color: #7A7474;
+        width: 30%;
+
+}
+
+.opciones {
+        border: #7A7474 solid 1px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px;
+        color: #7A7474;
+        width: 60%;
+}
+
+.tallas label {
+        width: 100%;
+        margin: 9px 0px;
+        font-size: 10px;
+        color: #7A7474; 
+}
+
+.field-qty label span {
+        width: 100%;
+        margin: 9px 0px;
+        font-size: 10px;
+        color: #7A7474; 
+}
+
 @media (min-width:361px){
         .carrito-compras{
                 display: inline;
@@ -399,6 +457,36 @@ cursor: pointer;
                 width: 70%;
 
         }
+        div.tallas {
+               margin-left: 30px;
+        }
+        .img-productDetail {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+        }
+        /*
+        div.price-desc {
+                padding: 5px 20px 5px;
+                margin-left: 20px;
+        }
+        .qty-size {
+                display: flex;
+                padding: 5px 10px 10px 5px;
+        }
+        .opciones {
+                width: auto;
+        }
+        .input-qty {
+                width: 30%;
+        }
+        .field-qty {
+                margin-left: 50px;
+        }
+        .boton-comprar {
+                margin-right: 70px;
+        }*/
+
 }
 
 @media (min-width:769px){
