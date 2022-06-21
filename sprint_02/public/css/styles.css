@@ -239,6 +239,76 @@ cursor: pointer;
 .boton a{
         text-decoration: none;
 }
+.articulo-compra{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        
+}
+.articulo-compra img{
+        width: 40%;
+        max-width: 100px;
+        display: inline-block;
+        justify-content: left;
+        margin: auto;
+}
+.articulo-compra .detalle-compra{
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        
+}
+.detalle-compra p{
+        width: 100%;
+        font-size: 10px;
+        justify-content: right;
+        align-items: initial;
+}
+.form-compra{
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 10px;
+        margin: 10px;
+        color: #7A7474;
+        
+}
+.form-compra label{
+       width: 100%;
+       margin: 9px 0px;
+}
+.form-compra select{
+        border: #7A7474 solid 1px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px;
+        color: #7A7474;
+        width: 100%;
+}
+.boton-quitar{
+        color: #9B0000;  
+        background-color: #FFFFFF;
+        font-size: 9px;
+        border: #9B0000 1px solid;
+        padding: 6px;
+        justify-content: right;
+        border-radius: 5px;        
+}
+.boton-quitar i{
+        font-size: 5px;
+}
+.boton-continuar{
+        border: none;
+        background-color: #9B0000;
+        color: #fdfdfd;
+        font-weight: bold;
+        border-radius: 4px;
+        padding: 15px;
+}
+
 /* detalle de producto 
 .product-detail {
         display: flex;

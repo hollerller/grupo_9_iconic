@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,400;1,500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7c28aaf964.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Iconic</title>
+    <title>Mis Compras</title>
 </head>
 <body>
     <header class="main-header">
@@ -28,22 +28,63 @@
             </ul>
         </div>
     </header>
-<footer>
-    <section class="footer-mobile">
-        <ul class="links">
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Política de devoluciones</a></li>
-            <li><a href="#">Envíos</a></li>
-            <li><a href="#">Nosotros</a></li>
-        </ul>
-        <div class="redes-sociales"> 
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-whatsapp"></i>
-            <i class="fab fa-youtube"></i>
-    </div>
-    </section>
-</footer>
+    <main>
+        <h5>Mis compras</h5>
+        <article class="articulo-compra">
+            <img src="/images/newArrivals1.jpg">
+            <div class="detalle-compra">
+                <p>Buzo Hoodie Classic | HOMBRE</p>
+                <p>$5.450,00</p>
+            </div>
+            
+            <form class="form-compra" action="/compra" method="post">
+                <label for="talle">Seleccioná tu talle</label>
+                <select name="talle-compra" id="talle">
+                    <option value="xs">XS</option>
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                    <option value="xxl">XXL</option>
+                    <option value="talles-especiales">Consultar por talles especiales</option>
+                </select>
+                <label for="color">Indicanos el color de tu preferencia</label>
+                <select name="color-compra" id="color">
+                    <option value="verde">Verde</option>
+                    <option value="bordo">Bordo</option>
+                    <option value="marron">Marrón</option>
+                    <option value="gris">Gris</option>
+                </select>
+                <label for="cantidad">Cantidad</label>
+                <select name="cantidad" id="cantidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                
+            </form>
+            <button class="boton-quitar"><i class="fas fa-trash"></i></button>
+        </article>
+        <button class="boton-continuar"><p>Continuar el proceso de compra</p></button>
+    </main>
+    <footer>
+        <section class="footer-mobile">
+            <ul class="links">
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Política de devoluciones</a></li>
+                <li><a href="#">Envíos</a></li>
+                <li><a href="#">Nosotros</a></li>
+            </ul>
+            <div class="redes-sociales"> 
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-youtube"></i>
+        </div>
+        </section>
+    </footer>
 </body>
 </html>
