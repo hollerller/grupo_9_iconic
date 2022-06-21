@@ -224,7 +224,8 @@ cursor: pointer;
 .terminos{
         line-height: 30px;
         padding-left: 10px;
-        height: 30px;
+        height: auto;
+        margin-bottom: 10px;
 }
 
 
