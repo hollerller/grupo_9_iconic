@@ -233,7 +233,8 @@ footer .redes-sociales {
         margin: 15px;
 }
 
-.boton-registrarme {
+.boton-registrarme,
+.boton-ingresar {
         width: 100%;
         background: black;
         padding: 10px;
@@ -299,8 +300,7 @@ footer .redes-sociales {
 }
 
 .articulo-compra .detalle-compra {
-        display: flex;
-        flex-wrap: wrap;
+        width: auto;
         width: 60%;
 
 }
@@ -308,7 +308,7 @@ footer .redes-sociales {
 .detalle-compra p {
         width: 100%;
         font-size: 10px;
-        justify-content: right;
+        justify-content: left;
         align-items: initial;
 }
 
