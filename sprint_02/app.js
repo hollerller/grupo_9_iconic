@@ -12,7 +12,7 @@ app.use(express.static('public')); //llamar la carpeta public
 
 // rutas
 
-app.get('/home', (request, response) => {
+app.get('/', (request, response) => {
     response.sendFile(path.join(__dirname, "./views/home.html"))
 });
 

@@ -14,19 +14,21 @@
 <body>
     <header>
         <div class="main-header">
-          <div class="top-bar">
+            <div class="top-bar">
                 <div class="burger-menu"><i class="fas fa-bars"></i></div>
-                <div class="logo"><img  src="/images/logo.png"></div>
+                <div class="logo">
+                    <a href='./'><img src="/images/logo.png" alt="Iconic"></a>
+                </div>
                 <div class="search">
                     <form action="/" method="get" class ="search-form">   
                         <label for="search"></label>  
-                        <input type="text" id="search" placeholder="Buscar por categorías, productos..." name="busqueda">
+                        <input type="search" id="search" placeholder="Buscar por categorías, productos..." name="busqueda">
                         <button class="boton-buscar" type="submit"><i class="fas fa-search" ></i></button>
                     </form> 
                 </div> 
                 <div class="search-buttom"> <a href="#"><i class="fas fa-search"></i></a> </div>   
                 <div class="login-icon"><a href="/login"><i class="far fa-user"></i></a></div>
-                <a class="carrito-compras" href='#'><i class="fas fa-shopping-cart"></i></a> 
+                <a class="carrito-compras" href='./shoppingCart'><i class="fas fa-shopping-cart"></i></a> 
             </div>
             <div class="barra-herramientas">
                 <ul class="navbar">
@@ -39,15 +41,15 @@
                 </ul>
             </div>
         </div>
-        </header>
+    </header>
     <main>
+        
         <form class="formulario" action="/login" method="get">
-
-                <label for="nombreUsuario">Nombre de usuario:</label>
-                    <input class="input-text" type="text" id="nombreUsuario" name="usuario" required minlength=6>
-                <label for="contraseña">Contraseña:</label>
-                    <input class="input-text" type="password" id="contraseña" name="contraseña">
-                <button class="boton-ingresar" type="submit" ><a href="/"><p>Enviar</p></a></button>
+            <label for="nombreUsuario">Nombre de usuario:</label>
+                <input class="input-text" type="text" id="nombreUsuario" name="usuario" required minlength=6>
+            <label for="contraseña">Contraseña:</label>
+                <input class="input-text" type="password" id="contraseña" name="contraseña">
+            <button class="boton-ingresar" type="submit" ><a href="/"><p>Enviar</p></a></button>
         </form>
 
     </main>
@@ -60,11 +62,11 @@
                 <li><a href="#">Nosotros</a></li>
             </ul>
             <div class="redes-sociales"> 
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-whatsapp"></i>
-                <i class="fab fa-youtube"></i>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
         </section>
     </footer>

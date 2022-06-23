@@ -60,6 +60,7 @@ Futura: https://es.wikipedia.org/wiki/Futura
 
 }
 
+
 .navbar {
         list-style: none;
         display: none
@@ -89,6 +90,14 @@ Futura: https://es.wikipedia.org/wiki/Futura
         align-self: center;
         font-size: 20px;
         text-align: center;
+}
+
+.top-bar .carrito-compras a:hover {
+        color: #000;
+}
+
+.top-bar .login-icon a:hover {
+        color: #000;
 }
 
 .search-buttom a,
