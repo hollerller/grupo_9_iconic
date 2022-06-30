@@ -1,84 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('./partials/head') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,400;1,500&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7c28aaf964.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Iconic</title>
-</head>
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <section class="slider slider-Detail">
+                    <img src="/images/slider2.png" class="img-productDetail">
+                    <div class="box-info">
+                        <div class="price-desc">
+                            <h3>Chaqueta Jean</h3>
+                            <h4>$3.990</h4>
+                        </div>
+                        <form action="/comprar-producto" method="POST" class="buy-form">
+                            <div class="qty-size">
+                                <div class="field-qty">
+                                    <label for="qty">
+                                        <span>Cantidad</span>
+                                    </label>
+                                    <input type="number" name="quantity" min="0" value="1" title="cantidad"
+                                        class="input-qty" id="qty">
+                                </div>
+                                <div class="tallas">
+                                    <label>Talla</label for="tallas">
+                                    <!-- texto que acompana la informacion del formulario-->
+                                    <select name="categoria" class="opciones">
+                                        <option value="s">S</option>
+                                        <option value="m">M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="boton-comprar">
+                                <p>Agregar a la bolsa</p>
+                            </button>
 
-<body>
-    <header>
-        <div class="main-header">
-            <div class="top-bar">
-                <div class="burger-menu"><i class="fas fa-bars"></i></div>
-                <div class="logo"><img src="/images/logo.png"></div>
-                <div class="search">
-                    <form action="/" method="get" class="search-form">
-                        <label for="search"></label>
-                        <input type="text" id="search" placeholder="Buscar por categorías, productos..."
-                            name="busqueda">
-                        <button class="boton-buscar" type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </div>
-                <div class="search-buttom"> <a href="#"><i class="fas fa-search"></i></a> </div>
-                <div class="login-icon"><a href="/login"><i class="far fa-user"></i></a></div>
-                <a class="carrito-compras" href='#'><i class="fas fa-shopping-cart"></i></a>
-            </div>
-            <div class="barra-herramientas">
-                <ul class="navbar">
-                    <li> <a href='#'>Categorías</a></li>
-                    <li><a href='#'>Galería</a></li>
-                    <li><a href='#'>FW 2022</a></li>
-                    <li><a href='#'>Nosotros</a></li>
-                    <li><a href='#'>Ayuda</a></li>
-
-                </ul>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="slider slider-Detail">
-            <img src="/images/slider2.png" class="img-productDetail">
-            <div class="box-info">
-            <div class="price-desc">
-                <h3>Chaqueta Jean</h3>
-                <h4>$3.990</h4>
-            </div>
-            <form action="/comprar-producto" method="POST" class="buy-form">
-                <div class="qty-size">
-                    <div class="field-qty">
-                        <label for="qty">
-                            <span>Cantidad</span>
-                        </label>
-                        <input type="number" name="quantity" min="0" value="1" title="cantidad" class="input-qty"
-                            id="qty">
+                        </form>
                     </div>
-                    <div class="tallas">
-                        <label>Talla</label for="tallas"> <!-- texto que acompana la informacion del formulario-->
-                        <select name="categoria" class="opciones">
-                            <option value="s">S</option>
-                            <option value="m">M</option>
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
-                        </select>
-                    </div>
-                </div>
-                <button class="boton-comprar">
-                    <p>Agregar a la bolsa</p>
-                </button>
-
-            </form>
-        </div>
-            <!--
+                    <!--
 
             <div class="info-envio">
                 <div class="envio-gratis">
@@ -94,56 +54,15 @@
                     <span>Pago en <br> efectivo</span>
                 </div>
             </div>-->
-        </section>
-
-
-
-
-
-            <section class="new-arrivals">
-                <div class="tituloNA">
-                    <h6>New arrivals </h6><i class="fas fa-star"></i>
-                </div>
-                <article class="producto">
-                    <img class="foto-producto" src="/images/newArrivals1.jpg">
-                    <p>Buzo | HOMBRE</p>
-                </article>
-                <article class="producto">
-                    <img class="foto-producto" src="/images/newArrivals2.jpg">
-                    <p>Remera | HOMBRE</p>
-                </article>
-                <article class="producto">
-                    <img class="foto-producto" src="/images/newArrivals3.jpg">
-                    <p>Campera | MUJER</p>
-                </article>
-                <article class="producto">
-                    <img class="foto-producto" src="/images/newArrivals4.jpg">
-                    <p>Jean | MUJER</p>
-                </article>
-            </section>
-            <section class="vender">
-                <div>
-                    <h6>Vendé tu marca</h6><i class="far fa-lightbulb"></i>
-                </div>
-            </section>
-    </main>
-    <footer>
-        <section class="footer-mobile">
-            <ul class="links">
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Política de devoluciones</a></li>
-                <li><a href="#">Envíos</a></li>
-                <li><a href="#">Nosotros</a></li>
-            </ul>
-            <div class="redes-sociales">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-whatsapp"></i>
-                <i class="fab fa-youtube"></i>
-            </div>
-        </section>
-    </footer>
-</body>
+                </section>
+                <%- include('./partials/newArrivals') %>
+                <section class="vender">
+                    <div>
+                        <h6>Vendé tu marca</h6><i class="far fa-lightbulb"></i>
+                    </div>
+                </section>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
 
 </html>

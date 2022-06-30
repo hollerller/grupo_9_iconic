@@ -1,78 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,400;1,500&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7c28aaf964.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Crea tu cuenta</title>
-</head>
-<body>
-    <header>
-        <div class="main-header">
-          <div class="top-bar">
-                <div class="burger-menu"><i class="fas fa-bars"></i></div>
-                <div class="logo"><img  src="/images/logo.png"></div>
-                <div class="search">
-                    <form action="/" method="get" class ="search-form">   
-                        <label for="search"></label>  
-                        <input type="text" id="search" placeholder="Buscar por categorías, productos..." name="busqueda">
-                        <button class="boton-buscar" type="submit"><i class="fas fa-search" ></i></button>
-                    </form> 
-                </div> 
-                <div class="search-buttom"> <a href="#"><i class="fas fa-search"></i></a> </div>   
-                <div class="login-icon"><a href="/login"><i class="far fa-user"></i></a></div>
-                <a class="carrito-compras" href='#'><i class="fas fa-shopping-cart"></i></a> 
-            </div>
-            <div class="barra-herramientas">
-                <ul class="navbar">
-                    <li> <a href='#'>Categorías</a></li>
-                    <li><a href='#'>Galería</a></li> 
-                    <li><a href='#'>FW 2022</a></li> 
-                    <li><a href='#'>Nosotros</a></li> 
-                    <li><a href='#'>Ayuda</a></li> 
-            
-                </ul>
-            </div>
-        </div>
-        </header>
-    <main>
-        <form class="formulario" action="/register" method="post">
+<%- include('./partials/head') %>
 
-            <h3 class="titulo-formulario"> Crea tu cuenta </h3>
-            
-                <input class="input-text" placeholder="Nombre y Apellido" type="text" name="nombreYApellido" id="nombre-apellido" required minlength= 10 required>
-            
-                <input class="input-text" placeholder="Usuario" type="text" id="usuario" name="usuario" required minlength=6>
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <form class="formulario" action="/register" method="post">
 
-                <input class="input-text" placeholder="Correo electrónico" type="email" id="mail" name="email" required>
+                    <h3 class="titulo-formulario"> Crea tu cuenta </h3>
 
-                <input class="input-text" placeholder="Contraseña" type="password" name="contraseña" id="contraseña" required minlength=8 required>
-            
-                <input class="input-text" placeholder="Confirma la contraseña" type="password" name="contraseñaConf" id="contraseñaConfirmada" required minlength=8 required>
+                    <input class="input-text" placeholder="Nombre y Apellido" type="text" name="nombreYApellido"
+                        id="nombre-apellido" required minlength=10 required>
+
+                    <input class="input-text" placeholder="Usuario" type="text" id="usuario" name="usuario" required
+                        minlength=6>
+
+                    <input class="input-text" placeholder="Correo electrónico" type="email" id="mail" name="email"
+                        required>
+
+                    <input class="input-text" placeholder="Contraseña" type="password" name="contraseña" id="contraseña"
+                        required minlength=8 required>
+
+                    <input class="input-text" placeholder="Confirma la contraseña" type="password" name="contraseñaConf"
+                        id="contraseñaConfirmada" required minlength=8 required>
 
 
 
-                
-            <!--  <input class="input-text" placeholder="Domicilio" type="text" id="domicilio" name="domicilio"> -->
-            
-            <!-- <label  for="fechaNacimiento">Fecha de nacimiento</label>  -->
-                <input  class="input-text" type="date" id="fechaNacimiento" name="fechaNacimiento">
 
-                <label class="terminos" for="aceptoTerminos"> <input  type="checkbox" value="aceptoTerminos" id="aceptoTerminos" name="tyc" required>   Estoy de acuerdo con los términos y condiciones   </label>
+                    <!--  <input class="input-text" placeholder="Domicilio" type="text" id="domicilio" name="domicilio"> -->
+
+                    <!-- <label  for="fechaNacimiento">Fecha de nacimiento</label>  -->
+                    <input class="input-text" type="date" id="fechaNacimiento" name="fechaNacimiento">
+
+                    <label class="terminos" for="aceptoTerminos"> <input type="checkbox" value="aceptoTerminos"
+                            id="aceptoTerminos" name="tyc" required> Estoy de acuerdo con los términos y condiciones
+                    </label>
 
 
-                <input class="boton-registrarme" type="submit" value="Registrarme">
+                    <input class="boton-registrarme" type="submit" value="Registrarme">
 
 
 
 
 
-          <!--  <label  for="perfilUsuario">¿Preferís comprar o vender?</label><br>
+                    <!--  <label  for="perfilUsuario">¿Preferís comprar o vender?</label><br>
                 <label>
                         <input type="radio" id="perfilUsuario" name="perfil" value="Comprar">Comprar</label>
                 <label>
@@ -88,35 +59,20 @@
             </div>
             <br><label for="fotoPerfil">Seleccioná tu foto de perfil</label>
                 <input type="file" name="avatar" id="fotoPerfil"> <br> -->
-        
-        
-    
-    
-        
-        <!-- <div class="boton-registro">
+
+
+
+
+
+                    <!-- <div class="boton-registro">
             <button class="boton-registrarme" type="submit" </button>
         </div> -->
-            
 
 
-        </form>
-    </main>
-    <footer>
-        <section class="footer-mobile">
-            <ul class="links">
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Política de devoluciones</a></li>
-                <li><a href="#">Envíos</a></li>
-                <li><a href="#">Nosotros</a></li>
-            </ul>
-            <div class="redes-sociales"> 
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-whatsapp"></i>
-                <i class="fab fa-youtube"></i>
-        </div>
-        </section>
-    </footer>
-</body>
+
+                </form>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
 </html>

@@ -14,8 +14,6 @@ Daniel López: Soy Daniel. Soy Mexicano. Me gusta mucho pasarla con mis amigos y
 
 David Tobasura: Soy David, me gusta la música y los viajes. También me gusta mucho la naturaleza y en especial las plantas.
 
-Flavia Lemos: Soy Fla tengo 29 años soy de Argentina Mendoza, me gusta pasar tiempo con mis amigos ya que trabajo con ellos, asi como viajar y tener la libertad de elegir que quiero para mi vida. Amo dedicarme al Networkmarketing ya que puedo ayudar a que las personas cambien su vida.
-
 ### --> Sitios de Referencia: 
 
 https://mercadolibre.com/
