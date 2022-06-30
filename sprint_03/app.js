@@ -10,27 +10,19 @@ const path = require('path');
 
 app.use(express.static('public')); //llamar la carpeta public
 
+//requiriendo mainRouter
+const mainRouter = require('./routes/mainRouter');
 // rutas
 
-app.get('/', (request, response) => {
-    response.sendFile(path.join(__dirname, "./views/home.html"))
-});
+app.get('/',mainRouter);
 
-app.get('/login', (request, response) => {
-    response.sendFile(path.join(__dirname, "./views/login.html"))
-});
+app.get('/login',mainRouter );
 
-app.get('/productDetail', (request, response) => {
-    response.sendFile(path.join(__dirname, "./views/productDetail.html"))
-});
+app.get('/productDetail',mainRouter);
 
-app.get('/register', (request, response) => {
-    response.sendFile(path.join(__dirname, "./views/register.html"))
-});
+app.get('/register',mainRouter);
 
-app.get('/shoppingCart', (request, response) => {
-    response.sendFile(path.join(__dirname, "./views/shoppingCart.html"))
-});
+app.get('/shoppingCart',mainRouter);
 
 //Configuración EJS
 app.set('view engine','ejs');
