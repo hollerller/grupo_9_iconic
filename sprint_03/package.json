@@ -1,0 +1,20 @@
+{
+  "name": "sprint_02",
+  "version": "1.0.0",
+  "description": "### Propósito del e-commerce y público objetivo: Somos Iconic, nuestro equipo se propone comercializar indumentaria para todos los gustos y preferencias, procurando que el cliente encuentre lo que gusta y lo/la hace ser el/ella mism@.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
