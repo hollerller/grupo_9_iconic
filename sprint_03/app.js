@@ -12,6 +12,8 @@ app.use(express.static('public')); //llamar la carpeta public
 
 //requiriendo mainRouter
 const mainRouter = require('./routes/mainRouter');
+const productRouter = require('./routes/productRoutes');
+const userRoutes = require('./routes/userRoutes');
 // rutas
 
 app.get('/',mainRouter);
@@ -23,6 +25,10 @@ app.get('/productDetail',mainRouter);
 app.get('/register',mainRouter);
 
 app.get('/shoppingCart',mainRouter);
+
+app.get('/products/:id?', productRouter);
+
+app.get('/user/:id?', userRoutes);
 
 //Configuración EJS
 app.set('view engine','ejs');
