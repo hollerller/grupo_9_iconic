@@ -1,0 +1,6 @@
+# Retrospectiva del trabajo grupal durante la realización del Sprint 1:
+    Como primera observación podría decirse que el grupo tuvo algunos problemas para coordinar el trabajo. En primer lugar, las complicaciones surgieron porque un miembro del grupo decidió separarse para hacer el proyecto solo y en segundo lugar por las responsabilidades diarias de cada uno de los miembros. Esto sin tener en cuenta que ya durante el desarrollo de la segunda entrega otro miembro de los miembros decidió abandonar el curso, dando lugar a dos miembros nuevos con los cuales no fue fácil contactarse.
+    No obstante esos contratiempos, entiendo que el grupo tiene iniciativa y compromiso para el desarrollo del proyecto. Es destacable la capacida de organización a la hora de sentar bases para el trabajo a realizar por cada uno, y la buena predisposición de cada uno de los miembros.
+    Un aspecto que necesitaríamos trabajar como grupo es el dedicarle más tiempo al trabajo individual, optimizando al máximo el trabajo previo de sentar acuerdos y organizar cómo se dividen las tareas.
+    
+    Otro aspecto en el cual necesitamos hacer mayor foco es la comunicación. No obstante haberse formado un grupo de whatsapp, sería conveniente idear un esquema de videollamadas semanales/diarias, dependiendo de la cantidad de trabajo a realizar y de la disponibilidad de los miembros.
