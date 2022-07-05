@@ -13,6 +13,9 @@ const mainController = {
     },
     shoppingCart:  (request, response) => {
         response.render('shoppingCart')
+    },
+    edicionDeProds: (request, response) => {
+        response.render('edicionDeProds')
     }
 }
 
