@@ -26,6 +26,8 @@ app.get('/register',mainRouter);
 
 app.get('/shoppingCart',mainRouter);
 
+app.get('/edicionDeProds',mainRouter);
+
 app.get('/products/:id?', productRouter);
 
 app.get('/user/:id?', userRoutes);
