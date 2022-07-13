@@ -5,18 +5,15 @@
     <body>
         <%- include('./partials/header') %>
             <main>
-                <h5>Mis compras</h5>
+                <h5 class="section-name">Mis compras</h5>
                 <article class="articulo-compra">
                     <img src="/images/newArrivals1.jpg">
                     <div class="detalle-compra">
-                        <p>Buzo Hoodie Classic | HOMBRE</p>
-                        <p>$5.450,00</p>
-                        <p>Buzo canguro de frisa con capucha
+                        <p class="productName">Buzo Hoodie Classic | HOMBRE</p>
+                        <p class="productPrice">$5.450,00</p>
+                        <p class="productDescription">Buzo canguro de frisa con capucha
 
-                            - Cordón fantasía y bolsillos en frente.
-                            - Puño mangas y cintura en morley a tono
-                            - Logo bordado en frente izquierdo.
-                            - Composición: Frisa50% algodón 50% poliéster</p>
+                            Cordón fantasía y bolsillos en frente. Puño mangas y cintura en morley a tono. Logo bordado en frente izquierdo. Composición: Frisa50% algodón 50% poliéster</p>
                     </div>
 
                     <form class="form-compra" action="/compra" method="post">
@@ -45,9 +42,9 @@
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-
+                        <button class="delete-button"><i class="fas fa-trash"></i></button>
                     </form>
-                    <button class="boton-quitar"><i class="fas fa-trash"></i></button>
+                    
                 </article>
                 <input type="button" class="boton-continuar" value="Continuar el proceso de compra">
             </main>

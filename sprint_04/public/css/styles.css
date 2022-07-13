@@ -40,6 +40,7 @@ Futura: https://es.wikipedia.org/wiki/Futura
         display: flex;
         justify-content: space-around;
         width: 100%;
+        align-items: center;
 }
 
 .search-form {
@@ -80,7 +81,7 @@ Futura: https://es.wikipedia.org/wiki/Futura
         width: auto;
 }
 
-.search-buttom,
+.search-button,
 .carrito-compras,
 .login-icon {
         width: 10%;
@@ -100,7 +101,7 @@ Futura: https://es.wikipedia.org/wiki/Futura
         color: #000;
 }
 
-.search-buttom a,
+.search-button a,
 .login-icon a {
         text-decoration: none;
         color: #7A7474;
@@ -207,6 +208,9 @@ footer .redes-sociales {
         font-weight: bold;
         font-size: 12px;
 }
+.redes-sociales i{
+        color: #000000;
+}
 
 .formulario {
 
@@ -290,6 +294,10 @@ footer .redes-sociales {
 .boton a {
         text-decoration: none;
 }
+/* Carrito de Compras */
+.section-name{
+        font-size: large;
+}
 
 .articulo-compra {
         width: 100%;
@@ -301,8 +309,8 @@ footer .redes-sociales {
 }
 
 .articulo-compra img {
-        width: 40%;
-        max-width: 100px;
+        width: 100%;
+        max-width: 70px;
         display: inline-block;
         justify-content: left;
         margin: auto;
@@ -310,16 +318,26 @@ footer .redes-sociales {
 
 .articulo-compra .detalle-compra {
         width: auto;
-        width: 60%;
-
-}
-
-.detalle-compra p {
         width: 100%;
-        font-size: 10px;
-        justify-content: left;
-        align-items: initial;
+
 }
+
+.productName,
+.productPrice{
+        width: 90%;
+        font-size: 12px;
+        text-align: left;
+        color: #7A7474;
+        font-weight: 600;
+}    
+.productDescription{
+        display: flex;
+        text-align: justify;
+        margin: 10px;
+        font-size: 9px;
+        font-weight: normal;
+        color: #7A7474;
+}   
 
 .form-compra {
         width: 100%;
@@ -344,19 +362,21 @@ footer .redes-sociales {
         padding: 5px;
         color: #7A7474;
         width: 100%;
+        margin: 10px;
 }
 
-.boton-quitar {
+.delete-button {
         color: #9B0000;
         background-color: #FFFFFF;
         font-size: 9px;
         border: #9B0000 1px solid;
         padding: 6px;
-        justify-content: right;
+        display: inline-block;
         border-radius: 5px;
+        margin: auto;
 }
 
-.boton-quitar i {
+.delete-button i {
         font-size: 5px;
 }
 
@@ -479,15 +499,17 @@ textarea.input-edit {
                 font-size: 15px;
         }
 
-        .navbar li {
+        .navbar a {
                 padding: 5px;
+                font-size: 20px;
         }
 
-        .barra-herramientas {
+        .tool-bar {
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
+
         }
 
         main {
@@ -598,6 +620,8 @@ textarea.input-edit {
 
         /*shopping Cart*/
 
+        
+        }
         .articulo-compra img {
                 width: auto;
                 max-width: 300px;
@@ -605,13 +629,12 @@ textarea.input-edit {
         }
 
 
-}
+
 
 @media (min-width:769px) {
-        .logo {
-                width: auto;
-
-        }
+       .logo{
+        max-width: 300px;
+       }
 
         .search {
                 display: flex;
@@ -620,15 +643,26 @@ textarea.input-edit {
         }
 
         .search-form {
-                display: flex;
-                flex-wrap: wrap;
+                display: inline;
+                border: #7A7474 solid;
+                border-radius: 5px;
+                
+
+        }
+        .search-form button{
+                border: none;
+                background-color: #fdfdfd;
+                
+
         }
 
         .search-form input {
                 display: inline;
+                border: none;
+                padding: 8px;
         }
 
-        .search-buttom {
+        .search-button {
                 display: none;
         }
 
@@ -653,7 +687,7 @@ textarea.input-edit {
                 width: 50%;
         }
 
-        .boton-quitar {
+        .delete-button {
                 height: 30px;
                 width: 30px;
         }
@@ -667,26 +701,49 @@ textarea.input-edit {
 }
 
 @media (min-width:1200px) {
+        .logo img{
+                max-width: 160px;
+                padding: 0;
+        }
         .formulario {
                 width: 40%;
         }
 
         .search,
         .carrito-compras {
-                max-width: 40px;
+                
                 width: auto;
         }
-
+        
         /* shopping cart */
+       
         .form-compra {
-                display: block;
-                width: 70%;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
                 margin-right: 70px;
+                justify-content: right;
+                padding: 0;
         }
+        .form-compra label {
+                width: 100%;
+                margin:auto
+        }
+        
+        .form-compra select {
+                border: #7A7474 solid 1px;
+                background-color: white;
+                border-radius: 5px;
+                padding: 5px;
+                color: #7A7474;
+                width: 100%;
+        }
+        
 
-        .boton-quitar {
-                height: 30px;
-                width: 30px;
+        .delete-button{
+                max-width: 60px;
+                margin: 10px;
+                justify-content: center;
         }
 
         .detalle-compra p {
