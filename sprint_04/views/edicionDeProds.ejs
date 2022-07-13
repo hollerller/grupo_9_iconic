@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %>
+    <form action="#" method="POST">
+        <div class="input-edit-products">
+            <!-- <label>Nombre del producto: </label> -->
+            <input type="text" name="nombreProducto" class="input-edit" placeholder="Nombre del producto:">
+        </div>
+        <div class="input-edit-products"> <!--<label>Descripción: </label> -->
+            <textarea class="input-edit" placeholder="Descripción:"></textarea>
+        </div>
+        <div class="input-edit-products">
+            <label for="imagen">Foto del Producto: </label>
+            <input type="file"
+            name="imagen"
+            accept=".jpg, .png">
+        </div>
+        <div class="input-edit-products">
+           <!-- <label>Categoria:</label>-->
+            <input type="text" name="categoria" class="input-edit" placeholder="Categoria:">
+        </div>
+        <div class="input-edit-products">
+           <!-- <label>Talles:</label> -->
+            <input type="text" name="talles" class="input-edit" placeholder="Talles">
+        </div>
+        <div class="input-edit-products">
+            <!-- <label>Precio:</label> -->
+            <input type="number" name="precio" class="input-edit" placeholder="Precio: ">
+        </div>
+    </form>
+    <%- include('./partials/footer') %>
+</body>
+</html>
