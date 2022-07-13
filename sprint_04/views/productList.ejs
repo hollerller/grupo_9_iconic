@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <!--<section class="slider">
+                    <img src="/images/slider2.png">
+                </section>-->
+                <% for(product of lista) {%>
+                <h2><%=product.price%></h2>
+                <span><%=product.discount%> % OFF</span>
+                <p><%=product.name%> </p>
+                <%}%>
+                <section class="vender">
+                    <div>
+                        <h6>Vendé tu marca</h6><i class="far fa-lightbulb"></i>
+                    </div>
+                </section>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
+</html>

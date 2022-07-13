@@ -1,6 +1,15 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const productArray = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
 const productController = {
-    product: (request, response) => {
-        response.render('home');
+    list: (request, response) => {
+        response.render('productList', {
+            lista: productArray
+        });
     },
     productID: (req, res) => {
         let productId = req.params.id;
