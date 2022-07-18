@@ -4,8 +4,18 @@
 
     <body>
         <%- include('./partials/header') %>
-            
-            <%- include('./partials/footer') %>
+        <section class="insale-list">
+            <h2>Ofertas</h2>
+            <article class="producto">
+            <% for(product of lista){ %>
+             
+                <a href="./productDetail/<% product.id %> "><img class="foto-producto" src="/images/products/prod1.jpg "></a>
+                <p><% product.product-name %> </p>
+            </article>
+            <% } %> 
+        </section>
+        
+         <%- include('./partials/footer') %>
     </body>
 
 </html>
