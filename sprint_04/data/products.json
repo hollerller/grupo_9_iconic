@@ -63,7 +63,7 @@
         "price": "7870",
         "in-sale": "true",
         "discount": "6%",
-        "product-img": 
+        "product-img": "prod5.jpg"
     },
     {
         "id": "7",
@@ -74,7 +74,7 @@
         "price": "3790",
         "in-sale": "false",
         "discount": "7%",
-        "product-img": 
+        "product-img": "newArrivals3.jpg"
     },
     {
         "id": "8",
