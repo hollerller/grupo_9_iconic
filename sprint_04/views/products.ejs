@@ -7,12 +7,16 @@
         <section class="insale-list">
             <h2>Ofertas</h2>
             <article class="producto">
-            <% for(product of lista){ %>
-             
-                <a href="./productDetail/<% product.id %> "><img class="foto-producto" src="/images/products/prod1.jpg "></a>
-                <p><% product.product-name %> </p>
+                <% for(product of list){%>
+                    <% if(product.inSale != false) {%>
+                    <a href="#"><img class="foto-producto" src="/images/products/<%= product.image %> " alt="Imagen de Producto"></a>
+                    <p class="product-name"><%=product.name %></p>
+                    <p class="product-price"><%= product.price %></p>
+                    <p class="product-description"><%= product.description %> </p>
+                    <% } %>  
+                <% } %> 
             </article>
-            <% } %> 
+                 
         </section>
         
          <%- include('./partials/footer') %>
