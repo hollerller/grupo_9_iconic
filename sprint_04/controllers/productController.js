@@ -7,9 +7,7 @@ const productArray = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
     list: (request, response) => {
-        response.render('productList', {
-            lista: productArray
-        });
+        response.render('products')
     },
     productID: (req, res) => {
         let productId = req.params.id;
