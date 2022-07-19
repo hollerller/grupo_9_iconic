@@ -617,16 +617,39 @@ textarea.input-edit {
                 width: auto;
                 padding: 0 15px 0;
         }
-
+}
         /*shopping Cart*/
 
+  
         
-        }
         .articulo-compra img {
                 width: auto;
                 max-width: 300px;
                 height: 450px;
         }
+        /*Listado de Productos*/
+        .products-list{
+                width: 100%;
+                padding: 20px;
+                justify-content: center;
+                
+        }
+        .section-title{
+                padding: 20px;
+                font-family: 'Roboto', Helvetica, sans-serif;
+        }
+        
+        .product-box{
+               
+                
+                justify-content: center;
+                width: 90%;
+        }
+       
+       
+
+        
+        
 
 
 
@@ -635,7 +658,6 @@ textarea.input-edit {
        .logo{
         max-width: 300px;
        }
-
         .search {
                 display: flex;
                 width: auto;
@@ -752,6 +774,58 @@ textarea.input-edit {
                 align-items: center;
                 margin-left: 40px;
         }
-
-
+        /* Listado productos*/
+        .section-title{
+                width: 100%;
+        }
+        .products-list{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: center;
+                
+        }
+        .product-box{
+                display: flex;
+                flex-wrap: wrap;
+                width: 45%;
+                margin: 50px 10px;
+                align-items: center;
+                box-shadow: 4px 9px 10px hwb(29 62% 27%);
+                border-radius: 5px;
+                background-color: rgb(240, 231, 219);
+        }
+        .product-box a{
+                display: inline-block;
+                align-items: center;
+                width: 40%;
+        }
+        .product-detail{
+                width: 60%;
+                display: inline-block;
+                align-items: top;
+                padding: 10px;
+                
+        }
+        .product-name{
+                font-size: 25px;
+                font-weight: bold;
+                text-align: right;
+                margin-bottom: 10px;
+                border-bottom: #7A7474 1px solid;
+        }
+       .product-price{
+                font-size: 23px;
+                font-weight: 400;
+                
+       }
+       .product-discount{
+        color: green;
+        font-weight: bold;
+        margin-bottom: 10px;
+       }
+       .product-description{
+        text-align: justify;
+        font-size: 10px;
+       }
 }

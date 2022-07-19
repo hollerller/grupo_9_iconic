@@ -7,7 +7,7 @@
             "size": "L",
             "price": "4340",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "6%",
             "image": "prod2.jpg"
         },
@@ -19,7 +19,7 @@
             "size": "L",
             "price": "1770",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "20%",
             "image": "prod1.jpg"
         },
@@ -31,7 +31,7 @@
             "size": "M",
             "price": "8830",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "30%",
             "image": "prod3.jpg"
         },
@@ -43,7 +43,7 @@
             "size": "S",
             "price": "7290",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "4%",
             "image": "prod2.jpg"
         },
@@ -55,7 +55,7 @@
             "size": "XL",
             "price": "1640",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "5%",
             "image": "prod1.jpg"
         },
@@ -67,7 +67,7 @@
             "size": "2XL",
             "price": "7870",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "6%",
             "image": "prod5.jpg"
         },
@@ -79,7 +79,7 @@
             "size": "S",
             "price": "3790",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "7%",
             "image": "newArrivals3.jpg"
         },
@@ -91,7 +91,7 @@
             "size": "XL",
             "price": "1210",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "8%",
             "image": "prod3.jpg"
         },
@@ -103,7 +103,7 @@
             "size": "XS",
             "price": "7050",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "9%",
             "image": "prod2.jpg"
         },
@@ -115,7 +115,7 @@
             "size": "XL",
             "price": "2760",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "10%",
             "image": "prod5(2).jpg"
         },
@@ -127,7 +127,7 @@
             "size": "M",
             "price": "1340",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "11%",
             "image": "prod3.jpg"
         },
@@ -139,7 +139,7 @@
             "size": "2XL",
             "price": "7990",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "12%",
             "image": "prod1.jpg"
         },
@@ -151,7 +151,7 @@
             "size": "3XL",
             "price": "4620",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "13%",
             "image": "prod5.jpg"
         },
@@ -163,7 +163,7 @@
             "size": "M",
             "price": "1150",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale":false,
             "discount": "14%",
             "image": "prod1.jpg"
         },
@@ -175,7 +175,7 @@
             "size": "2XL",
             "price": "9760",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "15%",
             "image": "prod3.jpg"
         },
@@ -187,7 +187,7 @@
             "size": "XL",
             "price": "8690",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "16%",
             "image": "prod5(2).jpg"
         },
@@ -199,7 +199,7 @@
             "size": "2XL",
             "price": "490",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "17%",
             "image": "prod3.jpg"
         },
@@ -211,7 +211,7 @@
             "size": "S",
             "price": "7780",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "18%",
             "image": "prod3.jpg"
         },
@@ -223,7 +223,7 @@
             "size": "M",
             "price": "4350",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "19%",
             "image": "prod2.jpg"
         },
@@ -235,7 +235,7 @@
             "size": "L",
             "price": "8160",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "20%",
             "image": "prod5(2).jpg"
         },
@@ -247,7 +247,7 @@
             "size": "S",
             "price": "8430",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "21%",
             "image": "prod1.jpg"
         },
@@ -259,7 +259,7 @@
             "size": "XL",
             "price": "9740",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "22%",
             "image": "prod3.jpg"
         },
@@ -271,7 +271,7 @@
             "size": "2XL",
             "price": "6540",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "23%",
             "image": "newArrivals3.jpg"
         },
@@ -283,7 +283,7 @@
             "size": "XS",
             "price": "8200",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale":true,
             "discount": "24%",
             "image": "prod5.jpg"
         },
@@ -295,7 +295,7 @@
             "size": "M",
             "price": "1050",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "25%",
             "image": "prod2.jpg"
         },
@@ -307,7 +307,7 @@
             "size": "L",
             "price": "5790",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "26%",
             "image": "newArrivals3.jpg"
         },
@@ -319,7 +319,7 @@
             "size": "XS",
             "price": "6010",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "27%",
             "image": "prod1.jpg"
         },
@@ -331,7 +331,7 @@
             "size": "2XL",
             "price": "5310",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "28%",
             "image": "prod5(2).jpg"
         },
@@ -343,7 +343,7 @@
             "size": "M",
             "price": "3320",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "29%",
             "image": "prod1.jpg"
         },
@@ -355,7 +355,7 @@
             "size": "3XL",
             "price": "3440",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "30%",
             "image": "prod5.jpg"
         },
@@ -367,7 +367,7 @@
             "size": "2XL",
             "price": "2120",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "31%",
             "image": "newArrivals3.jpg"
         },
@@ -379,7 +379,7 @@
             "size": "XL",
             "price": "4220",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "32%",
             "image": "prod1.jpg"
         },
@@ -391,7 +391,7 @@
             "size": "3XL",
             "price": "4790",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "33%",
             "image": "newArrivals3.jpg"
         },
@@ -403,7 +403,7 @@
             "size": "S",
             "price": "3310",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "34%",
             "image": "prod5(2).jpg"
         },
@@ -415,7 +415,7 @@
             "size": "L",
             "price": "8000",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "35%",
             "image": "prod5.jpg"
         },
@@ -427,7 +427,7 @@
             "size": "3XL",
             "price": "2200",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "36%",
             "image": "prod1.jpg"
         },
@@ -439,7 +439,7 @@
             "size": "M",
             "price": "5410",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "37%",
             "image": "prod4.jpg"
         },
@@ -451,7 +451,7 @@
             "size": "2XL",
             "price": "9960",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "38%",
             "image": "prod5(2).jpg"
         },
@@ -463,7 +463,7 @@
             "size": "2XL",
             "price": "3650",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "39%",
             "image": "prod1.jpg"
         },
@@ -475,7 +475,7 @@
             "size": "XS",
             "price": "5500",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "20%",
             "image": "prod4.jpg"
         },
@@ -487,7 +487,7 @@
             "size": "3XL",
             "price": "3500",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "21%",
             "image": "prod5.jpg"
         },
@@ -499,7 +499,7 @@
             "size": "M",
             "price": "5870",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "22%",
             "image": "prod1.jpg"
         },
@@ -511,7 +511,7 @@
             "size": "S",
             "price": "2410",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "23%",
             "image": "prod5(2).jpg"
         },
@@ -523,7 +523,7 @@
             "size": "3XL",
             "price": "7630",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "24%",
             "image": "prod2.jpg"
         },
@@ -535,7 +535,7 @@
             "size": "M",
             "price": "2910",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "25%",
             "image": "newArrivals3.jpg"
         },
@@ -547,7 +547,7 @@
             "size": "L",
             "price": "3920",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "26%",
             "image": "prod1.jpg"
         },
@@ -559,7 +559,7 @@
             "size": "S",
             "price": "7240",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "27%",
             "image": "prod4.jpg"
         },
@@ -571,7 +571,7 @@
             "size": "XL",
             "price": "9330",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "28%",
             "image": "prod5(2).jpg"
         },
@@ -583,7 +583,7 @@
             "size": "3XL",
             "price": "2460",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "29%",
             "image": "prod5.jpg"
         },
@@ -595,7 +595,7 @@
             "size": "3XL",
             "price": "4690",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "30%",
             "image": "prod2.jpg"
         },
@@ -607,7 +607,7 @@
             "size": "3XL",
             "price": "9760",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "31%",
             "image": "prod1.jpg"
         },
@@ -619,7 +619,7 @@
             "size": "S",
             "price": "5390",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "32%",
             "image": "prod5(2).jpg"
         },
@@ -631,7 +631,7 @@
             "size": "XS",
             "price": "7690",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "33%",
             "image": "prod3.jpg"
         },
@@ -643,7 +643,7 @@
             "size": "2XL",
             "price": "6030",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "34%",
             "image": "prod4.jpg"
         },
@@ -655,7 +655,7 @@
             "size": "2XL",
             "price": "7700",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "35%",
             "image": "prod2.jpg"
         },
@@ -667,7 +667,7 @@
             "size": "3XL",
             "price": "9530",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "16%",
             "image": "newArrivals3.jpg"
         },
@@ -679,7 +679,7 @@
             "size": "XL",
             "price": "5820",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "17%",
             "image": "prod1.jpg"
         },
@@ -691,7 +691,7 @@
             "size": "XL",
             "price": "2880",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "18%",
             "image": "prod5.jpg"
         },
@@ -703,7 +703,7 @@
             "size": "3XL",
             "price": "8520",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "19%",
             "image": "prod5(2).jpg"
         },
@@ -715,7 +715,7 @@
             "size": "L",
             "price": "3560",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "20%",
             "image": "prod3.jpg"
         },
@@ -727,7 +727,7 @@
             "size": "2XL",
             "price": "3520",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "21%",
             "image": "prod1.jpg"
         },
@@ -739,7 +739,7 @@
             "size": "3XL",
             "price": "3430",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "22%",
             "image": "prod4.jpg"
         },
@@ -751,7 +751,7 @@
             "size": "2XL",
             "price": "7780",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "23%",
             "image": "prod5.jpg"
         },
@@ -763,7 +763,7 @@
             "size": "M",
             "price": "6950",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "24%",
             "image": "newArrivals3.jpg"
         },
@@ -775,7 +775,7 @@
             "size": "XL",
             "price": "570",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "25%",
             "image": "prod5.jpg"
         },
@@ -787,7 +787,7 @@
             "size": "M",
             "price": "5000",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "26%",
             "image": "prod5.jpg"
         },
@@ -799,7 +799,7 @@
             "size": "XL",
             "price": "8230",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "27%",
             "image": "prod2.jpg"
         },
@@ -811,7 +811,7 @@
             "size": "L",
             "price": "7430",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "28%",
             "image": "prod3.jpg"
         },
@@ -823,7 +823,7 @@
             "size": "L",
             "price": "30",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "29%",
             "image": "prod5.jpg"
         },
@@ -835,7 +835,7 @@
             "size": "2XL",
             "price": "3410",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "30%",
             "image": "newArrivals3.jpg"
         },
@@ -847,7 +847,7 @@
             "size": "L",
             "price": "4280",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "31%",
             "image": "prod4.jpg"
         },
@@ -859,7 +859,7 @@
             "size": "XS",
             "price": "2540",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "32%",
             "image": "prod4.jpg"
         },
@@ -871,7 +871,7 @@
             "size": "S",
             "price": "8250",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "33%",
             "image": "prod5.jpg"
         },
@@ -883,7 +883,7 @@
             "size": "L",
             "price": "9680",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "34%",
             "image": "prod5.jpg"
         },
@@ -895,7 +895,7 @@
             "size": "XS",
             "price": "7030",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "35%",
             "image": "prod4.jpg"
         },
@@ -907,7 +907,7 @@
             "size": "L",
             "price": "7590",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "36%",
             "image": "prod5(2).jpg"
         },
@@ -919,7 +919,7 @@
             "size": "2XL",
             "price": "7000",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "37%",
             "image": "prod3.jpg"
         },
@@ -931,7 +931,7 @@
             "size": "S",
             "price": "5700",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale":true,
             "discount": "38%",
             "image": "prod4.jpg"
         },
@@ -943,7 +943,7 @@
             "size": "L",
             "price": "9850",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "39%",
             "image": "prod5(2).jpg"
         },
@@ -955,7 +955,7 @@
             "size": "L",
             "price": "9870",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "40%",
             "image": "prod5.jpg"
         },
@@ -967,7 +967,7 @@
             "size": "XS",
             "price": "8390",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "41%",
             "image": "prod5.jpg"
         },
@@ -979,7 +979,7 @@
             "size": "S",
             "price": "7910",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "42%",
             "image": "newArrivals3.jpg"
         },
@@ -991,7 +991,7 @@
             "size": "XS",
             "price": "3380",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "43%",
             "image": "prod4.jpg"
         },
@@ -1003,7 +1003,7 @@
             "size": "L",
             "price": "980",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "44%",
             "image": "prod5(2).jpg"
         },
@@ -1015,7 +1015,7 @@
             "size": "2XL",
             "price": "5710",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "45%",
             "image": "prod5.jpg"
         },
@@ -1027,7 +1027,7 @@
             "size": "M",
             "price": "690",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "46%",
             "image": "prod4.jpg"
         },
@@ -1039,7 +1039,7 @@
             "size": "L",
             "price": "2070",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "47%",
             "image": "prod2.jpg"
         },
@@ -1051,7 +1051,7 @@
             "size": "3XL",
             "price": "5310",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "48%",
             "image": "prod5.jpg"
         },
@@ -1063,7 +1063,7 @@
             "size": "XL",
             "price": "6310",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "49%",
             "image": "prod5.jpg"
         },
@@ -1075,7 +1075,7 @@
             "size": "M",
             "price": "9100",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "50%",
             "image": "newArrivals3.jpg"
         },
@@ -1087,7 +1087,7 @@
             "size": "L",
             "price": "240",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "51%",
             "image": "newArrivals3.jpg"
         },
@@ -1099,7 +1099,7 @@
             "size": "L",
             "price": "9910",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "52%",
             "image": "prod3.jpg"
         },
@@ -1111,7 +1111,7 @@
             "size": "2XL",
             "price": "6820",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "false",
+            "inSale": false,
             "discount": "53%",
             "image": "prod4.jpg"
         },
@@ -1123,7 +1123,7 @@
             "size": "3XL",
             "price": "5140",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "54%",
             "image": "prod5.jpg"
         },
@@ -1135,7 +1135,7 @@
             "size": "XS",
             "price": "4550",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "55%",
             "image": "prod3.jpg"
         },
@@ -1147,7 +1147,7 @@
             "size": "3XL",
             "price": "1840",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "56%",
             "image": "prod2.jpg"
         },
@@ -1159,7 +1159,7 @@
             "size": "XL",
             "price": "8070",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "57%",
             "image": "prod5.jpg"
         },
@@ -1171,7 +1171,7 @@
             "size": "M",
             "price": "8180",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "58%",
             "image": "prod4.jpg"
         },
@@ -1183,7 +1183,7 @@
             "size": "XL",
             "price": "8910",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "18%",
             "image": "prod5.jpg"
         },
@@ -1195,7 +1195,7 @@
             "size": "S",
             "price": "5280",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "inSale": "true",
+            "inSale": true,
             "discount": "10%",
             "image": "prod5.jpg"
         }

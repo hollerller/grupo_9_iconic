@@ -4,18 +4,33 @@
 
     <body>
         <%- include('./partials/header') %>
-        <section class="insale-list">
-            <h2>Ofertas</h2>
-            <article class="producto">
+        <section class="products-list">
+            <div class="section-title">
+                <h2>Ofertas</h2>
+            </div>
+        
+            
                 <% for(product of list){%>
-                    <% if(product.inSale != false) {%>
-                    <a href="#"><img class="foto-producto" src="/images/products/<%= product.image %> " alt="Imagen de Producto"></a>
-                    <p class="product-name"><%=product.name %></p>
-                    <p class="product-price"><%= product.price %></p>
-                    <p class="product-description"><%= product.description %> </p>
-                    <% } %>  
+                    <% if(product.inSale === true) {%> 
+                    <div class="product-box">
+                        
+                               
+                                    
+                                        <a href="#"><img class="foto-producto" src="/images/products/<%= product.image %> " alt="Imagen de Producto"></a>
+                                    
+                                <div class="product-detail">
+                                    <p class="product-name"><%=product.name %></p>
+                                    <p class="product-price">Precio online:  $<%= product.price %></p>
+                                    <p class="product-discount">Ahorrás un <%= product.discount %> </p>
+                                    <p class="product-description"><%= product.description %> </p>
+                                </div>
+
+ 
+                    </div>
+                    <% } %> 
                 <% } %> 
-            </article>
+            
+            
                  
         </section>
         
