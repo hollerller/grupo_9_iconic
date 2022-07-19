@@ -32,7 +32,7 @@ app.use('/products',productsRouter)
 
 //app.get('/products/:id?', productRouter);
 
-app.use('/user/:id?', userRoutes);
+app.use('/users', userRoutes);
 
 //Configuración EJS
 app.set('view engine','ejs');
