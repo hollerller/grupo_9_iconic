@@ -6,9 +6,9 @@ const usersArray = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
 const usersController = {
-    user: (req, res) => {
-        res.render('userList', {userList: usersArray});
-    },
+   // user: (req, res) => {
+   //     res.render('userList', {userList: usersArray});
+   // },
     userID: (req, res) => {
         let idUsuario = req.params.id;
         res.render('userDetail', 

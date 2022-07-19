@@ -4,6 +4,11 @@
 <body>
     <%- include('./partials/header') %>
     <form action="#" method="POST">
+        <div class="userProfile">
+            <h2>
+              Formulario de Creacion de Productos
+            </h2>
+        </div>
         <div class="input-edit-products">
             <!-- <label>Nombre del producto: </label> -->
             <input type="text" name="nombreProducto" class="input-edit" placeholder="Nombre del producto:">
@@ -28,6 +33,10 @@
         <div class="input-edit-products">
             <!-- <label>Precio:</label> -->
             <input type="number" name="precio" class="input-edit" placeholder="Precio: ">
+        </div>
+        <div class="div-button">
+            <button type="submit" class="boton-registrarme-1">Crear producto</button>
+            <button type="reset" class="boton-registrarme-1">Cancelar</button>
         </div>
     </form>
     <%- include('./partials/footer') %>

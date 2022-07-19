@@ -15,6 +15,12 @@ const productController = {
            res.render('productDetail');
            //console.log('productos');
         }
+    },
+    createProduct: (req,res) => {
+        res.render('createProducts')
+    },
+    editProduct: (req,res) => {
+        res.render('editProducts')
     }
 }
 

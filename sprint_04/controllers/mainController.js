@@ -13,10 +13,10 @@ const mainController = {
     },
     shoppingCart:  (request, response) => {
         response.render('shoppingCart')
-    },
-    edicionDeProds: (request, response) => {
-        response.render('edicionDeProds')
-    }
+    }//,
+    //editProducts: (request, response) => {
+    //    response.render('editProducts')
+    //}
 }
 
 module.exports = mainController;

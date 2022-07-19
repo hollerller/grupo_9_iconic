@@ -260,6 +260,24 @@ footer .redes-sociales {
         cursor: pointer;
 }
 
+button.boton-registrarme-1 {
+        width: 40%;
+        background: black;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: none;
+        margin: 16px 0;
+        font-size: 16px;
+        color: white;
+        cursor: pointer;
+}
+
+div.div-button {
+        display: flex;
+        justify-content: space-around;
+}
+
 .terminos {
         line-height: 30px;
         padding-left: 10px;
@@ -497,7 +515,7 @@ textarea.input-edit {
         width: 50%;
         height: 50%;
         border-radius: 10px;
-        box-shadow: 0px 0px 15px rgba(103, 223, 241, 0.646);
+        box-shadow: 0px 0px 15px rgba(155, 0, 0, 0.646);
 }
 
 .profileBox p {

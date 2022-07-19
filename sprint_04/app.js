@@ -26,7 +26,6 @@ app.use('/register',mainRouter);
 
 app.use('/shoppingCart',mainRouter);
 
-app.use('/edicionDeProds',mainRouter);
 //configurando ruta hacia products
 app.use('/products',productsRouter)
 
