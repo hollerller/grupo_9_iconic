@@ -3,42 +3,83 @@
     <%- include('./partials/head', {title: 'Editar producto'})  %>
 <body>
     <%- include('./partials/header') %>
-    <form action="#" method="POST">
-        <div class="userProfile">
-            <h2>
-              Formulario de Creacion de Productos
-            </h2>
-        </div>
-        <div class="input-edit-products">
-            <!-- <label>Nombre del producto: </label> -->
-            <input type="text" name="nombreProducto" class="input-edit" placeholder="Nombre del producto:">
-        </div>
-        <div class="input-edit-products"> <!--<label>Descripción: </label> -->
-            <textarea class="input-edit" placeholder="Descripción:"></textarea>
-        </div>
-        <div class="input-edit-products">
-            <label for="imagen">Foto del Producto: </label>
-            <input type="file"
-            name="imagen"
-            accept=".jpg, .png">
-        </div>
-        <div class="input-edit-products">
-           <!-- <label>Categoria:</label>-->
-            <input type="text" name="categoria" class="input-edit" placeholder="Categoria:">
-        </div>
-        <div class="input-edit-products">
-           <!-- <label>Talles:</label> -->
-            <input type="text" name="talles" class="input-edit" placeholder="Talles">
-        </div>
-        <div class="input-edit-products">
-            <!-- <label>Precio:</label> -->
-            <input type="number" name="precio" class="input-edit" placeholder="Precio: ">
-        </div>
-        <div class="div-button">
-            <button type="submit" class="boton-registrarme-1">Crear producto</button>
-            <button type="reset" class="boton-registrarme-1">Cancelar</button>
-        </div>
-    </form>
+        <main class="main-create-product">
+            <form class="formulario" class="create-form" action="/products/create" method="POST" enctype="multipart/form-data">
+
+                    
+                        <h2 class="titulo-formulario">
+                        Formulario de Creacion de Productos
+                        </h2>
+                  
+
+
+                        <label  for="prod-name">Nombre del Producto </label>
+                            
+                            <input class="input-text" id="prod-name" type="text" name="name" >
+                       
+                     
+                        <label  for="description">Descripción</label>
+                            
+                            <textarea  class="input-text" name="description" ></textarea>
+                        
+                    
+                        
+             
+                        <label for="image">Foto del Producto:</label>
+                            
+                            <input 
+                                    id="image"
+                                    type="file"
+                                    name="image"
+                                    accept=".jpg, .png"> 
+                                    
+                        
+        
+                        
+                        <label  for="category">Categoria</label>
+                           
+                            <select name="category" id="category">
+                                <option value="women">Mujer</option>
+                                <option value="men">Hombre</option>
+                                <option value="unisex">Unisex</option>
+                            </select>
+                        
+
+                        
+                        <label  for="sub-category">Subategoría</label>
+                            <br>
+                            <select name="subCategory" id="sub-category">
+                                <option value="women">Indumentaria</option>
+                                <option value="men">Accesorios</option>
+                                <option value="unisex">Otros</option>
+                            </select>
+                        
+
+
+  
+                        <p>Precio</p>
+                       
+                            <input class="input-text" id="price" type="number" name="price" >
+                      
+                        
+                        
+                        
+                            <input type="checkbox" value="inSale" id="inSale" name="inSale">
+                            ¿Este producto está en oferta?
+                         
+
+                        
+                        <label for="discount">Descuento </label>
+                        
+                        <input class="input-text" id="discount" type="number" name="discount" >
+                       
+
+                        <button type="submit" class="boton-registrarme-1">Crear producto</button>
+                        <button type="reset" class="boton-registrarme-1">Cancelar</button>
+
+         
+                    </form>
+        </main>
     <%- include('./partials/footer') %>
 </body>
 </html>

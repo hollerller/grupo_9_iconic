@@ -229,8 +229,13 @@ footer .redes-sociales {
 
 .formulario label {
         display: block;
+        width: 100%;
         margin: 5px;
 
+}
+.formulario select{
+        width: 100%;
+        margin: 10px 0px;
 }
 
 /*e4b6b6*/
@@ -258,10 +263,11 @@ footer .redes-sociales {
         font-size: 16px;
         color: white;
         cursor: pointer;
+
 }
 
 button.boton-registrarme-1 {
-        width: 40%;
+        width: 100%;
         background: black;
         padding: 10px;
         border-radius: 4px;
@@ -472,6 +478,12 @@ div.div-button {
         font-size: 10px;
         color: #7A7474;
 }
+.prodDetail-box{
+        padding: 10px;
+}
+.prodDetail-box img{
+        width: 100%;
+}
 
 /* CSS formulario edicion de productos */
 
@@ -496,6 +508,20 @@ div.div-button {
                 height: 30px;
                 border: #000000 1px solid;
         }     
+/*Formulario de Creación de Productos*/
+        .main-create-product{
+                width: 100%;
+        }
+        .create-form{
+               display: block;
+        }
+        .create-form label{
+                font-size: 9px;
+        }
+        .label-crateForm{
+                display: block;
+        }
+
 /*Listado de Prods*/
         .product-box{
                 box-shadow: 4px 9px 10px hwb(29 62% 27%);
@@ -655,7 +681,12 @@ div.div-button {
         .formulario {
                 width: 90%;
         }
-
+        .prodDetail-box{
+                padding: 10px;
+        }
+        .prodDetail-box img{
+                width: 100%;
+        }
 }
 
 
@@ -834,6 +865,30 @@ div.div-button {
        .product-box{
         width: 45%;
        }
+        /*DetalleProducto*/
+        .prodDetail-box{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                padding: 22px;
+                justify-content: center;
+        }
+        .prodDetail-box img{
+                width: 40%;
+                
+        }
+        .add-product-form {  
+                margin: 10px;
+                display: inline-block;
+                padding: 20px;
+                position: absolute;
+                bottom:100px;
+                right: 30px;
+        }
+        .product-detail{
+                width: 45%;
+                padding: 20px;
+        }
 }
 
 @media (min-width:1200px) {

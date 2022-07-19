@@ -29,7 +29,7 @@ app.use('/shoppingCart',mainRouter);
 //configurando ruta hacia products
 app.use('/products',productsRouter)
 
-//app.get('/products/:id?', productRouter);
+
 
 app.use('/users', userRoutes);
 
