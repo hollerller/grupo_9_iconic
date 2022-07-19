@@ -5,39 +5,27 @@
     <body>
         <%- include('./partials/header') %>
             <main>
-                <section class="slider slider-Detail">
-                    <img src="/images/slider2.png" class="img-productDetail">
-                    <div class="box-info">
-                        <div class="price-desc">
-                            <h3>Chaqueta Jean</h3>
-                            <h4>$3.990</h4>
-                        </div>
-                        <form action="/comprar-producto" method="POST" class="buy-form">
-                            <div class="qty-size">
-                                <div class="field-qty">
-                                    <label for="qty">
-                                        <span>Cantidad</span>
-                                    </label>
-                                    <input type="number" name="quantity" min="0" value="1" title="cantidad"
-                                        class="input-qty" id="qty">
-                                </div>
-                                <div class="tallas">
-                                    <label>Talla</label for="tallas">
-                                    <!-- texto que acompana la informacion del formulario-->
-                                    <select name="categoria" class="opciones">
-                                        <option value="s">S</option>
-                                        <option value="m">M</option>
-                                        <option value="l">L</option>
-                                        <option value="xl">XL</option>
-                                    </select>
-                                </div>
+               
+                <section  class="prodDetail-box">
+                    
+                        <img src="/images/products/<%=product.image%>" class="img-productDetail">
+                    
+                        <div class="product-detail">
+                            <p class="product-name"><%=product.name %></p>
+                            <p class="product-price">Precio online:  $<%= product.price %></p>
+                            <p class="product-discount">Ahorrás un <%= product.discount %> </p>
+                            <p class="product-description"><%= product.description %> </p>
+                             <div >
+                            <form class="add-product-form"action="/add-shopping-cart" method=PUT >
+                                    <button class="boton-comprar">
+                                        <p>Agregar a la bolsa</p>
+                                    </button>
+                            </form>
                             </div>
-                            <button class="boton-comprar">
-                                <p>Agregar a la bolsa</p>
-                            </button>
-
-                        </form>
-                    </div>
+                        </div>
+                       
+                
+                </section>
                     <!--
 
             <div class="info-envio">
@@ -54,7 +42,7 @@
                     <span>Pago en <br> efectivo</span>
                 </div>
             </div>-->
-                </section>
+                
                 <%- include('./partials/newArrivals') %>
                 <section class="vender">
                     <div>

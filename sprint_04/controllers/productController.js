@@ -11,9 +11,9 @@ const productController = {
     },
     productID: (req, res) => {
         let productId = req.params.id;
+        const product = products.find(element=>element.id == productId);
         if (productId != undefined) {
-           res.render('productDetail');
-           //console.log('productos');
+           res.render('productDetail', {product:product });
         }
     }
 }
