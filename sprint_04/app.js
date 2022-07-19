@@ -26,13 +26,12 @@ app.use('/register',mainRouter);
 
 app.use('/shoppingCart',mainRouter);
 
-app.use('/edicionDeProds',mainRouter);
 //configurando ruta hacia products
 app.use('/products',productsRouter)
 
 //app.get('/products/:id?', productRouter);
 
-app.use('/user/:id?', userRoutes);
+app.use('/users', userRoutes);
 
 //Configuración EJS
 app.set('view engine','ejs');

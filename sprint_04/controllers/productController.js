@@ -15,6 +15,12 @@ const productController = {
         if (productId != undefined) {
            res.render('productDetail', {product:product });
         }
+    },
+    createProduct: (req,res) => {
+        res.render('createProducts')
+    },
+    editProduct: (req,res) => {
+        res.render('editProducts')
     }
 }
 
