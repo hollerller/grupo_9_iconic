@@ -32,6 +32,7 @@ router.post('/create', uploadFile.single('image'),productController.store)
 //punto 5 sprint 4
 
 router.get('/:id/edit', productController.editProduct);
+router.put('/:id/edit',productController.saveChanges)
 
 
 

@@ -3,7 +3,7 @@ const path = require('path');
 
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const productController = {
@@ -18,9 +18,11 @@ const productController = {
            res.render('productDetail', {product:product });
         }
     },
+    //Crear productos: GET//
     createProduct: (req,res) => {
         res.render('createProducts')
     },
+    //Crear productos: POST//
     store: (req,res)=>{
         
         let newProduct = {
@@ -39,14 +41,39 @@ const productController = {
 
         res.redirect("/products");
 },
+//Editar productos: POST//
     editProduct: (req,res) => {
 
         let idUrl = req.params.id;
-        let product = products.find(product => product.id == idUrl)
+        let product = products.find(product => product.id == idUrl);
         res.render('editProducts',{ product:product })
 
     },
-    //Crear productos: POST//
+    //Editar productos: PUT//
+    saveChanges: (req,res) =>{
+        let idUrl = req.params.id;
+        
+       products = products.map(element=>{
+            if(element.id ==idUrl){
+                element.name= req.body.name;
+                element.price= req.body.price;
+                element.discount= req.body.discount;
+                element.category= req.body.category;
+                element.subCategory=req.body.subCategory;
+                element.description= req.body.description;
+                element.image= req.file.filename;
+                element.inSale= req.body.inSale;
+                element.size=req.body.size
+            }
+            return element
+        })
+           
+          res.send(products)
+
+       
+
+    }
+    
    
 }
 
