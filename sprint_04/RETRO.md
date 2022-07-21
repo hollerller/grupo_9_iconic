@@ -1,9 +1,11 @@
 # Retrospectiva del trabajo grupal:
 ## Análisis General
 
-En estas dos semanas el grupo se vio reducido, en los hechos, a dos personas. 
+Si bien hubieron complicaciones en cuanto al tiempo para realizar las consignas del Sprint, la colaboración y el diálogo estuvieron y están siempre presentes.
 
-Si bien hubieron complicaciones en cuanto al tiempo para realizar las consignas del Sprint, la colaboración y el diálogo estuvieron y están siempre presentes.  A pesar de la incertidumbre del futuro del grupo, nos sentimos cómodos y tanto la organización y división de tareas como la realización de las mismas fluyó sin problemas.
+Durante el sprint 3 vimos la importancia de estar al día con los contenidos del curso para optimizar al máximo el tiempo que invertimos en el proyecto y que el trabajo en equipo fluya de la mejor manera.
+
+Algo para destacar es que entre los miembros hay total confianza, la comunicación fluye muy bien y el aporte de ambos se puede ver claramente.
 
 
 ###1. Comenzar a hacer
