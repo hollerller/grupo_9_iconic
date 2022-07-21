@@ -11,16 +11,21 @@
                         <img src="/images/products/<%= product.image%>" class="img-productDetail">
                     
                         <div class="product-detail">
-                            <p class="product-name"><%=product.name %></p>
-                            <p class="product-price">Precio online:  $<%= product.price %></p>
-                            <p class="product-discount">Ahorrás un <%= product.discount %> </p>
-                            <p class="product-description"><%= product.description %> </p>
-                             <div >
-                            <form class="add-product-form"action="/add-shopping-cart" method=PUT >
-                                    <button class="boton-comprar">
-                                        <p>Agregar a la bolsa</p>
-                                    </button>
-                            </form>
+                                <p class="product-name"><%=product.name %></p>
+                                <p class="product-price">Precio online:  $<%= product.price %></p>
+                                <p class="product-discount">Ahorrás un <%= product.discount %> </p>
+                                <p class="product-description"><%= product.description %> </p>
+                             <br>
+                            <div class="add-product-form">
+                                <form action="/add-shopping-cart" method=PUT >
+                                        <input class="add-product-button" type="button" value="Agregar a la bolsa">   
+                                </form>
+                            </div>
+                            
+                            <div class="delete-product-form">
+                                <form action="/products/<%=product.id%>/delete?_method=DELETE" method="POST">
+                                    <button type="submit" class="delete-product-button">Eliminar producto</button>                       
+                                </form>
                             </div>
                         </div>
                        

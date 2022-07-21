@@ -69,11 +69,17 @@ const productController = {
         })
            
           res.send(products)
+    },
+    //ruta DELETE
+    delete:(req,res)=>{
+        let idUrl = req.params.id;
 
-       
-
+        let newList = products.filter(element=>element.id!=idUrl)
+        products =newList;
+        fs.writeFileSync(productsFilePath,JSON.stringify(products)); 
+        
+        res.redirect('/products')
     }
-    
    
 }
 

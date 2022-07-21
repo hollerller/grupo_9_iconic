@@ -484,6 +484,39 @@ div.div-button {
 .prodDetail-box img{
         width: 100%;
 }
+.add-product-form{
+        display: block;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+}
+.add-product-button{
+        background-color: #119153;
+        font-family: 'Roboto', Helvetica, sans-serif;
+        border: none;
+        padding: 15px;
+        border-radius: 5px;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 500;
+}
+
+.delete-product-form{
+        display: block;
+        text-align: right;
+        margin: 20px 0px;
+}
+.delete-product-button{
+        background-color: #FFFFFF;
+        font-family: 'Roboto', Helvetica, sans-serif;
+        border: none;
+        padding: 10px;
+        color: #9B0000;
+        font-size: 10px;
+        border-radius: 5px;
+        text-decoration: underline;
+        font-weight: 400;
+}
 
 /* CSS formulario edicion de productos */
 
@@ -877,14 +910,6 @@ div.div-button {
                 width: 40%;
                 
         }
-        .add-product-form {  
-                margin: 10px;
-                display: inline-block;
-                padding: 20px;
-                position: absolute;
-                bottom:100px;
-                right: 30px;
-        }
         .product-detail{
                 width: 45%;
                 padding: 20px;
@@ -978,7 +1003,7 @@ div.div-button {
                 display: inline-block;
                 align-items: top;
                 padding: 10px;
-                position: relative;
+                
                 
         }
         .product-name{
@@ -998,14 +1023,7 @@ div.div-button {
                 width: 40%;
                 
         }
-        .add-product-form {  
-                margin: 10px;
-                display: inline-block;
-                padding: 20px;
-                position: absolute;
-                bottom:100px;
-                right: 30px;
-        }
+       
         .product-detail{
                 width: 45%;
                 padding: 20px;
