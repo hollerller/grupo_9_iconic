@@ -3,7 +3,7 @@ const createError = require('http-errors');
 const express = require('express');
 const app = express();
 const path = require('path');
-//const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 
 
@@ -12,6 +12,7 @@ const path = require('path');
 app.use(express.static('public')); //llamar la carpeta public
 app.use(express.urlencoded({ extended: false }));//Para capturar informacion
 app.use(express.json()); //Para capturar info
+app.use(methodOverride('_method'));
 
 //requiriendo los routers
 const mainRouter = require('./routes/mainRouter');

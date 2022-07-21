@@ -21,28 +21,33 @@ const productController = {
     createProduct: (req,res) => {
         res.render('createProducts')
     },
-    editProduct: (req,res) => {
-        res.render('editProducts')
-    },
-    //Crear productos: POST//
     store: (req,res)=>{
         
-                let newProduct = {
-                    id: (products.length+1),
-                    name: req.body.name,
-                    price: req.body.price,
-                    discount: req.body.discount,
-                    category: req.body.category,
-                    subCategory:req.body.subCategory,
-                    description: req.body.description,
-                    image: req.file.filename,
-                    inSale: req.body.inSale
-                };
-                products.push(newProduct);
-                fs.writeFileSync(productsFilePath,JSON.stringify(products)); 
-        
+        let newProduct = {
+            id: (products.length+1),
+            name: req.body.name,
+            price: req.body.price,
+            discount: req.body.discount,
+            category: req.body.category,
+            subCategory:req.body.subCategory,
+            description: req.body.description,
+            image: req.file.filename,
+            inSale: req.body.inSale
+        };
+        products.push(newProduct);
+        fs.writeFileSync(productsFilePath,JSON.stringify(products)); 
+
         res.redirect("/products");
-    }
+},
+    editProduct: (req,res) => {
+
+        let idUrl = req.params.id;
+        let product = products.find(product => product.id == idUrl)
+        res.render('editProducts',{ product:product })
+
+    },
+    //Crear productos: POST//
+   
 }
 
 module.exports = productController;

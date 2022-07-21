@@ -3,41 +3,86 @@
     <%- include('./partials/head', {title: 'Editar producto'})  %>
 <body>
     <%- include('./partials/header') %>
-    <form action="#" method="POST">
-        <div class="userProfile">
-            <h2>
-              Formulario de Edición de Productos
+    
+       <main class="main-create-product">
+        <form class="formulario" class="create-form" action="/products/__/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+
+                    
+            <h2 class="titulo-formulario">
+            Formulario de Edición de Productos
             </h2>
-        </div>
-        <div class="input-edit-products">
-            <!-- <label>Nombre del producto: </label> -->
-            <input type="text" name="nombreProducto" class="input-edit" placeholder="Nombre del producto:">
-        </div>
-        <div class="input-edit-products"> <!--<label>Descripción: </label> -->
-            <textarea class="input-edit" placeholder="Descripción:"></textarea>
-        </div>
-        <div class="input-edit-products">
-            <label for="imagen">Foto del Producto: </label>
-            <input type="file"
-            name="imagen"
-            accept=".jpg, .png">
-        </div>
-        <div class="input-edit-products">
-           <!-- <label>Categoria:</label>-->
-            <input type="text" name="categoria" class="input-edit" placeholder="Categoria:">
-        </div>
-        <div class="input-edit-products">
-           <!-- <label>Talles:</label> -->
-            <input type="text" name="talles" class="input-edit" placeholder="Talles">
-        </div>
-        <div class="input-edit-products">
-            <!-- <label>Precio:</label> -->
-            <input type="number" name="precio" class="input-edit" placeholder="Precio: ">
-        </div>
-        <div class="div-button">
-            <button type="submit" class="boton-registrarme-1">Editar Producto</button>
-        </div>
-    </form>
+      
+
+
+            <label  for="prod-name">Nombre del Producto </label>
+                
+                <input class="input-text" id="prod-name" type="text" name="name" value="<%= product.name %> ">
+           
+         
+            <label  for="description">Descripción</label>
+                
+                <textarea  class="input-text" name="description" ><%= product.description %> </textarea>
+            
+        
+            
+ 
+            <label for="image">Foto del Producto:</label>
+                
+                <input 
+                        id="image"
+                        type="file"
+                        name="image"
+                        accept=".jpg, .png"
+                        value="<%= product.image %> "> 
+                        
+            
+
+            
+            <label  for="category">Categoria</label>
+               
+                <select name="category" id="category" value="<%= product.category %> ">
+                    <option value="women">Mujer</option>
+                    <option value="men">Hombre</option>
+                    <option value="unisex">Unisex</option>
+                </select>
+            
+
+            
+            <label  for="sub-category">Subategoría</label>
+                <br>
+                <select name="subCategory" id="sub-category" value="<%= product.subCategory %> ">
+                    <option value="clothing">Indumentaria</option>
+                    <option value="accesory">Accesorios</option>
+                    <option value="other">Otros</option>
+                </select>
+            
+
+
+
+            <p>Precio</p>
+                <input type="number" name="price" id="price" class="input-text" value="<%= product.price %> ">
+    
+               
+                <label  for="inSale"> ¿Este producto está en oferta?</label>
+                <br>
+                <select name="inSale" id="inSale" >
+                    <option value = "yes">Sí</option>
+                    <option value = "no">Por ahora no</option>
+        
+                </select>
+             
+
+            
+            <label for="discount">Descuento </label>
+            
+                <input type="number" class="input-text" id="discount" name="discount" value="<%=product.discount %> ">
+
+            <button type="submit" class="boton-registrarme-1">Guardar cambios</button>
+            <button type="reset" class="boton-registrarme-1">Cancelar</button>
+
+
+        </form>
+       </main>
     <%- include('./partials/footer') %>
 </body>
 </html>
