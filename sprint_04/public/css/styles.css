@@ -845,24 +845,28 @@ div.div-button {
        .logo{
         max-width: 300px;
        }
+       /* ajustes searchbar*/
         .search {
                 display: flex;
                 width: auto;
+                position: relative;
+                flex-grow: 1;
 
         }
 
         .search-form {
-                display: inline;
+                display: flex;
                 border: #7A7474 solid;
                 border-radius: 5px;
-                
+                width: 70%;
+                padding-left: 40px;
+                flex-direction: row;
+                justify-content: space-around;
 
         }
         .search-form button{
                 border: none;
                 background-color: #fdfdfd;
-                
-
         }
 
         .search-form input {
