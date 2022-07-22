@@ -38,9 +38,11 @@ Futura: https://es.wikipedia.org/wiki/Futura
 
 .top-bar {
         display: flex;
-        justify-content: space-around;
         width: 100%;
         align-items: center;
+        justify-content: right;
+        position: relative;
+        padding: 20px;
 }
 
 .search-form {
@@ -49,8 +51,9 @@ Futura: https://es.wikipedia.org/wiki/Futura
 
 .logo img {
         display: inline-block;
-        max-width: 50%;
-
+        max-width: 100px;
+        align-items: center;
+        right: 10px;
 }
 
 .logo {
@@ -77,20 +80,21 @@ Futura: https://es.wikipedia.org/wiki/Futura
         justify-content: flex-start;
         align-self: center;
         font-size: 10px;
-
+        font-size: 25px;
         width: auto;
 }
 
 .search-button,
 .carrito-compras,
 .login-icon {
-        width: 10%;
-        text-align: end;
+        width: 20%;
+        text-align: right;
         color: #7A7474;
         padding: 9px;
         align-self: center;
         font-size: 20px;
         text-align: center;
+
 }
 
 .top-bar .carrito-compras a:hover {
@@ -663,9 +667,23 @@ div.div-button {
         .carrito-compras {
                 display: inline;
         }
+        .top-bar{
+                justify-content: right;
+        }
+        .login-icon,
+        .search-button,
+        .carrito-compras{
+                padding: 3px;
+                max-width: 45px;
+        }
+        .logo{
+                width: auto;
+                position: absolute;
+                left: 10px;
 
-        .logo {
-                text-align: left;
+        }
+        .logo img{
+                max-width: 140px;
         }
 
         .burger-menu {
@@ -745,7 +763,7 @@ div.div-button {
 
 
 @media (min-width:450px) {
-
+        
         .formulario {
                 width: 70%;
 
@@ -842,42 +860,39 @@ div.div-button {
 
 
 @media (min-width:769px) {
-       .logo{
-        max-width: 300px;
-       }
-        .search {
-                display: flex;
-                width: auto;
-
-        }
-
-        .search-form {
-                display: inline;
-                border: #7A7474 solid;
+        .search-form{
+                display: inline-block;
+                height: 30px;
                 border-radius: 5px;
-                
-
+                min-width: 450px;
+                max-width: 800px;
+                border: #b85c5c solid 3px;
+                margin: auto
+        }
+        .search-form input{
+                width: 90%;
+                height: 20px;
+                border: none;
         }
         .search-form button{
                 border: none;
-                background-color: #fdfdfd;
-                
-
+                background-color: #FFFFFF;
+                height: 20px;
+                color: #b85c5c ;
         }
-
-        .search-form input {
-                display: inline;
-                border: none;
-                padding: 8px;
-        }
-
-        .search-button {
-                display: none;
-        }
-
-        .formulario {
-                width: 60%;
-        }
+       .logo{
+                max-width: fit-content;
+                position: absolute;
+                left: 10px;
+       }
+       .logo img{
+        max-width: 300px;
+        
+       }
+       .search-button{
+        display: none;
+       }
+        
 
         /*shopping cart */
         .articulo-compra img {
@@ -1049,5 +1064,5 @@ div.div-button {
                 width: 45%;
                 padding: 20px;
         }
-
+       
 }
