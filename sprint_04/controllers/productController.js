@@ -53,7 +53,7 @@ const productController = {
     saveChanges: (req,res) =>{
         let idUrl = req.params.id;
         
-       products = products.map(element=>{
+       let editedList =  products.map(element=>{
             if(element.id ==idUrl){
                 element.name= req.body.name;
                 element.price= req.body.price;
@@ -67,8 +67,11 @@ const productController = {
             }
             return element
         })
-           
-          res.send(products)
+        fs.writeFileSync(productsFilePath,JSON.stringify(editedList));   
+        const product = editedList.find(element=>element.id == idUrl);
+        if (idUrl != undefined) {
+            res.render('productDetail',{ product: product })
+        }    
     },
     //ruta DELETE
     delete:(req,res)=>{
