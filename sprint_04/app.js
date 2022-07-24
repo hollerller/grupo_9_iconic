@@ -33,7 +33,21 @@ app.use('/shoppingCart',mainRouter);
 //configurando ruta hacia products
 app.use('/products',productsRouter)
 
+app.get('/serie/:id', (req, res) => {
+    let idSerie = req.params.id;
+    
 
+/* --------------------------- *//*prueba ejercicio playground *//* --------------------------- */
+    let serie = series.find(item => item.id == idSerie);
+    res.send(serie.name);
+    }
+)
+
+let series = [ { "id": 1, "name": "Friends" }, { "id": 2, "name": "Breaking Bad" }, { "id": 3, "name": "Dexter" }, { "id": 4, "name": "Six Feet Under" } ]
+console.log (series);
+let serienoJSON = JSON.stringify(series);
+console.log(serienoJSON)
+/* --------------------------- *//* --------------------------- *//* --------------------------- */
 
 app.use('/users', userRoutes);
 

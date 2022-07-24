@@ -37,11 +37,11 @@ const productController = {
             inSale: req.body.inSale
         };
         products.push(newProduct);
-        fs.writeFileSync(productsFilePath,JSON.stringify(products)); 
+        fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' ')); 
 
         res.redirect("/products");
 },
-//Editar productos: POST//
+//Editar productos: GET//
     editProduct: (req,res) => {
 
         let idUrl = req.params.id;
@@ -67,7 +67,7 @@ const productController = {
             }
             return element
         })
-        fs.writeFileSync(productsFilePath,JSON.stringify(editedList));   
+        fs.writeFileSync(productsFilePath,JSON.stringify(editedList, null, ' '));   
         const product = editedList.find(element=>element.id == idUrl);
         if (idUrl != undefined) {
             res.render('productDetail',{ product: product })
@@ -79,7 +79,7 @@ const productController = {
 
         let newList = products.filter(element=>element.id!=idUrl)
         products =newList;
-        fs.writeFileSync(productsFilePath,JSON.stringify(products)); 
+        fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' ')); 
         
         res.redirect('/products')
     }

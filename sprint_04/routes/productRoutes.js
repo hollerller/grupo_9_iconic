@@ -41,6 +41,8 @@ router.delete('/:id/delete',productController.delete);
 
 
 
+
+
 //router.get('/create', productController)
 
 module.exports = router;
