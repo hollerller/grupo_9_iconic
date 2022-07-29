@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Registro'})  %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <form class="formulario" action="/register" method="post">
+
+                    <h3 class="titulo-formulario"> Crea tu cuenta </h3>
+
+                    <input class="input-text" placeholder="Nombre y Apellido" type="text" name="nombreYApellido"
+                        id="nombre-apellido" required minlength=10 required>
+
+                    <input class="input-text" placeholder="Usuario" type="text" id="usuario" name="usuario" required
+                        minlength=6>
+
+                    <input class="input-text" placeholder="Correo electrónico" type="email" id="mail" name="email"
+                        required>
+
+                    <input class="input-text" placeholder="Contraseña" type="password" name="contraseña" id="contraseña"
+                        required minlength=8 required>
+
+                    <input class="input-text" placeholder="Confirma la contraseña" type="password" name="contraseñaConf"
+                        id="contraseñaConfirmada" required minlength=8 required>
+
+
+
+
+                    <!--  <input class="input-text" placeholder="Domicilio" type="text" id="domicilio" name="domicilio"> -->
+
+                    <!-- <label  for="fechaNacimiento">Fecha de nacimiento</label>  -->
+                    <input class="input-text" type="date" id="fechaNacimiento" name="fechaNacimiento">
+
+                    <label class="terminos" for="aceptoTerminos"> 
+                        <input 
+                            type="checkbox" 
+                            value="aceptoTerminos"
+                            id="aceptoTerminos" 
+                            name="tyc" 
+                            required>
+                            Estoy de acuerdo con los términos y condiciones
+                    </label>
+
+
+                    <input class="boton-registrarme" type="submit" value="Registrarme">
+
+
+
+
+
+                    <!--  <label  for="perfilUsuario">¿Preferís comprar o vender?</label><br>
+                <label>
+                        <input type="radio" id="perfilUsuario" name="perfil" value="Comprar">Comprar</label>
+                <label>
+                    <input type="radio" id="perfilUsuario" name="perfil" value="Vender">Vender</label>
+           <div class="checkbox">
+                <label for="intereses">Seleccioná las categorías de tu interés</label>
+                
+                    <label for="electro"> <input  type="checkbox" value="electro" id="electro" name="intereses" > Electro</label>
+                    <label for="moda"> <input  type="checkbox" value="moda" id="moda" name="intereses" > Moda</label>
+                    <label for="hogar"> <input  type="checkbox" value="hogar" id="hogar" name="intereses" > Hogar</label>
+                    <label for="jugueteria"> <input  type="checkbox" value="jugueteria" id="jugueteria" name="intereses" > Jugueteria</label>
+                    <label for="vidaSana"> <input  type="checkbox" value="vidaSana" id="vidaSana" name="intereses" > Vida sana</label>
+            </div>
+            <br><label for="fotoPerfil">Seleccioná tu foto de perfil</label>
+                <input type="file" name="avatar" id="fotoPerfil"> <br> -->
+
+
+
+
+
+                    <!-- <div class="boton-registro">
+            <button class="boton-registrarme" type="submit" </button>
+        </div> -->
+
+
+
+                </form>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
+</html>

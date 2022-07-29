@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Detalle De Usuario' }) %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <div class="profileBox">
+                <section>
+                    <div class="userProfile">
+                        <h2>
+                            Hola <%=usuario.first_name%>
+                        </h2>
+                    </div>
+                    <div>
+                        <img src="/images/users/<%=usuario.avatar%>" class="profilePic">
+                    </div>
+                </section>
+                <section id="userData">
+                    <article>
+                        <h3>Nombre:</h3>
+                        <p>
+                            <%= usuario.first_name %>
+                        </p>
+                    </article>
+                    <article>
+                        <h3>Apellido:</h3>
+                        <p>
+                            <%= usuario.last_name %>
+                        </p>
+                    </article>
+                    <article>
+                        <h3>Correo electrónico:</h3>
+                        <p>
+                            <%= usuario.email %>
+                        </p>
+                    </article>
+                    <article>
+                        <h3>Perfil:</h3>
+                        <p>
+                            <%= usuario.category %>
+                        </p>
+                    </article>
+                    <article>
+                        <h3>Fecha de Nacimiento:</h3>
+                        <p>
+                            <%= usuario.birthday %>
+                        </p>
+                    </article>
+                </section>
+                <section>
+                            <a href="#">Editar perfil</a>
+                </section>
+            </div>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
+</html>
