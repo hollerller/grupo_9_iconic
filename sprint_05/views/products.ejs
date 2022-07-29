@@ -8,24 +8,25 @@
             <div class="section-title">
                 <h2>Ofertas</h2>
             </div>
+              
         
             
                 <% for(product of list){%>
                     <% if(product.inSale === "yes") {%> 
                     <div class="product-box">
-                        
-                               
-                                    
                                         <a href="#"><img class="foto-producto" src="/images/products/<%= product.image %> " alt="Imagen de Producto"></a>
                                     
                                 <div class="product-detail">
                                     <p class="product-name"><%=product.name %></p>
                                     <p class="product-price">Precio online:  $<%= product.price %></p>
-                                    <p class="product-discount">Ahorrás un <%= product.discount %> </p>
-                                    <p class="product-description"><%= product.description %> </p>
-                                </div>
-
- 
+                                    <p class="product-discount">Ahorrás un <%= product.discount %>%</p>
+                                    <!--p class="product-description"><%= product.description %> <p-->
+                                    <div class="see-box">
+                                        <a class="see-button"  href="./products/<%=product.id %> ">ver</a>
+                                    </div> 
+                            </div>
+                               
+                                
                     </div>
                     <% } %> 
                 <% } %> 
