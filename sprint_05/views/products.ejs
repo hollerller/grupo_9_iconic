@@ -14,7 +14,16 @@
                 <% for(product of list){%>
                     <% if(product.inSale === "yes") {%> 
                     <div class="product-box">
-                                        <a href="#"><img class="foto-producto" src="/images/products/<%= product.image %> " alt="Imagen de Producto"></a>
+                                        <% if(product.image != null) {%> 
+                                                <a href="#">
+                                                    <img class="foto-producto" src="/images/products/<%= product.image %> " alt="Imagen de Producto">
+                                                </a>
+                                        <% } else {%>
+
+                                            <a href="#">
+                                                <img class="foto-producto" src="/images/products/product-default.jpeg%> " alt="Imagen de Producto">
+                                            </a>                                            
+                                        <% } %>  
                                     
                                 <div class="product-detail">
                                     <p class="product-name"><%=product.name %></p>
