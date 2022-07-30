@@ -1226,5 +1226,16 @@
   "subCategory": "women",
   "description": "INFORMACIÓN\r\nTela: Jean\r\nColor: Azul\r\nFit: Denim",
   "image": "1658256581648_img_.jpg"
+ },
+ {
+  "id": 104,
+  "name": "",
+  "price": "",
+  "discount": "",
+  "category": "women",
+  "subCategory": "clothing",
+  "description": "",
+  "image": "1659189329392_img_.jpg",
+  "inSale": "yes"
  }
 ]
