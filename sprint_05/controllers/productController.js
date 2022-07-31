@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const {validationResult} = require('express-validator');
+
 
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -24,26 +26,29 @@ const productController = {
     },
     //Crear productos: POST//
     store: (req,res)=>{
+        let errores = validationResult(req);
+        
         let file = req.file;
-        if(file){
-                    let newProduct = {
-                    id: (products.length+1),
-                    name: req.body.name,
-                    price: req.body.price,
-                    discount: req.body.discount,
-                    category: req.body.category,
-                    subCategory:req.body.subCategory,
-                    description: req.body.description,
-                    image: req.file.filename,
-                    inSale: req.body.inSale
-                };
-                products.push(newProduct);
-                fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' ')); 
-
-                res.redirect("/products");
+        if(file && validationResult.isEmpty()){
+            let newProduct = {
+                id: (products.length+1),
+                name: req.body.name,
+                price: req.body.price,
+                discount: req.body.discount,
+                category: req.body.category,
+                subCategory:req.body.subCategory,
+                description: req.body.description,
+                image: req.file.filename,
+                inSale: req.body.inSale
+            };
+            products.push(newProduct);
+            fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' ')); 
+    
+            res.redirect("/products");   
         }else{
-            res.render('createProducts')
+            return res.render('createProducts', { errorsMessage : errores.mapped()})
         }
+                   
         
 },
 //Editar productos: GET//

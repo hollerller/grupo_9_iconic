@@ -1228,113 +1228,14 @@
   "image": "1658256581648_img_.jpg"
  },
  {
-  "id": 104,
-  "name": "Prueba ",
-  "price": "3333",
-  "discount": "23",
-  "category": "men",
-  "subCategory": "clothing",
-  "description": "imagen por default",
-  "image": "/images/products/product-default.jpeg",
-  "inSale": "yes"
- },
- {
-  "id": 105,
-  "name": "Prueba",
-  "price": "23443",
-  "discount": "23",
-  "category": "women",
-  "subCategory": "clothing",
-  "description": "Imagen por default bolsa de compra",
-  "image": "product-default.jpeg",
-  "inSale": "yes"
- },
- {
-  "id": 106,
-  "name": "Nueva prueba",
-  "price": "5600",
-  "discount": "12",
-  "category": "women",
-  "subCategory": "clothing",
-  "description": "IMAGEN POR DEFAULT",
-  "image": "product-default.jpeg",
-  "inSale": "yes"
- },
- {
-  "id": 107,
-  "name": "Prueba 3",
-  "price": "3445",
-  "discount": "5",
-  "category": "women",
-  "subCategory": "clothing",
-  "description": "Imagen x default",
-  "image": "product-default.jpeg",
-  "inSale": "yes"
- },
- {
-  "id": 108,
-  "name": "Prueba 4",
-  "price": "3455",
-  "discount": "4",
-  "category": "women",
-  "subCategory": "clothing",
-  "description": "IMAGEN POR DEFAULT",
-  "image": "product-default.jpeg",
-  "inSale": "yes"
- },
- {
-  "id": 109,
+  "id": 103,
   "name": "prueba",
-  "price": "5678",
-  "discount": "19",
-  "category": "women",
-  "subCategory": "clothing",
-  "description": "imagen = null",
-  "image": "product-default.jpeg",
-  "inSale": "yes"
- },
- {
-  "id": 110,
-  "name": "Gorro",
-  "price": "23",
+  "price": "34556",
   "discount": "4",
   "category": "women",
   "subCategory": "clothing",
-  "description": "imagen default",
-  "image": "product-default.jpeg",
-  "inSale": "yes"
- },
- {
-  "id": 111,
-  "name": "Gorro",
-  "price": "244",
-  "discount": "3",
-  "category": "women",
-  "subCategory": "clothing",
-  "description": "jfja;sdflads",
-  "image": "product-default.jpeg",
-  "inSale": "yes"
- },
- {
-  "id": 112,
-  "name": "Gorro Yummy",
-  "price": "454",
-  "discount": "45",
-  "category": "men",
-  "subCategory": "clothing",
-  "description": "gorro de lana",
-  "image": "product-default.jpeg",
-  "inSale": "yes"
- },
- {
-  "id": 113,
-  "name": "Gorro Yummy",
-  "price": "4445",
-  "discount": "10",
-  "category": "women",
-  "subCategory": "clothing",
-  "description": "afasfasdf",
-  "image": "product-default.jpeg",
+  "description": "16:50",
+  "image": "1659210657579_img_.jpg",
   "inSale": "yes"
  }
 ]

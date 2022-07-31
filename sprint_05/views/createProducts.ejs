@@ -10,8 +10,11 @@
                         <h2 class="titulo-formulario">
                         Formulario de Creacion de Productos
                         </h2>
-                  
-
+                        <% if (locals && locals.errorsMessage) {%> 
+                        <% for (let error in errorsMessage){ %> 
+                            <p class="error-message"><%= errorsMessage[error].msg %> </p>
+                            <% } %> 
+                        <% } %> 
 
                         <label  for="prod-name">Nombre del Producto </label>
                             

@@ -2,9 +2,13 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+//requiriendo express-validator//
+const {body} = require('express-validator');
 
 //requiriendo el controlador//
 const productController = require('../controllers/productController');
+
+
 
 //Configurando multer storage//
 const storage = multer.diskStorage({ 
@@ -17,6 +21,13 @@ const storage = multer.diskStorage({
   //Variable upload//
 const uploadFile = multer({storage});
 
+//Creando validaciones para el formulario de creación de productos//
+const createValidations = [
+   body('name').notEmpty().withMessage('Tenés que completar el nombre del producto'),
+   body('description').notEmpty().withMessage('Por favor, agregá una breve descripción del producto'),
+   body('price').notEmpty().withMessage('Tenés que indicar el precio del producto'),
+]
+
 // punto 1. sprint 4
 router.get('/',productController.list);
 
@@ -28,7 +39,7 @@ router.get('/create', productController.createProduct)
 router.get('/:id', productController.productID);
 
 //punto 4 sprint 4 - Creación de productos por POST//
-router.post('/create', uploadFile.single('image'),productController.store)
+router.post('/create',uploadFile.single('image'),createValidations,productController.store)
 //punto 5 sprint 4
 
 router.get('/:id/edit', productController.editProduct);
