@@ -581,6 +581,8 @@ div.div-button {
         }
         .error-message{
                 color: #9B0000;
+                margin-left: 15px;
+                font-size: 13px;
         }
 
 /*Listado de Prods*/

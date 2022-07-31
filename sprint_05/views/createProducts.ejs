@@ -10,21 +10,32 @@
                         <h2 class="titulo-formulario">
                         Formulario de Creacion de Productos
                         </h2>
-                        <% if (locals && locals.errorsMessage) {%> 
-                        <% for (let error in errorsMessage){ %> 
-                            <p class="error-message"><%= errorsMessage[error].msg %> </p>
-                            <% } %> 
-                        <% } %> 
+                        
 
                         <label  for="prod-name">Nombre del Producto </label>
                             
-                            <input class="input-text" id="prod-name" type="text" name="name" >
-                       
+                            <input 
+                                class="input-text" 
+                                d="prod-name" 
+                                type="text" 
+                                name="name"
+                                value="<%= locals.oldData ? oldData.name : null%>  "
+                            >
+
+                            <% if (locals.errorsMessage && errorsMessage.name) {%> 
+                              
+                                    <p class="error-message"><%= errorsMessage.name.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                                 
+                                <% } %> 
                      
                         <label  for="description">Descripción</label>
                             
-                            <textarea  class="input-text" name="description" ></textarea>
-                        
+                            <textarea  class="input-text" name="description"  value="<%= locals.oldData ? oldData.description : null%>  "></textarea>
+                            <% if (locals.errorsMessage && errorsMessage.description) {%> 
+                              
+                                <p class="error-message"><%= errorsMessage.description.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                             
+                            <% } %> 
                     
                         
              
@@ -62,8 +73,12 @@
   
                         <p>Precio</p>
                        
-                            <input class="input-text" id="price" type="number" name="price" >
-                
+                            <input class="input-text" id="price" type="number" name="price"  value="<%= locals.oldData ? oldData.price : null%>  " >
+                            <% if (locals.errorsMessage && errorsMessage.price) {%> 
+                              
+                                <p class="error-message"><%= errorsMessage.price.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                             
+                            <% } %> 
                            
                             <label  for="inSale"> ¿Este producto está en oferta?</label>
                             <br>
