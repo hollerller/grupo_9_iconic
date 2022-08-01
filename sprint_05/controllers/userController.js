@@ -30,8 +30,23 @@ const usersController = {
                 registerErrors: registerValidation.mapped(),
                 oldData: req.body
             })
-        }
-    },
+        } else {
+            let newUser = {
+                id: (usersArray.length+1),
+                fullName: req.body.nombreYApellido,
+                username: req.body.username,
+                email: req.body.email,
+                avatar: req.file.filename,
+                password: req.body.contrasena,
+                birthday: req.body.fechaNacimiento,
+                terms: req.body.tyc,
+                category: 'vendedor'
+               }
+               usersArray.push(newUser);
+            fs.writeFileSync(usersFilePath, JSON.stringify(usersArray, null, ' ')); 
+            res.redirect("/products");   
+            };
+        },
 
     // Mostrar perfil de usuario
     userID: (req, res) => {

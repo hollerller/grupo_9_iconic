@@ -51,8 +51,6 @@ router.get('/register', usersController.register);
 router.post('/register', uploadFile.single('avatar'), registerValidations, usersController.createUser);
 
 
-
-
 //Formulario de login
 router.get('/login', usersController.login);
 //Procesar el login

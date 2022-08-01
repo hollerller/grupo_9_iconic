@@ -9,7 +9,7 @@
                 <section>
                     <div class="userProfile">
                         <h2>
-                            Hola <%=usuario.first_name%>
+                            Hola <%=usuario.fullName%>
                         </h2>
                     </div>
                     <div>
@@ -20,13 +20,13 @@
                     <article>
                         <h3>Nombre:</h3>
                         <p>
-                            <%= usuario.first_name %>
+                            <%= usuario.fullName %>
                         </p>
                     </article>
                     <article>
-                        <h3>Apellido:</h3>
+                        <h3>Usuario:</h3>
                         <p>
-                            <%= usuario.last_name %>
+                            <%= usuario.username %>
                         </p>
                     </article>
                     <article>
