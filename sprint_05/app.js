@@ -22,17 +22,18 @@ const productsRouter = require('./routes/productRoutes');
 
 app.use('/',mainRouter);
 
-app.use('/login',mainRouter );
+//app.use('/login',mainRouter );
 
 app.use('/productDetail',mainRouter);
 
-app.use('/register',mainRouter);
+//app.use('/register',mainRouter);
 
 app.use('/shoppingCart',mainRouter);
 
 //configurando ruta hacia products
 app.use('/products',productsRouter)
 
+//Confiurando ruta hacia users
 app.use('/users', userRoutes);
 
 //Configuración EJS

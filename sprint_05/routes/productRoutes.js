@@ -23,7 +23,7 @@ const uploadFile = multer({storage});
 
 //Creando validaciones para el formulario de creación de productos//
 const createValidations = [
-   body('name').notEmpty().withMessage('Tenés que completar el nombre del producto'),
+   body('prodName').notEmpty().withMessage('Tenés que completar el nombre del producto'),
    body('description').notEmpty().withMessage('Por favor, agregá una breve descripción del producto'),
    body('price').notEmpty().withMessage('Tenés que indicar el precio del producto'),
 ]
@@ -31,7 +31,7 @@ const createValidations = [
 // punto 1. sprint 4
 router.get('/',productController.list);
 
-// punto 2. sprint 4 - CREACIÓN DE PRODUCTOS POR GET
+// punto 2. sprint 4 - CREACIÓN DE PRODUCTOS mostrar formulario
 
 router.get('/create', productController.createProduct)
 

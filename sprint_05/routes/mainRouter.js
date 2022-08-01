@@ -3,8 +3,8 @@ const router = express.Router();
 const mainController = require('../controllers/mainController')
 
 router.get('/',mainController.home);
-router.get('/login',mainController.login);
-router.get('/register',mainController.register);
+//router.get('/login',mainController.login);
+//router.get('/register',mainController.register);
 router.get('/productDetail',mainController.productDetail);
 router.get('/shoppingCart',mainController.shoppingCart);
 //router.get('/editProducts',mainController.editProducts);

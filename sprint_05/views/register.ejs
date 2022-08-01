@@ -5,32 +5,59 @@
     <body>
         <%- include('./partials/header') %>
             <main>
-                <form class="formulario" action="/register" method="post">
+                <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
 
                     <h3 class="titulo-formulario"> Crea tu cuenta </h3>
 
                     <input class="input-text" placeholder="Nombre y Apellido" type="text" name="nombreYApellido"
-                        id="nombre-apellido" required minlength=10 required>
+                        id="nombre-apellido" value="<%= locals.oldData ? oldData.nombreYApellido : null  %>" >  
+                    <% if (locals.registerErrors && registerErrors.nombreYApellido) { %>
+                        <p class="error-message"><%= registerErrors.nombreYApellido.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
 
-                    <input class="input-text" placeholder="Usuario" type="text" id="usuario" name="usuario" required
-                        minlength=6>
+                    <input class="input-text" placeholder="Usuario" type="text" id="usuario" name="usuario"
+                    value="<%= locals.oldData ? oldData.usuario : null  %>">
+                    <% if (locals.registerErrors && registerErrors.usuario) { %>
+                        <p class="error-message"><%= registerErrors.usuario.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
 
                     <input class="input-text" placeholder="Correo electrónico" type="email" id="mail" name="email"
-                        required>
+                    value="<%= locals.oldData ? oldData.email : null  %>">
+                    <% if (locals.registerErrors && registerErrors.email) { %>
+                        <p class="error-message"><%= registerErrors.email.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+                    
+                        <label for="avatar">Avatar de usuario:</label>
+                            
+                        <input 
+                                id="avatar"
+                                type="file"
+                                name="avatar"
+                                accept=".jpg, .png"> 
 
-                    <input class="input-text" placeholder="Contraseña" type="password" name="contraseña" id="contraseña"
-                        required minlength=8 required>
+                    <% if (locals.registerErrors && registerErrors.avatar) { %>
+                            <p class="error-message"><%= registerErrors.avatar.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
 
-                    <input class="input-text" placeholder="Confirma la contraseña" type="password" name="contraseñaConf"
-                        id="contraseñaConfirmada" required minlength=8 required>
-
-
-
-
+                    <input class="input-text" placeholder="Contraseña" type="password" name="contrasena" id="contrasena"
+                    value="<%= locals.oldData ? oldData.contrasena : null  %>">
+                    <% if (locals.registerErrors && registerErrors.contrasena) { %>
+                        <p class="error-message"><%= registerErrors.contrasena.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+                    <input class="input-text" placeholder="Confirma la contraseña" type="password" name="contrasenaConf"
+                        id="contrasenaConfirmada"
+                        value="<%= locals.oldData ? oldData.contrasenaConf : null  %>">
+                        <% if (locals.registerErrors && registerErrors.contrasenaConf) { %>
+                            <p class="error-message"><%= registerErrors.contrasenaConf.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                        <% } %>
                     <!--  <input class="input-text" placeholder="Domicilio" type="text" id="domicilio" name="domicilio"> -->
 
                     <!-- <label  for="fechaNacimiento">Fecha de nacimiento</label>  -->
-                    <input class="input-text" type="date" id="fechaNacimiento" name="fechaNacimiento">
+                    <input class="input-text" type="date" id="fechaNacimiento" name="fechaNacimiento"
+                    value="<%= locals.oldData ? oldData.fechaNacimiento : null  %>">
+                    <% if (locals.registerErrors && registerErrors.fechaNacimiento) { %>
+                        <p class="error-message"><%= registerErrors.fechaNacimiento.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
 
                     <label class="terminos" for="aceptoTerminos"> 
                         <input 

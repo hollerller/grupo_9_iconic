@@ -16,15 +16,18 @@
                             
                             <input 
                                 class="input-text" 
-                                d="prod-name" 
+                                id="prod-name" 
                                 type="text" 
-                                name="name"
-                                value="<%= locals.oldData ? oldData.name : null%>  "
+                                name="prodName"
+                                value="<%= locals.oldData ? oldData.prodName : null%>"
                             >
-
-                            <% if (locals.errorsMessage && errorsMessage.name) {%> 
+<!-- para elementos con select: 
+selected  
+ejs locals.oldData && oneCountry === oldData.country ? 'selected' : null
+-->
+                            <% if (locals.errorsMessage && errorsMessage.prodName) {%> 
                               
-                                    <p class="error-message"><%= errorsMessage.name.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                                    <p class="error-message"><%= errorsMessage.prodName.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                                  
                                 <% } %> 
                      

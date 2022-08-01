@@ -46,6 +46,7 @@ const productController = {
     
             res.redirect("/products");   
         }else{
+            console.log(errores.mapped());
             return res.render('createProducts', { 
                 errorsMessage : errores.mapped(),
                 oldData: req.body
