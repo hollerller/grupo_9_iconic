@@ -6,11 +6,23 @@
         <%- include('./partials/header') %>
             <main>
 
-                <form class="formulario" action="/login" method="POST">
+                <form class="formulario" action="/users/login" method="POST">
                     <label for="nombreUsuario">Nombre de usuario:</label>
-                    <input class="input-text" type="text" id="nombreUsuario" name="usuario" required minlength=6>
+                    <input class="input-text" type="text" id="nombreUsuario" name="usuario"
+                    value="<%= locals.oldData ? oldData.usuario : null  %>" >
+
+                    <% if (locals.loginErrors && loginErrors.usuario) { %>
+                        <p class="error-message"><%= loginErrors.usuario.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+
                     <label for="contrasena">Contraseña:</label>
-                    <input class="input-text" type="password" id="contrasena" name="contrasena">
+                    <input class="input-text" type="password" id="contrasena" name="contrasena"
+                    value="<%= locals.oldData ? oldData.contrasena : null  %>" >
+
+                    <% if (locals.loginErrors && loginErrors.contrasena) { %>
+                        <p class="error-message"><%= loginErrors.contrasena.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+                    
                     <button class="boton-ingresar" type="submit"><a href="/">
                             <p>Enviar</p>
                         </a></button>

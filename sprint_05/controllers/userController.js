@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const User = require('../data/models/User');
+const bcryptjs = require('bcryptjs');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 
@@ -31,21 +33,34 @@ const usersController = {
                 oldData: req.body
             })
         } else {
+            let userExists = User.findByField('email', req.body.email);
+
+            if (userExists) {
+                res.render('register', {
+                    registerErrors: {
+                        email: {
+                        msg: 'Este email ya está registrado'}
+                    },
+                    oldData: req.body
+                })
+            } else {
+
             let newUser = {
-                id: (usersArray.length+1),
+                id: User.generateId(),
                 fullName: req.body.nombreYApellido,
                 username: req.body.username,
                 email: req.body.email,
                 avatar: req.file.filename,
-                password: req.body.contrasena,
+                password: bcryptjs.hashSync(req.body.contrasena, 10),
                 birthday: req.body.fechaNacimiento,
                 terms: req.body.tyc,
                 category: 'vendedor'
                }
                usersArray.push(newUser);
             fs.writeFileSync(usersFilePath, JSON.stringify(usersArray, null, ' ')); 
-            res.redirect("/products");   
+            res.redirect("/login");   
             };
+        }
         },
 
     // Mostrar perfil de usuario
@@ -63,8 +78,13 @@ const usersController = {
     // Procesar login
 
     processLogin: (req, res) => {
-       const loginValidations =  validationResult(req)
-             res.send(loginValidations);
+       const loginValidations =  validationResult(req);
+       if (loginValidations.errors.length > 0) {
+        res.render('login', {
+            loginErrors: loginValidations.mapped(),
+            oldData: req.body
+        })
+       }
     }
 
 }
