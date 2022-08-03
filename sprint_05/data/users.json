@@ -1169,5 +1169,15 @@
   "birthday": "1998-03-02",
   "terms": "aceptoTerminos",
   "category": "vendedor"
+ },
+ {
+  "id": 108,
+  "fullName": "Lucas Romero",
+  "email": "lucasromero@hotmail.com",
+  "avatar": "1659560878346_img_.jpg",
+  "password": "$2a$10$iomkN60QSxVtt9ddSRjm8eufalbzEanKOA7fZvE8W6quDO/XVS4/m",
+  "birthday": "1998-12-21",
+  "terms": "aceptoTerminos",
+  "category": "vendedor"
  }
 ]
