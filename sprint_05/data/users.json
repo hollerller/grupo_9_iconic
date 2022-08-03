@@ -1159,5 +1159,15 @@
   "birthday": "1991-10-24",
   "terms": "aceptoTerminos",
   "category": "vendedor"
+ },
+ {
+  "id": 107,
+  "fullName": "Belén Aldana",
+  "email": "lopezbelenald@gmail.com",
+  "avatar": "1659560346568_img_.jpg",
+  "password": "$2a$10$V4/HPAsk2BSNmXl6bK9sHuwd/mGPvcxvQ3ApeHRnqcaBHNMXJeNIe",
+  "birthday": "1998-03-02",
+  "terms": "aceptoTerminos",
+  "category": "vendedor"
  }
 ]
