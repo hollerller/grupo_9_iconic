@@ -1,6 +1,6 @@
  # Retrospectiva del trabajo grupal:
 
- ![Logo](/images/logo.png "Iconic logo")
+ ![Logo](./public/images/logo.png "Iconic logo")
 ## Análisis General
 
 >Durante la realizacioón del Sprint 04 pudimos sentirnos más cómodos. Forjamos un flujo de comunicación realmente efectivo y ordenado, priorizando que lo referente a los archivos del Repositorio se canalice vía GitHub pero sin dejar de lado la posibilidad de contactarnos por medios más informales.
