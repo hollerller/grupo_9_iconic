@@ -5,7 +5,8 @@ const app = express();
 const path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
-
+//Llamando a los middlewares a nivel global
+const errorMiddleware = require('./middlewares/error')
 
 // configuración
 
@@ -13,6 +14,8 @@ app.use(express.static('public')); //llamar la carpeta public
 app.use(express.urlencoded({ extended: false }));//Para capturar informacion
 app.use(express.json()); //Para capturar info
 app.use(methodOverride('_method'));
+//Configuración EJS
+app.set('view engine','ejs');
 
 //requiriendo los routers
 const mainRouter = require('./routes/mainRouter');
@@ -36,9 +39,8 @@ app.use('/products',productsRouter)
 //Confiurando ruta hacia users
 app.use('/users', userRoutes);
 
-//Configuración EJS
-app.set('view engine','ejs');
-
+//Configurando miiddleware error 404 notfound
+app.use(errorMiddleware);
 
 
 // levantar el servidor

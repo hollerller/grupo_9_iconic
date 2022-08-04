@@ -694,8 +694,31 @@ div.div-button {
 
 
 /* lista de usuarios */
+/*Error 404 page*/
+.error-main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+.error-404-img{
+        width: 100%;
+        justify-content: center;
 
-
+}
+.error-404-img img{
+        width: 100%;
+        margin: auto;
+}
+.error-404{
+        border: #b61313 solid 4px;
+        color: #000000;
+        font-style: italic;
+        font-weight: 300;
+        text-align: center;
+        font-size: 12px;
+        width: 100%;
+        padding: 10px;
+}
 @media (min-width:361px) {
         .carrito-compras {
                 display: inline;
