@@ -1111,58 +1111,9 @@
   "category": "vendedor"
  },
  {
-  "id": 102,
-  "fullName": "Daniel Pardo",
-  "email": "daniel@test.com",
-  "avatar": "1659332980767_img_.png",
-  "password": "123456764623",
-  "birthday": "1991-12-12",
-  "terms": "aceptoTerminos",
-  "category": "vendedor"
- },
- {
-  "id": 103,
-  "fullName": "David Hash",
-  "email": "david@test.com",
-  "avatar": "1659411796880_img_.png",
-  "password": "$2a$10$zZUmbGp85Cq1CC/XbukvEOSuBDVL/ej03bxpcJho/w02lv2L6LLGO",
-  "birthday": "1991-12-10",
-  "terms": "aceptoTerminos",
-  "category": "vendedor"
- },
- {
-  "id": 104,
-  "fullName": "David",
-  "email": "david@test.com",
-  "avatar": "1659412009390_img_.png",
-  "password": "$2a$10$KvPcybrW34gzPCTZTQbON.FwZkFWIwRtlka9yLprJuU.DW03zgD9G",
-  "birthday": "1991-11-18",
-  "terms": "aceptoTerminos",
-  "category": "vendedor"
- },
- {
-  "id": 105,
-  "fullName": "David",
-  "email": "david@test.com",
-  "avatar": "1659412344209_img_.png",
-  "password": "$2a$10$U8DSnXCOmsi9YbLRFoZuJ.lzLnpF65EkwE//cVYcgLmXHGiLzoEBW",
-  "birthday": "1992-12-30",
-  "terms": "aceptoTerminos",
-  "category": "vendedor"
- },
- {
-  "id": 106,
-  "fullName": "David",
-  "email": "david@tes1234123t.com",
-  "avatar": "1659412528681_img_.png",
-  "password": "$2a$10$Ah6G/Dh0NUWW/KbU/Cy7tOY0Q1mGvhrP2b88MdjaUSOMSh4s4Ctwm",
-  "birthday": "1991-10-24",
-  "terms": "aceptoTerminos",
-  "category": "vendedor"
- },
- {
   "id": 107,
   "fullName": "Belén Aldana",
+  "username": "belu",
   "email": "lopezbelenald@gmail.com",
   "avatar": "1659560346568_img_.jpg",
   "password": "$2a$10$V4/HPAsk2BSNmXl6bK9sHuwd/mGPvcxvQ3ApeHRnqcaBHNMXJeNIe",
@@ -1172,11 +1123,12 @@
  },
  {
   "id": 108,
-  "fullName": "Lucas Romero",
-  "email": "lucasromero@hotmail.com",
-  "avatar": "1659560878346_img_.jpg",
-  "password": "$2a$10$iomkN60QSxVtt9ddSRjm8eufalbzEanKOA7fZvE8W6quDO/XVS4/m",
-  "birthday": "1998-12-21",
+  "fullName": "David",
+  "username": "Test Login",
+  "email": "david@test.com",
+  "avatar": "1659587683102_img_.png",
+  "password": "$2a$10$tCk7Nkl0kT83oNLN9PbB/uoBbX5SnSZAiQtSpp0zpAm1AoRR7cod2",
+  "birthday": "1991-10-12",
   "terms": "aceptoTerminos",
   "category": "vendedor"
  }

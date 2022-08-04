@@ -652,7 +652,10 @@ div.div-button {
        border-radius: 5px;
        padding: 20px;
        line-height: 2;
+        display: flex;
+        justify-content: space-around;
 }
+
 .userProfile h2 { 
        text-align: center;
         margin-bottom: 20px;
