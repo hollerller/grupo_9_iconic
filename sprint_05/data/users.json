@@ -1131,5 +1131,16 @@
   "birthday": "1991-10-12",
   "terms": "aceptoTerminos",
   "category": "vendedor"
+ },
+ {
+  "id": 109,
+  "fullName": "Belen Lopez",
+  "username": "blopez123",
+  "email": "belen@hotmail.com",
+  "avatar": "1659674713248_img_.png",
+  "password": "$2a$10$mw9KOspWFmItqkur8vVMl.9jiIENSVzMHYUoAG0kIiGcjUfdgr5cC",
+  "birthday": "1990-12-21",
+  "terms": "aceptoTerminos",
+  "category": "vendedor"
  }
 ]

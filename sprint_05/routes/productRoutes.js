@@ -4,6 +4,8 @@ const multer = require('multer');
 const path = require('path');
 //requiriendo express-validator//
 const {body} = require('express-validator');
+//requerir el authMiddleware
+const authMiddleware = require('../middlewares/authMiddleware');
 
 //requiriendo el controlador//
 const productController = require('../controllers/productController');
@@ -33,7 +35,7 @@ router.get('/',productController.list);
 
 // punto 2. sprint 4 - CREACIÓN DE PRODUCTOS mostrar formulario
 
-router.get('/create', productController.createProduct)
+router.get('/create', authMiddleware,productController.createProduct)
 
 //punto 3 sprint 4
 router.get('/:id', productController.productID);
@@ -42,7 +44,7 @@ router.get('/:id', productController.productID);
 router.post('/create',uploadFile.single('image'),createValidations,productController.store)
 //punto 5 sprint 4
 
-router.get('/:id/edit', productController.editProduct);
+router.get('/:id/edit', authMiddleware,productController.editProduct);
 router.put('/:id/edit', uploadFile.single('image'), productController.saveChanges);
 router.delete('/:id/delete',productController.delete);
 

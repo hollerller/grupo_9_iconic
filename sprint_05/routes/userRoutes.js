@@ -4,6 +4,11 @@ const multer = require('multer');
 const path = require('path');
 //requerir el controlador
 const usersController = require('../controllers/userController');
+// requerir el guestMiddleware
+const guestMiddleware = require('../middlewares/guestMiddleware');
+//requerir el authMiddleware
+const authMiddleware = require('../middlewares/authMiddleware');
+
 
 // Express Validator
 const { body } = require('express-validator');
@@ -59,13 +64,13 @@ router.post('/register', uploadFile.single('avatar'), registerValidations, users
 
 
 //Formulario de login
-router.get('/login', usersController.login);
+router.get('/login',guestMiddleware, usersController.login);
 //Procesar el login
 router.post('/login', loginValidations, usersController.processLogin);
 
 
 //Perfil de usuario
-router.get('/:id', usersController.userID);
+router.get('/:id', authMiddleware,usersController.userID);
 
 module.exports = router;
 

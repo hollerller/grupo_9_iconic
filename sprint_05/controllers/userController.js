@@ -84,7 +84,10 @@ const usersController = {
             if (userToLogin) {
                 let validPassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.password);
                 if (validPassword) {
-                    res.send(userToLogin);
+                    delete userToLogin.password;
+                    req.session.userLogged = userToLogin;
+                    
+                    res.render('home');
                 } else {
                     res.render('login', {
                         loginErrors: {
