@@ -645,7 +645,7 @@ div.div-button {
 /* css usuarios */
 
 
-
+/*
 .profileBox {
        text-align: center;
        width: 65%;
@@ -654,6 +654,24 @@ div.div-button {
        line-height: 2;
         display: flex;
         justify-content: space-around;
+}
+ */
+
+.userImage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+}
+
+.userDetail {
+        display: flex;
+        align-items: center;
+}
+
+section#userData {
+        display: flex;
+        flex-direction: column;
 }
 
 .userProfile h2 { 
@@ -672,8 +690,12 @@ div.div-button {
 .profileBox p {
   font-size: 1.4em;
   justify-content: center;
-  margin: 0;
+  margin: 10px 0;
  }
+
+section.editProfile {
+        justify-content: center;
+}
 
  .profileBox a {
         font-size: 1.3em;
