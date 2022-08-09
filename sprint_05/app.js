@@ -8,6 +8,7 @@ const session = require('express-session');
 
 //Llamando a los middlewares a nivel global
 const errorMiddleware = require('./middlewares/error')
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 
 // configuración
 
@@ -18,7 +19,7 @@ app.use(methodOverride('_method'));
 app.use(session({
     secret: 'Secret Word',
     resave : false,
-    saveUninitialized:false
+    saveUninitialized:true
 }))
 //Configuración EJS
 app.set('view engine','ejs');
@@ -47,7 +48,8 @@ app.use('/users', userRoutes);
 
 //Configurando miiddleware error 404 notfound
 app.use(errorMiddleware);
-
+// Middleware de sesion de usuario loggeado
+app.use(userLoggedMiddleware);
 
 // levantar el servidor
 

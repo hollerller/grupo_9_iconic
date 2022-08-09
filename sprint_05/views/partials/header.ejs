@@ -11,7 +11,20 @@
                 </form>
             </div>
             <div class="search-button"> <a href="#"><i class="fas fa-search"></i></a> </div>
-            <div class="login-icon"><a href="/login"><i class="far fa-user" title="Login"></i></a></div>
+            <!-- Mostrar el icono o foto en la sesion-->
+            <div class="login-icon">
+
+
+            <% if (!locals.isLogged) { %>
+                <a href="/users/login"><i class="far fa-user" title="Login"></i></a>
+                <% } else { %>
+                    <p>estoy loggeado</p>>
+                <% }  %>
+
+        <!-- Mostrar el icono o foto en la sesion-->
+            </div>
+
+
             <a class="carrito-compras" href='shoppingCart'><i class="fas fa-shopping-cart" title="Carrito"></i></a>
         </div>
         <div class="tool-bar">

@@ -58,7 +58,7 @@ const registerValidations = [
 ]
 
 //Formulario de registro
-router.get('/register', usersController.register);
+router.get('/register', guestMiddleware, usersController.register);
 //Procesar el formulario de registro
 router.post('/register', uploadFile.single('avatar'), registerValidations, usersController.createUser);
 
@@ -70,7 +70,7 @@ router.post('/login', loginValidations, usersController.processLogin);
 
 
 //Perfil de usuario
-router.get('/:id', authMiddleware,usersController.userID);
+router.get('/:id', authMiddleware, usersController.userID);
 
 module.exports = router;
 

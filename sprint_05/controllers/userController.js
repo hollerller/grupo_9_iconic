@@ -7,7 +7,7 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 
 //Validation result - Express Validator
 const { validationResult } = require('express-validator');
-const { findByField, findByPk } = require('../data/models/User');
+//const { findByField, findByPk } = require('../data/models/User');
 
 // Multer
 const usersArray = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -68,7 +68,7 @@ const usersController = {
     userID: (req, res) => {
         let idUsuario = req.params.id;
         res.render('userDetail', 
-        {usuario: usersArray[idUsuario]});
+        {usuario: req.session.userLogged});
     },
 
     // Mostrar formulario de login
@@ -80,14 +80,16 @@ const usersController = {
 
     processLogin: (req, res) => {
         let userToLogin = User.findByField('username', req.body.usuario);
-
             if (userToLogin) {
                 let validPassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.password);
                 if (validPassword) {
                     delete userToLogin.password;
                     req.session.userLogged = userToLogin;
-                    
-                    res.render('home');
+                    console.log(req.session.userLogged);
+                   let userLogged = User.findByPk(userToLogin.id)
+                    res.render('userDetail', 
+                    {usuario: userLogged});
+
                 } else {
                     res.render('login', {
                         loginErrors: {
