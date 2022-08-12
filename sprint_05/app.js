@@ -31,6 +31,9 @@ const userRoutes = require('./routes/userRoutes');
 const productsRouter = require('./routes/productRoutes');
 // rutas
 
+app.use(userLoggedMiddleware);
+// levantar el servidor
+
 app.use('/',mainRouter);
 
 //app.use('/login',mainRouter );
@@ -51,8 +54,7 @@ app.use('/users', userRoutes);
 app.use(errorMiddleware);
 
 // Middleware de sesion de usuario loggeado
-app.use(userLoggedMiddleware);
-// levantar el servidor
+
 
 app.listen(3000, () => {
     console.log('Server Running');
