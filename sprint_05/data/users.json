@@ -1142,5 +1142,16 @@
   "birthday": "1990-12-21",
   "terms": "aceptoTerminos",
   "category": "vendedor"
+ },
+ {
+  "id": 110,
+  "fullName": "Belu L.",
+  "username": "belu234",
+  "email": "belu@hola.com",
+  "avatar": "1660251291532_img_.png",
+  "password": "$2a$10$g6w9CLH6a1tsfeFK6E1poee7g3VXq0ys3K6F5iOyDTvXAzjvPQJAi",
+  "birthday": "1996-01-31",
+  "terms": "aceptoTerminos",
+  "category": "vendedor"
  }
 ]

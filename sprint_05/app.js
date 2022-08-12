@@ -19,8 +19,9 @@ app.use(methodOverride('_method'));
 app.use(session({
     secret: 'Secret Word',
     resave : false,
-    saveUninitialized:true
+    saveUninitialized:false
 }))
+
 //Configuración EJS
 app.set('view engine','ejs');
 
@@ -48,9 +49,9 @@ app.use('/users', userRoutes);
 
 //Configurando miiddleware error 404 notfound
 app.use(errorMiddleware);
+
 // Middleware de sesion de usuario loggeado
 app.use(userLoggedMiddleware);
-
 // levantar el servidor
 
 app.listen(3000, () => {

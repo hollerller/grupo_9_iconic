@@ -63,8 +63,10 @@ Futura: https://es.wikipedia.org/wiki/Futura
         text-align: center;
 
 }
-
-
+/*Avatar en miniatura - header*/
+.avatar-header{
+        max-width: 20px;
+}
 .navbar {
         list-style: none;
         display: none

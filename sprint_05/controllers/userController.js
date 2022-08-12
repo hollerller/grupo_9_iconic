@@ -110,7 +110,6 @@ const usersController = {
                 })
             } 
 }, 
-
     editUser: (req, res) => {
         let userToEdit = req.session.userLogged;
         res.render('Test')
