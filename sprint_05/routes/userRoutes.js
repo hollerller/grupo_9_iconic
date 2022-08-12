@@ -70,11 +70,13 @@ router.post('/login', loginValidations, usersController.processLogin);
 
 
 //Perfil de usuario
-router.get('/:id', authMiddleware, usersController.userID);
+router.get('/profile', authMiddleware, usersController.userID);
 
 //Editar usuario
 router.get('/edit', authMiddleware, usersController.editUser)
 
+//logout
+router.get('/logout', usersController.logout);
 
 module.exports = router;
 

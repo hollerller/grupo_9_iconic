@@ -66,7 +66,7 @@ const usersController = {
 
     // Mostrar perfil de usuario
     userID: (req, res) => {
-        let idUsuario = req.params.id;
+        //console.log(req.session.userLogged);
         res.render('userDetail', 
         {usuario: req.session.userLogged});
     },
@@ -74,7 +74,9 @@ const usersController = {
     // Mostrar formulario de login
 
     login: (req, res) => {
+        console.log(req.session);
         res.render('login');
+
     },
     // Procesar login
 
@@ -85,10 +87,11 @@ const usersController = {
                 if (validPassword) {
                     delete userToLogin.password;
                     req.session.userLogged = userToLogin;
-                    console.log(req.session.userLogged);
+                  //console.log(req.session.userLogged);
                    let userLogged = User.findByPk(userToLogin.id)
-                    res.render('userDetail', 
-                    {usuario: userLogged});
+                  //  res.render('userDetail', 
+                   // {usuario: userLogged});
+                   res.redirect('profile')
 
                 } else {
                     res.render('login', {
@@ -116,6 +119,11 @@ const usersController = {
        // res.render('userEdit', {
        //    usuario: userToEdit
        // })
+    },
+
+    logout: (req, res) => {
+        req.session.destroy();
+        res.redirect('/')
     }
 
 }

@@ -3,6 +3,7 @@
         <div class="top-bar">
             <div class="burger-menu"><i class="fas fa-bars"></i></div>
             <div class="logo"><a href="./"><img src="/images/logo.png" alt="Iconic"></a></div>
+            <p><a href="/users/logout/">Logout</a></p>
             <div class="search">
                 <form action="/" method="get" class="search-form">
                     <label for="search"></label>
@@ -11,12 +12,11 @@
                 </form>
             </div>
             <div class="search-button"> <a href="#"><i class="fas fa-search"></i></a> 
-                
             </div>
             <!-- Mostrar el icono o foto en la sesion-->
         <% if (locals.isLogged) {%>
             <div><p>Bienvenid@!</p></div>
-        <% } else{%>
+        <% } else {%>
             <div class="login-icon"> <a href="/users/login"> <i class="far fa-user" title="Login"></i></a>  </div>
         <% } %>  
          

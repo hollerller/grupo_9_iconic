@@ -1,5 +1,6 @@
 const mainController = {
     home: (request, response) => {
+       // console.log(request.session.userLogged);
         response.render('home')
     },
     login: (request, response) => {
