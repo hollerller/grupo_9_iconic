@@ -3,7 +3,9 @@
         <div class="top-bar">
             <div class="burger-menu"><i class="fas fa-bars"></i></div>
             <div class="logo"><a href="./"><img src="/images/logo.png" alt="Iconic"></a></div>
-            <p><a href="/users/logout/">Logout</a></p>
+          
+    
+         
             <div class="search">
                 <form action="/" method="get" class="search-form">
                     <label for="search"></label>
@@ -14,14 +16,27 @@
             <div class="search-button"> <a href="#"><i class="fas fa-search"></i></a> 
             </div>
             <!-- Mostrar el icono o foto en la sesion-->
-        <% if (locals.isLogged) {%>
-            <div><p>Bienvenid@!</p></div>
-        <% } else {%>
-            <div class="login-icon"> <a href="/users/login"> <i class="far fa-user" title="Login"></i></a>  </div>
-        <% } %>  
+       
          
           
             <a class="carrito-compras" href='shoppingCart'><i class="fas fa-shopping-cart" title="Carrito"></i></a>
+            <% if (locals.isLogged) {%>
+              <div class="user-section-header">
+               
+                    <div class="hello-header">
+                        <img class="avatar-header" src="/images/users/<%=userLogged.avatar%> " alt="">
+                        <p>Hola <%= userLogged.fullName %> ! </p>
+                    </div>  
+                <ul class="dropdown-menu">
+                    <li><a href="/users/profile">Mi perfil</a></li>
+                    <li><a href="/users/logout/">Cerrar sesión</a></li>
+                </ul>
+              </div>
+               
+                        
+            <% } else {%>
+                <div class="login-icon"> <a href="/users/login"> <i class="far fa-user" title="Login"></i></a>  </div>
+            <% } %>  
         </div>
         <div class="tool-bar">
             <ul class="navbar">
