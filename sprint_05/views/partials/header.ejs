@@ -21,7 +21,7 @@
           
             <a class="carrito-compras" href='shoppingCart'><i class="fas fa-shopping-cart" title="Carrito"></i></a>
             <% if (locals.isLogged) {%>
-              <div class="user-section-header">
+              <button class="user-section-header">
                
                     <div class="hello-header">
                         <img class="avatar-header" src="/images/users/<%=userLogged.avatar%> " alt="">
@@ -31,7 +31,7 @@
                     <li><a href="/users/profile">Mi perfil</a></li>
                     <li><a href="/users/logout/">Cerrar sesión</a></li>
                 </ul>
-              </div>
+              </button>
                
                         
             <% } else {%>

@@ -71,6 +71,9 @@ Futura: https://es.wikipedia.org/wiki/Futura
                 transition: all 500ms;
                 width: fit-content;
                 position: relative;
+                border: solid 1px #000000;
+                background-color: #fdfdfd;
+                border-radius: 5px;
         }
         .hello-header p{
                 display: none;
@@ -80,9 +83,16 @@ Futura: https://es.wikipedia.org/wiki/Futura
                 border-radius: 5px;
                 color: white;
         }
-        .user-section-header:hover > .dropdown-menu{
+        .user-section-header:focus{
+                background-color: #e54b4b;
+                color: #fdfdfd;
+                border: #fdfdfd;
+        }
+        .user-section-header:focus > .dropdown-menu{
                 display: block;
                 padding: 10px;
+                width: 300%;
+                border-radius: 5%;
         }
         .hello-header{
                 display: flex;
@@ -95,35 +105,40 @@ Futura: https://es.wikipedia.org/wiki/Futura
                 float: left;
                 list-style: none;
                 margin: 0px;
-                padding: 10px;
+                border: #000000 5px solid;
                 display: none;
                 position: absolute;
                 right: 10px;
+                justify-content: center;
+                background-color: #e54b4b;
+                
                
         }
         .dropdown-menu li a{
                 font-size: 20px;
                 text-decoration: none;
                 color: white;
-                background-color: #e54b4b;
+                background-color: #ff5656;
                 display: block;
                 padding: 10px;
                 min-width: 10px;
-                padding: 10px;
         }
         .dropdown-menu li a:hover{
                 background-color: #ff5656;
         }
         .dropdown-menu ul{
                 padding: 10px;
+                justify-content: center;
+                border: #000000 4px solid;
         }
         .dropdown-menu li{
                 transition: all 500ms;
+                border-radius: 7px;
         }
 
         .avatar-header{
                 max-width: 40px;
-                border: #cb2121 solid 1px;
+                border: #fdfdfd solid 1px;
                 border-radius: 50%;
         }
 
@@ -1136,9 +1151,11 @@ section.editProfile {
                 border-radius: 5px;
                 color: white;
         }
-        .user-section-header:hover > .dropdown-menu{
+        .user-section-header:focus > .dropdown-menu{
                 display: block;
                 padding: 10px;
+                width: 200%;
+                border-radius: 5px;
         }
         .hello-header{
                 display: flex;
@@ -1158,7 +1175,6 @@ section.editProfile {
                 padding: 0px;
                 position: absolute;
                 display: none;
-                min-width: min-content;
         }
         .dropdown-menu li a{
                 text-decoration: none;
@@ -1167,7 +1183,7 @@ section.editProfile {
                 display: block;
                 min-width: 70px;
                 width:100%;
-                
+                justify-content: center;
         }
         .dropdown-menu li a:hover{
                 background-color: #ff5656;
@@ -1178,7 +1194,7 @@ section.editProfile {
 
         .avatar-header{
                 max-width: 45px;
-                border: #cb2121 solid 1px;
+                border: #fdfdfd solid 1px;
                 border-radius: 50%;
         }
 
