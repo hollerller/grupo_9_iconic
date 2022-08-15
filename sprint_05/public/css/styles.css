@@ -64,6 +64,7 @@ Futura: https://es.wikipedia.org/wiki/Futura
         width: 70%;
         text-align: center;
 }
+
 /* Seccion del usuario en el header */
         .user-section-header{
                 padding: 10px;
@@ -78,13 +79,9 @@ Futura: https://es.wikipedia.org/wiki/Futura
         .hello-header p{
                 display: none;
         }
-        .user-section-header:hover{
-                background-color: #e54b4b;
-                border-radius: 5px;
-                color: white;
-        }
         .user-section-header:focus{
                 background-color: #e54b4b;
+                border-radius: 5px;
                 color: #fdfdfd;
                 border: #fdfdfd;
         }
@@ -105,7 +102,6 @@ Futura: https://es.wikipedia.org/wiki/Futura
                 float: left;
                 list-style: none;
                 margin: 0px;
-                border: #000000 5px solid;
                 display: none;
                 position: absolute;
                 right: 10px;
@@ -118,24 +114,14 @@ Futura: https://es.wikipedia.org/wiki/Futura
                 font-size: 20px;
                 text-decoration: none;
                 color: white;
-                background-color: #ff5656;
+                background-color: #e54b4b;
                 display: block;
                 padding: 10px;
                 min-width: 10px;
         }
-        .dropdown-menu li a:hover{
-                background-color: #ff5656;
-        }
-        .dropdown-menu ul{
-                padding: 10px;
-                justify-content: center;
-                border: #000000 4px solid;
-        }
         .dropdown-menu li{
                 transition: all 500ms;
-                border-radius: 7px;
         }
-
         .avatar-header{
                 max-width: 40px;
                 border: #fdfdfd solid 1px;
@@ -208,6 +194,7 @@ main {
 .slider {
         margin-bottom: 20px;
 }
+/* estilos del banner-home */
 
 .new-arrivals {
         width: 100vw;
@@ -215,13 +202,27 @@ main {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        position: relative;
 }
-
-.tituloNA {
+.new-arrivals-title{
         width: 100%;
-        text-align: center;
-        bottom: 20px;
+        display: block;
+        justify-content: right;
+     
 }
+.new-arrivals-title h6{
+        border: black solid 3px;
+        text-align: right;
+        bottom: 20px;
+        font-size: 28px;
+        width: 100%;
+        padding: 10px;
+        
+}
+.banner-home img{
+        width: 100vw;
+        margin-left: -20px;
+  }
 
 
 .producto {
@@ -889,9 +890,10 @@ section.editProfile {
                 justify-content: space-around;
         }
 
-        .tituloNA {
+        .new-arrivals-title{
                 margin: 5px;
         }
+       
 
         .producto {
                 padding: 0px;
@@ -1000,9 +1002,43 @@ section.editProfile {
                 padding: 20px;
                 font-family: 'Roboto', Helvetica, sans-serif;
         }
-     /* hello user header */
-    
-        
+     /* slider */
+    .home-main{
+                width: 100%;
+                display: block;
+        }
+    .slider-container-750{
+        width: 100%;
+        max-width: 900px;
+        display: block;
+     
+    }
+    .slider{
+       width: 400%;
+       display: flex;
+       max-height: 400px;
+       align-items: center;
+    }
+    .slider-section{
+        width: 100%;
+        padding: 10px;
+        display: block;
+       
+    }
+    .slider-img{
+        min-width: 100%;
+        width: 100%;
+  
+    }
+    .slider-button:hover{
+
+    }
+    .slider-button-right{
+
+    }
+    .slider-button-left{
+
+    }
 }
         
        
@@ -1136,15 +1172,11 @@ section.editProfile {
                 padding: 20px;
         }
         /* Seccion del usuario en el header */
-        .user-section-header{
-                padding: 10px;
-                display: block;
-                transition: all 500ms;
-                width: fit-content;
-                position: relative;
-        }
+        
         .hello-header p{
                 display: block;
+                margin-left: 10px;
+                min-width: 80px;
         }
         .user-section-header:hover{
                 background-color: #e54b4b;
@@ -1152,52 +1184,19 @@ section.editProfile {
                 color: white;
         }
         .user-section-header:focus > .dropdown-menu{
-                display: block;
-                padding: 10px;
                 width: 200%;
-                border-radius: 5px;
-        }
-        .hello-header{
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                position: relative;
-                
-        }
-        .hello-header p{
-                margin-left: 10px;
-                min-width: 80px;
-        }
-        .dropdown-menu{
-                text-align: left;
-                list-style: none;
-                margin: 0px;
-                padding: 0px;
-                position: absolute;
-                display: none;
-        }
-        .dropdown-menu li a{
-                text-decoration: none;
-                color: white;
-                background-color: #e54b4b;
-                display: block;
-                min-width: 70px;
-                width:100%;
-                justify-content: center;
         }
         .dropdown-menu li a:hover{
                 background-color: #ff5656;
         }
-        .dropdown-menu li{
-                transition: all 500ms;
-        }
 
         .avatar-header{
-                max-width: 45px;
-                border: #fdfdfd solid 1px;
-                border-radius: 50%;
+                max-width: 50px;
         }
-
+        /* new arivals */
+        .new-arrivals-title h6{
+                font-size: 34px;
+        }
 }
 
 @media (min-width:1200px) {
@@ -1306,6 +1305,11 @@ section.editProfile {
         }
         .see-button:hover{
                 background-color: #116691;
-               }
+        }
+        /* new arrivals */
+        .new-arrivals-title{
+                width: 80%;
+                margin: 20px 10% 30px 10%;
+        }
        
 }
