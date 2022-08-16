@@ -1262,9 +1262,7 @@ section.editProfile {
                 margin-left: 40px;
         }
         /* Listado productos*/
-        .section-title h2{
-                font-size: 1.5em
-        }
+
       
         .products-list{
                 display: flex;
