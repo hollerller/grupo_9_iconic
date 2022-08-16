@@ -6,7 +6,7 @@
         <%- include('./partials/header') %>
         <section class="products-list">
             <div class="section-title">
-                <h2>Ofertas</h2>
+                <h2>OFERTAS</h2>
             </div>
               
         
@@ -15,7 +15,7 @@
                     <% if(product.inSale === "yes") {%> 
                     <div class="product-box">
                                                 <a href="#">
-                                                    <img class="foto-producto" src="/images/products/<%= product.image %> " alt="Imagen de Producto">
+                                                    <img class="product-img" src="/images/products/<%= product.image %> " alt="Imagen de Producto">
                                                 </a>
 
                                           
@@ -25,11 +25,11 @@
                                     <p class="product-price">Precio online:  $<%= product.price %></p>
                                     <p class="product-discount">Ahorrás un <%= product.discount %>%</p>
                                     <!--p class="product-description"><%= product.description %> <p-->
-                                    <div class="see-box">
-                                        <a class="see-button"  href="/products/<%=product.id %> ">ver</a>
-                                    </div> 
+                                    
                             </div>
-                               
+                            <div class="see-box">
+                                <a class="see-button"  href="/products/<%=product.id %> ">ver</a>
+                            </div>  
                                 
                     </div>
                     <% } %> 

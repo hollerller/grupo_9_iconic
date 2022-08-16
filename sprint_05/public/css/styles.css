@@ -43,6 +43,7 @@ Futura: https://es.wikipedia.org/wiki/Futura
         justify-content: right;
         position: relative;
         padding: 20px;
+        height: 100.5px;
 }
 
 .search {
@@ -67,7 +68,6 @@ Futura: https://es.wikipedia.org/wiki/Futura
 
 /* Seccion del usuario en el header */
         .user-section-header{
-                padding: 10px;
                 display: block;
                 transition: all 500ms;
                 width: fit-content;
@@ -75,22 +75,13 @@ Futura: https://es.wikipedia.org/wiki/Futura
                 border: solid 1px #000000;
                 background-color: #fdfdfd;
                 border-radius: 5px;
+                padding: 5px;
         }
         .hello-header p{
                 display: none;
         }
-        .user-section-header:focus{
-                background-color: #e54b4b;
-                border-radius: 5px;
-                color: #fdfdfd;
-                border: #fdfdfd;
-        }
-        .user-section-header:focus > .dropdown-menu{
-                display: block;
-                padding: 10px;
-                width: 300%;
-                border-radius: 5%;
-        }
+
+
         .hello-header{
                 display: flex;
                 align-items: center;
@@ -146,10 +137,20 @@ Futura: https://es.wikipedia.org/wiki/Futura
         font-size: 25px;
         width: auto;
 }
+.logout{
+       margin: 10px;
+       display: block;
+}
+.logout a{
+        font-weight: bold;
+        text-decoration: none;
+        color: #000000;
+        font-size: 20px;
+}
 
 .search-button,
 .carrito-compras,
-.login-icon {
+.login-icon{
         width: 20%;
         text-align: right;
         color: #7A7474;
@@ -178,22 +179,17 @@ Futura: https://es.wikipedia.org/wiki/Futura
         display: none;
 }
 
-main {
+main { 
         width: 100vw;
         display: flex;
         flex-wrap: wrap;
-        padding: 20px;
+    
         font-family: 'Roboto', Helvetica, sans-serif;
 }
 
-.slider img {
-        max-width: 100%;
 
-}
 
-.slider {
-        margin-bottom: 20px;
-}
+
 /* estilos del banner-home */
 
 .new-arrivals {
@@ -204,24 +200,26 @@ main {
         align-items: center;
         position: relative;
 }
+.section-title,
 .new-arrivals-title{
         width: 100%;
         display: block;
         justify-content: right;
      
 }
+.section-title h2,
 .new-arrivals-title h6{
         border: black solid 3px;
         text-align: right;
         bottom: 20px;
-        font-size: 28px;
+        font-size: 1.5em;
         width: 100%;
         padding: 10px;
         
 }
 .banner-home img{
         width: 100vw;
-        margin-left: -20px;
+        
   }
 
 
@@ -236,7 +234,7 @@ article p {
         display: flex;
         text-align: right;
         margin: 10px;
-        font-size: 9px;
+        font-size: 22px;
         font-weight: normal;
         color: #7A7474;
 }
@@ -246,10 +244,16 @@ article p {
         margin: auto;
         display: block;
 }
+.product-img{
+        width: 100%;
+        margin: auto;
+        display: block;
+        max-width: 200px;
+}
 
 .vender {
         font-family: 'Roboto', Helvetica, sans-serif;
-        display: flex;
+        display: block;
         background-color: #9B0000;
         color: #FFFFFF;
         padding: 20px;
@@ -260,15 +264,17 @@ article p {
 .vender i,
 .vender h6 {
         margin-left: 6px;
-        display: inline;
+        display: inline-block;
         text-align: center;
 }
 
-.footer-mobile {
-        background-color: #7A7474;
+.footer{
+        background-color: #a9a6a6;
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        padding: 20px;
+        
 }
 
 footer .redes-sociales {
@@ -278,24 +284,41 @@ footer .redes-sociales {
         font-size: larger;
 }
 
-.footer-mobile ul {
+.footer ul {
         list-style: none;
         font-family: 'Roboto', Helvetica, sans-serif;
-        padding: 10px;
+        padding: 20px;
+        text-align: center;
+        line-height: 19px;
+        
 }
-
-.footer-mobile ul a {
+.footer ul li{
+        display: inline;
+        margin: 15px;
+}
+.footer ul a {
         text-decoration: none;
         color: #000000;
-        font-weight: bold;
-        font-size: 12px;
+        font-weight: normal;
+        font-size: 18px;
+        padding: 10px;
+        transition: all 600ms;
+}
+.footer ul a:hover{
+        background-color: #888888;
+}
+.copyright{
+        width: 100%;
+        text-align: center;
 }
 .redes-sociales i{
         color: #000000;
+        font-size: 20px;
+        margin: 6px;
 }
 
 .formulario {
-
+        margin: 30px 10px 40px 10px;
         width: 100%;
         justify-content: left;
         padding: 30px;
@@ -673,6 +696,7 @@ div.div-button {
                 margin: 20px 0px;
                 padding: 25px;
                 justify-content: space-around;
+                position: relative;
         }
         .product-name{
                 font-size: 22px;
@@ -712,8 +736,11 @@ div.div-button {
         font-weight: bold;
         border-radius: 4px;
         transition: all 500ms;
-        right: 0px;
+        right: 15px;
+        bottom: 20px;
         justify-content: right;
+        position:absolute;
+        font-size: 19px;
        }
        .see-button a{
         padding: 0%;
@@ -819,6 +846,9 @@ section.editProfile {
         width: 100%;
         padding: 10px;
 }
+.slider{
+        display: none;
+}
 @media (min-width:361px) {
         .carrito-compras {
                 display: inline;
@@ -832,43 +862,7 @@ section.editProfile {
                 padding: 3px;
                 max-width: 45px;
         }
-        .logo{
-                width: auto;
-                position: absolute;
-                left: 10px;
-
-        }
-        .logo img{
-                max-width: 140px;
-        }
-
-        .burger-menu {
-                display: none;
-        }
-
-        .navbar {
-                display: flex;
-                flex-wrap: wrap;
-                width: 90vw;
-                justify-content: space-around;
-                padding: 0;
-                margin: 10px;
-                font-size: 15px;
-        }
-
-        .navbar a {
-                padding: 5px;
-                font-size: 20px;
-        }
-
-        .tool-bar {
-                width: 100%;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-
-        }
-
+       
         main {
                 justify-content: center;
                 width: 100vw;
@@ -910,11 +904,60 @@ section.editProfile {
         .formulario {
                 width: 90%;
         }
+       .slider{
+        display:none
+       }
         /* hello user header */
        
        
 @media (min-width:450px) {
+        .logo{
+                width: auto;
+                position: absolute;
+                left: 10px;
+
+        }
+        .logo img{
+                max-width: 140px;
+        }
+
         
+
+        .burger-menu {
+                display: none;
+        }
+
+        .navbar {
+                display: flex;
+                flex-wrap: wrap;
+                width: 90vw;
+                justify-content: space-around;
+                padding: 0;
+                margin: 10px;
+                font-size: 15px;
+        }
+      
+        .navbar a {
+                padding: 15px;
+                font-size: 20px;
+        }
+
+        .tool-bar {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                margin-top: 20px;
+        }
+        .tool-bar a{
+                transition: all 500ms;
+                border-radius: 6px;
+        }
+        .tool-bar a:hover{
+                background-color: #000;
+                color:white;
+
+        }
         .formulario {
                 width: 70%;
 
@@ -1002,43 +1045,7 @@ section.editProfile {
                 padding: 20px;
                 font-family: 'Roboto', Helvetica, sans-serif;
         }
-     /* slider */
-    .home-main{
-                width: 100%;
-                display: block;
-        }
-    .slider-container-750{
-        width: 100%;
-        max-width: 900px;
-        display: block;
-     
-    }
-    .slider{
-       width: 400%;
-       display: flex;
-       max-height: 400px;
-       align-items: center;
-    }
-    .slider-section{
-        width: 100%;
-        padding: 10px;
-        display: block;
-       
-    }
-    .slider-img{
-        min-width: 100%;
-        width: 100%;
-  
-    }
-    .slider-button:hover{
-
-    }
-    .slider-button-right{
-
-    }
-    .slider-button-left{
-
-    }
+    
 }
         
        
@@ -1058,16 +1065,17 @@ section.editProfile {
                
         }
         .search-form{
-                display: inline-block;
-                position: relative;
+                display: inline;
+                position: absolute;
                 border-radius: 5px;
-                min-width: 350px;
-                max-width: 800px;
+                max-width: 350px;
+                top: 40px;
                 width: 100%;
-                margin: auto;
+                left: 180px;
                 border: #b85c5c solid 3px;
                 justify-content: space-between;
                 align-items: center;
+                
         }
         .search-form input{
                 width: 93%;
@@ -1177,25 +1185,27 @@ section.editProfile {
                 display: block;
                 margin-left: 10px;
                 min-width: 80px;
+                font-size: 20px;
         }
         .user-section-header:hover{
                 background-color: #e54b4b;
                 border-radius: 5px;
                 color: white;
         }
-        .user-section-header:focus > .dropdown-menu{
-                width: 200%;
-        }
-        .dropdown-menu li a:hover{
-                background-color: #ff5656;
-        }
-
+        
         .avatar-header{
                 max-width: 50px;
         }
         /* new arivals */
+        .section-title,
         .new-arrivals-title h6{
                 font-size: 34px;
+        }
+        .producto{
+                max-width: none;
+        }
+        .foto-producto{
+                max-width: 400px;
         }
 }
 
@@ -1252,6 +1262,9 @@ section.editProfile {
                 margin-left: 40px;
         }
         /* Listado productos*/
+        .section-title h2{
+                font-size: 1.5em
+        }
       
         .products-list{
                 display: flex;
@@ -1263,7 +1276,7 @@ section.editProfile {
         .product-box{
                 display: flex;
                 flex-wrap: wrap;
-                width: 45%;
+                width: 48%;
                 margin: 50px 10px;
                 align-items: center;
                 box-shadow: 4px 9px 10px hwb(29 62% 27%);
@@ -1292,6 +1305,8 @@ section.editProfile {
                 font-size: 25px;
                 
         }
+        /* barra de busqueda */
+        
 
         /*DetalleProducto*/
         
@@ -1307,9 +1322,17 @@ section.editProfile {
                 background-color: #116691;
         }
         /* new arrivals */
+        
         .new-arrivals-title{
                 width: 80%;
                 margin: 20px 10% 30px 10%;
         }
+        .producto{
+                max-width: none;
+        }
+        .producto img{
+                max-width: 500px;
+        }
+
        
 }

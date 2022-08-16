@@ -19,20 +19,19 @@
        
          
           
-            <a class="carrito-compras" href='shoppingCart'><i class="fas fa-shopping-cart" title="Carrito"></i></a>
+            
             <% if (locals.isLogged) {%>
               <button class="user-section-header">
                
                     <div class="hello-header">
-                        <img class="avatar-header" src="/images/users/<%=userLogged.avatar%> " alt="">
+                        <a href="/users/profile"><img class="avatar-header" src="/images/users/<%=userLogged.avatar%> " alt=""></a>
                         <p>Hola <%= userLogged.fullName %> ! </p>
                     </div>  
-                <ul class="dropdown-menu">
-                    <li><a href="/users/profile">Mi perfil</a></li>
-                    <li><a href="/users/logout/">Cerrar sesión</a></li>
-                </ul>
-              </button>
-               
+                    <!--button class="shopping-cart-button">
+                        <a class="carrito-compras" href='shoppingCart'><i class="fas fa-shopping-cart" title="Carrito"></i></a>
+                    </-button-->
+                    </button>
+                <div class="logout"> <a  href="/users/logout/"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></div>
                         
             <% } else {%>
                 <div class="login-icon"> <a href="/users/login"> <i class="far fa-user" title="Login"></i></a>  </div>
@@ -40,7 +39,7 @@
         </div>
         <div class="tool-bar">
             <ul class="navbar">
-                <li> <a href='#'>Categorías</a></li>
+                <li> <a href='products'>Ofertas</a></li>
                 <li><a href='#'>Galería</a></li>
                 <li><a href='#'>FW 2022</a></li>
                 <li><a href='#'>Nosotros</a></li>
