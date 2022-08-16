@@ -26,5 +26,4 @@
 - Postergar trabajo que puede ser realizado durante la semana. No delegar muchas tareas para el fin de semana.
 
 ### 5. Dejar de hacer
-- Subir cambios no testeados.
 - Postergar mejoras en el Front que se pueden realizar entre una entrega y otra.
