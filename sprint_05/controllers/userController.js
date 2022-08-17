@@ -74,7 +74,7 @@ const usersController = {
     // Mostrar formulario de login
 
     login: (req, res) => {
-        console.log(req.session);
+       // console.log(req.session);
         res.render('login');
 
     },
@@ -82,13 +82,18 @@ const usersController = {
 
     processLogin: (req, res) => {
         let userToLogin = User.findByField('username', req.body.usuario);
+
             if (userToLogin) {
                 let validPassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.password);
                 if (validPassword) {
                     delete userToLogin.password;
                     req.session.userLogged = userToLogin;
+
+                    if (req.body.recordarUsuario) {
+                        res.cookie('usernameCookie', req.body.usuario, { maxAge: 86400000}); // cookie que dura 24 horas
+                    }
                   //console.log(req.session.userLogged);
-                   let userLogged = User.findByPk(userToLogin.id)
+                  // let userLogged = User.findByPk(userToLogin.id)
                   //  res.render('userDetail', 
                    // {usuario: userLogged});
                    res.redirect('profile')

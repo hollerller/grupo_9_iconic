@@ -5,6 +5,7 @@ const app = express();
 const path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
+const cookies = require('cookie-parser');
 
 //Llamando a los middlewares a nivel global
 const errorMiddleware = require('./middlewares/error')
@@ -30,6 +31,8 @@ const mainRouter = require('./routes/mainRouter');
 const userRoutes = require('./routes/userRoutes');
 const productsRouter = require('./routes/productRoutes');
 // rutas
+
+app.use(cookies());
 
 app.use(userLoggedMiddleware);
 // levantar el servidor

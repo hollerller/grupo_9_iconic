@@ -21,7 +21,10 @@
                     <% if (locals.loginErrors && loginErrors.contrasena) { %>
                         <p class="error-message"><%= loginErrors.contrasena.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
-                    
+
+                    <label>Recordar mi usuario:
+                    <input type="checkbox" name="recordarUsuario">
+                </label>
                     <button class="boton-ingresar" type="submit"><a href="/">
                             <p>Enviar</p>
                         </a></button>
