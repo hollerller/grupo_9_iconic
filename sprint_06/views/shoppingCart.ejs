@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Mi carrito'}) %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <h5 class="section-name">Mis compras</h5>
+                <article class="articulo-compra">
+                    <img src="/images/products/newArrivals1.jpg">
+                    <div class="detalle-compra">
+                        <p class="productName">Buzo Hoodie Classic | HOMBRE</p>
+                        <p class="productPrice">$5.450,00</p>
+                        <p class="productDescription">Buzo canguro de frisa con capucha
+
+                            Cordón fantasía y bolsillos en frente. Puño mangas y cintura en morley a tono. Logo bordado en frente izquierdo. Composición: Frisa50% algodón 50% poliéster</p>
+                    </div>
+
+                    <form class="form-compra" action="/compra" method="post">
+                        <label for="talle">Seleccioná tu talle</label>
+                        <select name="talle-compra" id="talle">
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                            <option value="xxl">XXL</option>
+                            <option value="talles-especiales">Consultar por talles especiales</option>
+                        </select>
+                        <label for="color">Indicanos el color de tu preferencia</label>
+                        <select name="color-compra" id="color">
+                            <option value="verde">Verde</option>
+                            <option value="bordo">Bordo</option>
+                            <option value="marron">Marrón</option>
+                            <option value="gris">Gris</option>
+                        </select>
+                        <label for="cantidad">Cantidad</label>
+                        <select name="cantidad" id="cantidad">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <button class="delete-button"><i class="fas fa-trash"></i></button>
+                    </form>
+                    
+                </article>
+                <input type="button" class="boton-continuar" value="Continuar el proceso de compra">
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
+</html>

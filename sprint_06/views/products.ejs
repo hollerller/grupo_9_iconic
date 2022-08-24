@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Listado de Productos'})  %>
+
+    <body>
+        <%- include('./partials/header') %>
+        <section class="products-list">
+            <div class="section-title">
+                <h2>OFERTAS</h2>
+            </div>
+              
+        
+            
+                <% for(product of list){%>
+                    <% if(product.inSale === "yes") {%> 
+                    <div class="product-box">
+                                                <a href="#">
+                                                    <img class="product-img" src="/images/products/<%= product.image %> " alt="Imagen de Producto">
+                                                </a>
+
+                                          
+                                    
+                                <div class="product-detail">
+                                    <p class="product-name"><%=product.name %></p>
+                                    <p class="product-price">Precio online:  $<%= product.price %></p>
+                                    <p class="product-discount">Ahorrás un <%= product.discount %>%</p>
+                                    <!--p class="product-description"><%= product.description %> <p-->
+                                    
+                            </div>
+                            <div class="see-box">
+                                <a class="see-button"  href="/products/<%=product.id %> ">ver</a>
+                            </div>  
+                                
+                    </div>
+                    <% } %> 
+                <% } %> 
+            
+            
+                 
+        </section>
+        
+         <%- include('./partials/footer') %>
+    </body>
+
+</html>

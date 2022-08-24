@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Home'})  %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <div class="slider">
+                    <img src="/images/products/slider2.webp" alt="">
+                </div>
+                
+                <div class="banner-home">
+                    <img src="/images/banner-home.webp" alt="">
+                </div>
+                <%- include('./partials/newArrivals') %>
+                <section class="vender">
+                    <div>
+                        <h6>Vendé tu marca</h6><i class="far fa-lightbulb"></i>
+                    </div>
+                </section>
+           
+            
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
+</html>

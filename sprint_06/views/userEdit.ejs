@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Editar Usuario'})  %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <form class="formulario" action="/users/edit" method="POST" enctype="multipart/form-data">
+
+                    <h3 class="titulo-formulario"> Edita tu información de perfil </h3>
+
+                    <input class="input-text" placeholder="Nombre y Apellido" type="text" name="fullname"
+                        id="nombre-apellido" value="<%= locals.oldData ? oldData.fullName : null  %>" >  
+                    <% if (locals.registerErrors && registerErrors.fullName) { %>
+                        <p class="error-message"><%= registerErrors.fullName.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+
+                    <input class="input-text" placeholder="Usuario" type="text" id="usuario" name="username"
+                    value="<%= locals.oldData ? oldData.username : null  %>">
+                    <% if (locals.registerErrors && registerErrors.username) { %>
+                        <p class="error-message"><%= registerErrors.username.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+
+                    <input class="input-text" placeholder="Correo electrónico" type="email" id="mail" name="email"
+                    value="<%= locals.oldData ? oldData.email : null  %>">
+                    <% if (locals.registerErrors && registerErrors.email) { %>
+                        <p class="error-message"><%= registerErrors.email.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+                    
+                        <label for="avatar">Avatar de usuario:</label>
+                            
+                        <input 
+                                id="avatar"
+                                type="file"
+                                name="avatar"
+                                accept=".jpg, .png"
+                                value="<%= locals.oldData ? oldData.avatar : null %>  "> 
+
+                    <% if (locals.registerErrors && registerErrors.avatar) { %>
+                            <p class="error-message"><%= registerErrors.avatar.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+
+                    <input class="input-text" placeholder="Contraseña" type="password" name="contrasena" id="contrasena"
+                    value="<%= locals.oldData ? oldData.password : null  %>">
+                    <% if (locals.registerErrors && registerErrors.password) { %>
+                        <p class="error-message"><%= registerErrors.password.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+                    <input class="input-text" placeholder="Confirma la contraseña" type="password" name="contrasenaConf"
+                        id="contrasenaConfirmada"
+                        value="<%= locals.oldData ? oldData.password : null  %>">
+                        <% if (locals.registerErrors && registerErrors.password) { %>
+                            <p class="error-message"><%= registerErrors.password.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                        <% } %>
+
+                    <input class="input-text" type="date" id="fechaNacimiento" name="birthday"
+                    value="<%= locals.oldData ? oldData.birthday : null  %>">
+                    <% if (locals.registerErrors && registerErrors.birthday) { %>
+                        <p class="error-message"><%= registerErrors.birthday.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+
+                    <input class="boton-registrarme" type="submit" value="Editar Perfil">
+
+                </form>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
+</html>

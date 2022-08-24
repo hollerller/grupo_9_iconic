@@ -1,0 +1,51 @@
+<header>
+    <div class="main-header">
+        <div class="top-bar">
+            <div class="burger-menu"><i class="fas fa-bars"></i></div>
+            <div class="logo"><a href="/"><img src="/images/logo.png" alt="Iconic"></a></div>
+          
+    
+         
+            <div class="search">
+                <form action="/" method="get" class="search-form">
+                    <label for="search"></label>
+                    <input class="search_form" type="search" id="search" placeholder="Buscar por categorías, productos..." name="busqueda">
+                    <button class="button" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="search-button"> <a href="#"><i class="fas fa-search"></i></a> 
+            </div>
+            <!-- Mostrar el icono o foto en la sesion-->
+       
+         
+          
+            
+            <% if (locals.isLogged) {%>
+              <button class="user-section-header">
+               
+                    <div class="hello-header">
+                        <a href="/users/profile"><img class="avatar-header" src="/images/users/<%=userLogged.avatar%> " alt=""></a>
+                        <p>Hola <%= userLogged.fullName %> ! </p>
+                    </div>  
+                    <!--button class="shopping-cart-button">
+                        <a class="carrito-compras" href='shoppingCart'><i class="fas fa-shopping-cart" title="Carrito"></i></a>
+                    </-button-->
+                    </button>
+                <div class="logout"> <a  href="/users/logout/"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></div>
+                        
+            <% } else {%>
+                <div class="login-icon"> <a href="/users/login"> <i class="far fa-user" title="Login"></i></a>  </div>
+            <% } %>  
+        </div>
+        <div class="tool-bar">
+            <ul class="navbar">
+                <li> <a href='products'>Ofertas</a></li>
+                <li><a href='#'>Galería</a></li>
+                <li><a href='#'>FW 2022</a></li>
+                <li><a href='#'>Nosotros</a></li>
+                <li><a href='#'>Ayuda</a></li>
+
+            </ul>
+        </div>
+    </div>
+</header>

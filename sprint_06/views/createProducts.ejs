@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head', {title: 'Crear nuevo producto'})  %>
+<body>
+    <%- include('./partials/header') %>
+        <main class="main-create-product">
+            <form class="formulario" class="create-form" action="/products/create" method="POST" enctype="multipart/form-data">
+
+                    
+                        <h2 class="titulo-formulario">
+                        Formulario de Creacion de Productos
+                        </h2>
+                        
+
+                        <label  for="prod-name">Nombre del Producto </label>
+                            
+                            <input 
+                                class="input-text" 
+                                id="prod-name" 
+                                type="text" 
+                                name="prodName"
+                                value="<%= locals.oldData ? oldData.prodName : null%>"
+                            >
+<!-- para elementos con select: 
+selected  
+ejs locals.oldData && oneCountry === oldData.country ? 'selected' : null
+-->
+                            <% if (locals.errorsMessage && errorsMessage.prodName) {%> 
+                              
+                                    <p class="error-message"><%= errorsMessage.prodName.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                                 
+                                <% } %> 
+                     
+                        <label  for="description">Descripción</label>
+                            
+                            <textarea  class="input-text" name="description"  value="<%= locals.oldData ? oldData.description : null%>  "></textarea>
+                            <% if (locals.errorsMessage && errorsMessage.description) {%> 
+                              
+                                <p class="error-message"><%= errorsMessage.description.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                             
+                            <% } %> 
+                    
+                        
+             
+                        <label for="image">Foto del Producto:</label>
+                            
+                            <input 
+                                    id="image"
+                                    type="file"
+                                    name="image"
+                                    accept=".jpg, .png"> 
+                                    
+                        
+        
+                        
+                        <label  for="category">Categoria</label>
+                           
+                            <select name="category" id="category">
+                                <option value="women">Mujer</option>
+                                <option value="men">Hombre</option>
+                                <option value="unisex">Unisex</option>
+                            </select>
+                        
+
+                        
+                        <label  for="sub-category">Subategoría</label>
+                            <br>
+                            <select name="subCategory" id="sub-category">
+                                <option value="clothing">Indumentaria</option>
+                                <option value="accesory">Accesorios</option>
+                                <option value="other">Otros</option>
+                            </select>
+                        
+
+
+  
+                        <p>Precio</p>
+                       
+                            <input class="input-text" id="price" type="number" name="price"  value="<%= locals.oldData ? oldData.price : null%>  " >
+                            <% if (locals.errorsMessage && errorsMessage.price) {%> 
+                              
+                                <p class="error-message"><%= errorsMessage.price.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                             
+                            <% } %> 
+                           
+                            <label  for="inSale"> ¿Este producto está en oferta?</label>
+                            <br>
+                            <select name="inSale" id="inSale">
+                                <option value = "yes">Sí</option>
+                                <option value = "no">Por ahora no</option>
+                    
+                            </select>
+                         
+
+                        
+                        <label for="discount">Descuento </label>
+                        
+                        <input class="input-text" id="discount" type="number" name="discount" >
+                       
+
+                        <button type="submit" class="boton-registrarme-1">Crear producto</button>
+                        <button type="reset" class="boton-registrarme-1">Cancelar</button>
+
+         
+                    </form>
+        </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>
