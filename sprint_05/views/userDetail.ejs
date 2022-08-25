@@ -57,6 +57,12 @@
                             <a href="/users/edit">Editar perfil</a>
                 </section>
             </div>
+            <div class="delete-user-form">
+                <form action="/users/<%=usuario.id%>/delete?_method=DELETE" method="POST">
+                    <button type="submit" class="delete-product-button">Eliminar Usuario</button>                       
+                </form>
+            </div>
+
             </main>
             <%- include('./partials/footer') %>
     </body>

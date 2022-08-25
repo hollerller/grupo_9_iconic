@@ -1150,18 +1150,6 @@
   "image": "prod2.jpg"
  },
  {
-  "id": 97,
-  "name": "Ocean Spray - Kiwi Strawberry",
-  "category": "women",
-  "subCategory": "casual-clothing",
-  "size": "XL",
-  "price": 8907,
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  "inSale": "yes",
-  "discount": 5,
-  "image": "prod5.jpg"
- },
- {
   "id": 98,
   "name": "Syrup - Monin, Irish Cream",
   "category": "women",
@@ -1183,18 +1171,6 @@
   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   "inSale": "yes",
   "discount": 19,
-  "image": "prod5.jpg"
- },
- {
-  "id": 100,
-  "name": "Eggplant - Regular",
-  "category": "women",
-  "subCategory": "casual-clothing",
-  "size": "S",
-  "price": 5280,
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  "inSale": "yes",
-  "discount": 10,
   "image": "prod5.jpg"
  },
  {

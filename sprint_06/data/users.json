@@ -1122,17 +1122,6 @@
   "category": "vendedor"
  },
  {
-  "id": 108,
-  "fullName": "David",
-  "username": "Test Login",
-  "email": "david@test.com",
-  "avatar": "1659587683102_img_.png",
-  "password": "$2a$10$tCk7Nkl0kT83oNLN9PbB/uoBbX5SnSZAiQtSpp0zpAm1AoRR7cod2",
-  "birthday": "1991-10-12",
-  "terms": "aceptoTerminos",
-  "category": "vendedor"
- },
- {
   "id": 109,
   "fullName": "Belen Lopez",
   "username": "blopez123",

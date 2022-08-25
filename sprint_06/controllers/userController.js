@@ -10,7 +10,7 @@ const { validationResult } = require('express-validator');
 //const { findByField, findByPk } = require('../data/models/User');
 
 // Multer
-const usersArray = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+let usersArray = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
     // user: (req, res) => {
@@ -159,6 +159,16 @@ const usersController = {
     logout: (req, res) => {
         req.session.destroy();
         res.redirect('/')
+    }, 
+
+
+    deleteUser: (req, res) => {
+        let userToDelete = req.session.userLogged;
+        let newUserData = usersArray.filter(element => element.id != userToDelete.id)
+        usersArray = newUserData;
+        fs.writeFileSync(usersFilePath, JSON.stringify(usersArray, null, ' '));
+        req.session.destroy();
+        res.redirect('/');
     }
 
 }

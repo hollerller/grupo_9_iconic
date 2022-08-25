@@ -80,5 +80,8 @@ router.post('/edit/', uploadFile.single('avatar') ,registerValidations, usersCon
 //logout
 router.get('/logout', usersController.logout);
 
+//Eliminar Usuario
+router.delete('/:id/delete',usersController.deleteUser);
+
 module.exports = router;
 
