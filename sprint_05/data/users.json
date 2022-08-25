@@ -1142,5 +1142,16 @@
   "birthday": "1996-01-31",
   "terms": "aceptoTerminos",
   "category": "vendedor"
+ },
+ {
+  "id": 111,
+  "fullName": "David Tobasura Editado 12",
+  "username": "test",
+  "email": "test@test.com",
+  "avatar": "1661399734831_img_.png",
+  "password": "$2a$10$.SFZwKU3QBhDL98Eo2/Y2eRnFDh/81TWgOJZ.CVHoke2RE7LxRNOq",
+  "birthday": "2991-10-16",
+  "category": "vendedor",
+  "terms": "aceptoTerminos"
  }
 ]

@@ -145,19 +145,26 @@ const usersController = {
                 item.email = req.body.email;
                 item.avatar = req.file.filename;
                 item.birthday = req.body.birthday;
-                item.terms = req.body.tyc;
+                item.terms = 'aceptoTerminos';
                 item.category = 'vendedor';
                 }
                 return item;
             })
             fs.writeFileSync(usersFilePath,JSON.stringify(edditedUsers, null, ' '));   
-            res.render('userDetail',{ usuario: req.session.userLogged })
+            
+            const user = edditedUsers.find(element => element.id == userToEdit.id);
+            res.render('userDetail',{ usuario: user })
+       //     if (userToEdit.id != undefined) {
+                
+         //   }    
+              
     }
         
     },
 
     logout: (req, res) => {
         req.session.destroy();
+        res.clearCookie('usernameCookie')
         res.redirect('/')
     }, 
 
