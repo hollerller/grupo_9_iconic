@@ -75,13 +75,15 @@ router.get('/profile', authMiddleware, usersController.userID);
 //Editar usuario
 router.get('/edit/', authMiddleware, usersController.editUser)
 //Procesar la edicion
-router.post('/edit/', uploadFile.single('avatar') ,registerValidations, usersController.processEdition);
+router.put('/profile/', uploadFile.single('avatar'), usersController.processEdition);
 
 //logout
 router.get('/logout', usersController.logout);
 
 //Eliminar Usuario
 router.delete('/:id/delete',usersController.deleteUser);
+
+
 
 module.exports = router;
 
