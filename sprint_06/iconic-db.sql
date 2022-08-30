@@ -1,0 +1,92 @@
+DROP DATABASE IF EXISTS iconic_db;
+CREATE DATABASE iconic_db;
+USE iconic_db; -- Para abrir la base de datos que fue creada en el paso anterior
+
+-- Para crear las claves foraneas, primero se deben crear las tablas con las claves primarias
+-- Las foreing key deben tener los campos identicos a la PK 
+
+CREATE TABLE sizes(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(100)
+);
+
+CREATE TABLE category(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(100)
+);
+
+CREATE TABLE gender(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(100)
+);
+
+
+CREATE TABLE brand(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(100)
+);
+
+
+CREATE TABLE products (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	price DECIMAL NOT NULL,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	description VARCHAR(1500),
+	in_sale VARCHAR(3),
+	discount TINYINT UNSIGNED,
+	image VARCHAR(100),
+	size_id INT UNSIGNED NOT NULL,
+	category_id INT UNSIGNED NOT NULL,
+	gender_id INT UNSIGNED NOT NULL,
+	brand_id INT UNSIGNED NOT NULL,
+	FOREIGN KEY (size_id) REFERENCES sizes(id),
+	FOREIGN KEY (category_id) REFERENCES category(id),
+	FOREIGN KEY (gender_id) REFERENCES gender(id),
+	FOREIGN KEY (brand_id) REFERENCES brand(id)
+);
+
+CREATE TABLE roles(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(100)
+);
+
+CREATE TABLE country(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(100)
+);
+
+
+CREATE TABLE users (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	full_name VARCHAR(100) NOT NULL,
+	user_name VARCHAR(100) UNIQUE NOT NULL,
+	email VARCHAR(100) UNIQUE NOT NULL,
+	avatar VARCHAR(20) NOT NULL,
+	password VARCHAR(20) NOT NULL,
+	birthday DATE NOT NULL,
+	role_id INT UNSIGNED NOT NULL,
+	country_id INT UNSIGNED NOT NULL,
+	FOREIGN KEY (role_id) REFERENCES roles(id),
+	FOREIGN KEY (country_id) REFERENCES country(id)
+);
+
+CREATE TABLE orders(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ 	total DECIMAL NOT NULL,
+ 	status VARCHAR(100),
+ 	order_address VARCHAR(100) NOT NULL,
+ 	cellphone VARCHAR(15) NOT NULL,
+ 	user_id INT UNSIGNED NOT NULL,
+ 	FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE order_detail(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ 	order_id INT UNSIGNED NOT NULL,
+ 	product_id INT UNSIGNED NOT NULL,
+ 	quantity INT UNSIGNED NOT NULL,
+ 	FOREIGN KEY (order_id) REFERENCES orders(id),
+ 	FOREIGN KEY (product_id) REFERENCES products(id)
+);
