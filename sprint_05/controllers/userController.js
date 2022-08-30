@@ -29,7 +29,7 @@ const usersController = {
         const registerValidation = validationResult(req);
         //console.log(registerValidation.mapped());
         if (registerValidation.errors.length > 0) {
-            res.render('editUser', {
+            res.render('register', {
                 registerErrors: registerValidation.mapped(),
                 oldData: req.body
             })
@@ -151,8 +151,13 @@ const usersController = {
                 return item;
             })
             fs.writeFileSync(usersFilePath,JSON.stringify(edditedUsers, null, ' '));   
-            
-            const user = edditedUsers.find(element => element.id == userToEdit.id);
+            console.log(req.session.userLogged);
+            let user = edditedUsers.find(element => element.id == userToEdit.id);
+            delete user.password;
+            req.session.userLogged = user;
+           
+            console.log(req.session.userLogged)
+           
             res.render('userDetail',{ usuario: user })
        //     if (userToEdit.id != undefined) {
                 

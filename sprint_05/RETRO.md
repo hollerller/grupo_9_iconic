@@ -3,7 +3,7 @@
  ![Logo](./public/images/logo.png "Iconic logo")
 ## Análisis General
 
->Durante la realizacioón del Sprint 04 pudimos sentirnos más cómodos. Forjamos un flujo de comunicación realmente efectivo y ordenado, priorizando que lo referente a los archivos del Repositorio se canalice vía GitHub pero sin dejar de lado la posibilidad de contactarnos por medios más informales.
+>Durante la realizacioón del Sprint 05 pudimos sentirnos más cómodos. Forjamos un flujo de comunicación realmente efectivo y ordenado, priorizando que lo referente a los archivos del Repositorio se canalice vía GitHub pero sin dejar de lado la posibilidad de contactarnos por medios más informales.
 >En cuanto a las consignas del Sprint en particular, no obstante algunos ajustes a realizar durante estas semanas, nos sentimos conformes tanto con el trabajo entregado como con la devolución de los profesores, lo que nos llegó a motivar más aún para seguir invirtiendo tiempo y esfuerzo en el proyecto.
 
 ### 1. Comenzar a hacer

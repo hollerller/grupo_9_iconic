@@ -1153,5 +1153,16 @@
   "birthday": "2991-10-16",
   "category": "vendedor",
   "terms": "aceptoTerminos"
+ },
+ {
+  "id": 112,
+  "fullName": "David Edicion 11",
+  "username": "testEdition",
+  "email": "12test@test.com",
+  "avatar": "1661817746569_img_.png",
+  "password": "$2a$10$w/0FCZvaHsdxFa6SugOviOr8ZCCrpqYcY1lt3CzNzYzza5xjHpGcm",
+  "birthday": "1991-10-16",
+  "terms": "aceptoTerminos",
+  "category": "vendedor"
  }
 ]
