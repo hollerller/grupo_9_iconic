@@ -3,6 +3,10 @@
  ![Logo](./public/images/logo.png "Iconic logo")
 ## Análisis General
 
+>En este sprint, tuvimos que tomar algunas decisiones importantes para la finalización del proyecto. Estuvimos reunidos con el grupo 1 por sugerencia de los profes, para ver si podíamos integrarnos con ellos y terminar el proyecto. Vimos que su proyecto es muy bueno y van al día, unicamente sentimos que habia algunas diferencias en la metodología de subida de cambios. Igualmente, pensamos que podía ser un poco más difícil organizarnos entre 5 personas, ya que pueden haber diferencias de horario y disponibilidad, por eso tomamos la decisión de continuar con nuestro proyecto Iconic. 
+
+> Continuamos manteniendo una comunicación permanente y apoyandonos en las dudas que pueden surgri 
+
 >Durante la realizacioón del Sprint 04 pudimos sentirnos más cómodos. Forjamos un flujo de comunicación realmente efectivo y ordenado, priorizando que lo referente a los archivos del Repositorio se canalice vía GitHub pero sin dejar de lado la posibilidad de contactarnos por medios más informales.
 >En cuanto a las consignas del Sprint en particular, no obstante algunos ajustes a realizar durante estas semanas, nos sentimos conformes tanto con el trabajo entregado como con la devolución de los profesores, lo que nos llegó a motivar más aún para seguir invirtiendo tiempo y esfuerzo en el proyecto.
 
