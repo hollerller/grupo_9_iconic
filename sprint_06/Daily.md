@@ -2,8 +2,8 @@
 Se acordó realizar al menos dos reuniones semanales. Durante el sprint 5 las mismas se hicieron de la siguiente forma:
 
 
-- **Lunes 8/08:** Se realizó una reunión con una duración aproximada 50 minutos, con la idea de realizar en conjunto la tarea opcional del sprint (Session y cookies).
-- **Jueves 12/08:** Nos reunimos para solucionar el funcionamiento de un middleware (userLoggedMiddleware). Se revisó el tablero de trello y las consignas obligatorias del sprint.
+- **Lunes 29/08:** Se realizó una reunión con una duración aproximada 30 minutos con el objetivo de ponernos al corriente del estado de avance de esta entrega. Se instaló sequelize.
+- **Martes 30/08:** Nos pusimos en contacto para discutir, en particular, un detalle de las relaciones entre las tablas de sizes con las de products y order_detail.
 
 
 Las reuniones se realizan a través de [este link](https://meet.google.com/zic-frwn-fzj?pli=1&authuser=2)
