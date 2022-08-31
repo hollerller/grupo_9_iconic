@@ -21,7 +21,7 @@ module.exports = (sequelize,DataTypes) => {
             
         },
         discount:{
-            type:DataTypes.TINYIN5.UNSIGNED,
+            type:DataTypes.TINYINT.UNSIGNED,
 
         },
         image:{
