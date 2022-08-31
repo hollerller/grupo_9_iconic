@@ -1,5 +1,5 @@
 module.exports = (sequelize,dataTypes) => {
-    let alias = "Product";
+    let alias = "User";
     let cols = {
         id: {
             type: dataTypes.INTEGER.UNSIGNED,
@@ -8,54 +8,44 @@ module.exports = (sequelize,dataTypes) => {
             primaryKey: true
         
         },
-        name:{
+        full_name:{
             type:dataTypes.VARCHAR(100),
             allowNull: false
         },
-        price: {
+        user_name: {
             type: dataTypes.DECIMAL,
             allowNull:false
         },
-        description: {
+        email: {
             type: dataTypes.VARCHAR(1500),
-
-        },
-        in_sale:{
-            type:dataTypes.VARCHAR(3),
-            
-        },
-        discount:{
-            type:dataTypes.TINYINT.UNSIGNED,
-
-        },
-        image:{
-            type:dataTypes.VARCHAR(100),
-
-        },
-        size_id:{
-            type:dataTypes.INTEGER.UNSIGNED,
-            
-        },
-        category_id:{
-            type:dataTypes.INTEGER.UNSIGNED,
             allowNull:false
+        },
+        avatar:{
+            type:dataTypes.VARCHAR(100),
+            
+        },
+        password:{
+            type:dataTypes.VARCHAR(20),
+            allowNull:false
+        },
+        birthday:{
+            type:dataTypes.DATE,
 
         },
-        gender_id:{
-            type:dataTypes.INTEGER.UNSIGNED,
-            allowNull: false
-
+        role_id:{
+            type:dataTypes.INTEGER,
+            allowNull:false
         },
-        brand_id:{
+        country_id:{
             type:dataTypes.INTEGER.UNSIGNED,
             allowNull:false
 
         }
     };
     let config = {
-        tableNme: "products",
+        tableNme: "users",
         timestamps:false
     };
-    const Product = sequelize.define(alias,cols,config);
-    return Product
+    const User = sequelize.define(alias,cols,config);
+    return User
 }
