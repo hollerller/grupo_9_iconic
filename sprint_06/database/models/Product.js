@@ -21,8 +21,8 @@ module.exports = (sequelize,dataTypes) => {
 
         },
         in_sale:{
-            type:dataTypes.VARCHAR(3),
-            
+            type:dataTypes.BOOLEAN,
+            allowNull:false
         },
         discount:{
             type:dataTypes.TINYINT.UNSIGNED,
