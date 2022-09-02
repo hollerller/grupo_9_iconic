@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const {validationResult} = require('express-validator');
-
+let db = require("../database/models");
+const { create } = require('domain');
 
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -22,37 +23,42 @@ const productController = {
     },
     //Crear productos: GET//
     createProduct: (req,res) => {
-        res.render('createProducts')
+        db.Size.findAll()
+        .then(sizes=>{
+            return res.render('createProducts', {sizes})
+        })
+        
+    
     },
     //Crear productos: POST//
     store: (req,res)=>{
-        let errores = validationResult(req);
+        // let errores = validationResult(req);
         
-        let file = req.file;
-        if(file && validationResult.isEmpty()){
-            let newProduct = {
-                id: (products.length+1),
-                name: req.body.name,
-                price: req.body.price,
-                discount: req.body.discount,
-                category: req.body.category,
-                subCategory:req.body.subCategory,
-                description: req.body.description,
-                image: req.file.filename,
-                inSale: req.body.inSale
-            };
-            products.push(newProduct);
-            fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' ')); 
+        // let file = req.file;
+        // if(file && validationResult.isEmpty()){
+        //     let newProduct = {
+        //         id: (products.length+1),
+        //         name: req.body.name,
+        //         price: req.body.price,
+        //         discount: req.body.discount,
+        //         category: req.body.category,
+        //         subCategory:req.body.subCategory,
+        //         description: req.body.description,
+        //         image: req.file.filename,
+        //         inSale: req.body.inSale
+        //     };
+        //     products.push(newProduct);
+        //     fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' ')); 
     
-            res.redirect("/products");   
-        }else{
-            console.log(errores.mapped());
-            return res.render('createProducts', { 
-                errorsMessage : errores.mapped(),
-                oldData: req.body
-            })
-        }
-                   
+        //     res.redirect("/products");   
+        // }else{
+        //     console.log(errores.mapped());
+        //     return res.render('createProducts', { 
+        //         errorsMessage : errores.mapped(),
+        //         oldData: req.body
+        //     })
+        // }
+   
         
 },
 //Editar productos: GET//

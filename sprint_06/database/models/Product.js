@@ -9,7 +9,7 @@ module.exports = (sequelize,dataTypes) => {
         
         },
         name:{
-            type:dataTypes.VARCHAR(100),
+            type:dataTypes.STRING(100),
             allowNull: false
         },
         price: {
@@ -17,7 +17,7 @@ module.exports = (sequelize,dataTypes) => {
             allowNull:false
         },
         description: {
-            type: dataTypes.VARCHAR(1500),
+            type: dataTypes.STRING(1500),
 
         },
         in_sale:{
@@ -29,7 +29,7 @@ module.exports = (sequelize,dataTypes) => {
 
         },
         image:{
-            type:dataTypes.VARCHAR(100),
+            type:dataTypes.STRING(100),
 
         },
         size_id:{

@@ -9,7 +9,7 @@ module.exports = (sequelize,dataTypes) => {
         
         },
         date:{
-            type:dataTypes.Date,
+            type:dataTypes.DATE,
             allowNull: false
         },
         total: {
@@ -17,11 +17,11 @@ module.exports = (sequelize,dataTypes) => {
             allowNull:false
         },
         status: {
-            type: dataTypes.VARCHAR(1500),
+            type: dataTypes.STRING(1500),
 
         },
         order_adress:{
-            type:dataTypes.VARCHAR(100),
+            type:dataTypes.STRING(100),
             
         },
         user_id:{

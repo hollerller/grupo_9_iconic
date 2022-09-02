@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "root1234",
     "database": "iconic_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

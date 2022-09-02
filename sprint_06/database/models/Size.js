@@ -9,7 +9,7 @@ module.exports = (sequelize,dataTypes) => {
         
         },
         name:{
-            type:dataTypes.VARCHAR(10),
+            type:dataTypes.STRING(10),
             allowNull: false
         }
     };

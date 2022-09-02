@@ -53,26 +53,24 @@ ejs locals.oldData && oneCountry === oldData.country ? 'selected' : null
                         
         
                         
-                        <label  for="category">Categoria</label>
-                           
-                            <select name="category" id="category">
-                                <option value="women">Mujer</option>
-                                <option value="men">Hombre</option>
-                                <option value="unisex">Unisex</option>
+                                    <label for="size">Géneros</label>
+                                    <select name="gender" id="gender">
+                                        <% for (let i = 0; i < genders.length; i++) { %> 
+                                        <option value="<%= genders[i].id %> ">
+                                            <%= genders[i].name %> 
+                                        </option>
+                                        <% } %> 
+                                    </select>
+                        
+
+                            <label for="size">Talle</label>
+                            <select name="size" id="size">
+                                <% for (let i = 0; i < sizes.length; i++) { %> 
+                                <option value="<%= sizes[i].id %> ">
+                                    <%= sizes[i].name %> 
+                                </option>
+                                <% } %> 
                             </select>
-                        
-
-                        
-                        <label  for="sub-category">Subategoría</label>
-                            <br>
-                            <select name="subCategory" id="sub-category">
-                                <option value="clothing">Indumentaria</option>
-                                <option value="accesory">Accesorios</option>
-                                <option value="other">Otros</option>
-                            </select>
-                        
-
-
   
                         <p>Precio</p>
                        

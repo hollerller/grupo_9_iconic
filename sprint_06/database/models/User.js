@@ -9,7 +9,7 @@ module.exports = (sequelize,dataTypes) => {
         
         },
         full_name:{
-            type:dataTypes.VARCHAR(100),
+            type:dataTypes.STRING(100),
             allowNull: false
         },
         user_name: {
@@ -17,15 +17,15 @@ module.exports = (sequelize,dataTypes) => {
             allowNull:false
         },
         email: {
-            type: dataTypes.VARCHAR(1500),
+            type: dataTypes.STRING(1500),
             allowNull:false
         },
         avatar:{
-            type:dataTypes.VARCHAR(100),
+            type:dataTypes.STRING(100),
             
         },
         password:{
-            type:dataTypes.VARCHAR(20),
+            type:dataTypes.STRING(20),
             allowNull:false
         },
         birthday:{

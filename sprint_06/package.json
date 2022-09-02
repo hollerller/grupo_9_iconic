@@ -4,6 +4,7 @@
   "description": "### Propósito del e-commerce y público objetivo: Somos Iconic, nuestro equipo se propone comercializar indumentaria para todos los gustos y preferencias, procurando que el cliente encuentre lo que gusta y lo/la hace ser el/ella mism@.",
   "main": "app.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
     "dev": "nodemon app.js"
   },
@@ -23,6 +24,6 @@
     "sequelize": "^6.21.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.18"
   }
 }

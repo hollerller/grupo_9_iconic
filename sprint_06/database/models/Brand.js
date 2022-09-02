@@ -1,3 +1,4 @@
+
 module.exports = (sequelize,dataTypes) => {
     let alias = "Brand";
     let cols = {
@@ -9,7 +10,7 @@ module.exports = (sequelize,dataTypes) => {
         
         },
         name:{
-            type:dataTypes.VARCHAR(100),
+            type: dataTypes.STRING(100),
             allowNull: false
         }
     };
