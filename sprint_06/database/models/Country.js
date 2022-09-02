@@ -17,5 +17,12 @@ module.exports = (sequelize,dataTypes) => {
         tableNme: "products"
     };
     const Country = sequelize.define(alias,cols,config);
+
+    Country.associate = (models) => {
+        Country.hasMany(models.User,{
+            as: "users",
+            foreignKey: "country_id"
+        })
+    }
     return Country
 }
