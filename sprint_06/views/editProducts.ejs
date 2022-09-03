@@ -14,72 +14,140 @@
       
 
 
-            <label  for="prod-name">Nombre del Producto </label>
-                
-                <input class="input-text" id="prod-name" type="text" name="name" value="<%= product.name %> ">
-           
-         
-            <label  for="description">Descripción</label>
-                
-                <textarea  class="input-text" name="description" ><%= product.description %> </textarea>
-            
         
-            
- 
-            <label for="image">Foto del Producto:</label>
-                
-                <input 
-                        id="image"
-                        type="file"
-                        name="image"
-                        accept=".jpg, .png"
-                        value="<%= product.image %> "> 
+                    <label  for="prod-name">Nombre del Producto </label>
+                                    
+                    <input 
+                        class="input-text" 
+                        id="prod-name" 
+                        type="text" 
+                        name="prodName"
+                        value="<%=product.name%>"
+                    >
+        <!-- para elementos con select: selected  ejs locals.oldData && oneCountry === oldData.country ? 'selected' : null-->
+                    <% if (locals.errorsMessage && errorsMessage.prodName) {%> 
+                    
+                            <p class="error-message"><%= errorsMessage.prodName.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                         
+                        <% } %> 
+            
+                <label  for="description">Descripción</label>
+                    
+                    <textarea  class="input-text" name="description"><%=product.description%> </textarea>
+                    <% if (locals.errorsMessage && errorsMessage.description) {%> 
+                    
+                        <p class="error-message"><%= errorsMessage.description.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    
+                    <% } %> 
+            
+                
+
+                <label for="image">Foto del Producto:</label>
+                    
+                    <input 
+                            id="image"
+                            type="file"
+                            name="image"
+                            accept=".jpg, .png"
+                            > 
+                            
+                            
+                            <label for="category">Categoría</label>
+                            <select name="category" id="category">
+                                <% for (let i = 0; i < categories.length; i++) { %> 
+                                    <% if (categories[i].id == product.category_id) { %> 
+                                        <option value="<%= categories[i].id %>" selected>
+                                           <%= categories[i].name %> 
+                                        </option>
+                                    <%} else { %>
+                                        <option value="<%= categories[i].id %>">
+                                            <%= categories[i].name %> 
+                                         </option>
+
+                                    <%}%>
+                               
+                                <% } %> 
+                            </select>
+
+                            <label for="gender">Géneros</label>
+                            <select name="gender" id="gender">
+                                <% for (let i = 0; i < genders.length; i++) { %> 
+                                    <% if (genders[i].id == product.gender_id) { %> 
+                                        <option value="<%= genders[i].id %>" selected>
+                                            <%= genders[i].name %> 
+                                        </option>
+                                    <%} else {%>
+                                        <option value="<%= genders[i].id %> ">
+                                            <%= genders[i].name %> 
+                                        </option>
+                                    <% } %> 
+
+                                
+                                <% } %> 
+                            </select>
+                        
+                
+
+                            <label for="size">Talle</label>
+                            <select name="size" id="size">
+                                <% for (let i = 0; i < sizes.length; i++) { %> 
+                                    <% if (sizes[i].id == product.size_id) { %> 
+                                        <option value="<%= sizes[i].id %>" selected>
+                                            <%= sizes[i].name %> 
+                                        </option>
+                                    <% } else { %>
+                                        <option value="<%= sizes[i].id %> ">
+                                            <%= sizes[i].name %> 
+                                        </option>
+                                    <% } %> 
+
+                               
+                                <% } %> 
+                            </select>
+                            
+                            <label for="brand">Marca</label>
+                            <select name="brand" id="brand">
+                                <% for (let i = 0; i < brands.length; i++) { %> 
+                                    <% if (brands[i].id == product.brand_id) { %> 
+                                        <option value="<%= brands[i].id %>" selected>
+                                            <%= brands[i].name %> 
+                                        </option>
+                                    <% } else { %> 
+                                        <option value="<%= brands[i].id %> ">
+                                            <%= brands[i].name %> 
+                                        </option>
+                                    <% } %> 
+                                
+                                <% } %> 
+                            </select>
+                            
+
+                <p>Precio</p>
+            
+                    <input class="input-text" id="price" type="number" name="price"  value="<%=product.price%>" >
+                    <% if (locals.errorsMessage && errorsMessage.price) {%> 
+                    
+                        <p class="error-message"><%= errorsMessage.price.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    
+                    <% } %> 
+                
+                    <label  for="inSale"> ¿Este producto está en oferta?</label>
+                    <br>
+                    <select name="inSale" id="inSale">
+                        <option value = true>Sí</option>
+                        <option value = false>Por ahora no</option>
+            
+                    </select>
+                
+
+                
+                <label for="discount">Descuento </label>
+                
+                <input class="input-text" id="discount" type="number" name="discount" value="<%=product.discount%>">
             
 
-            
-            <label  for="category">Categoria</label>
-               
-                <select name="category" id="category" value="<%= product.category %> ">
-                    <option value="women">Mujer</option>
-                    <option value="men">Hombre</option>
-                    <option value="unisex">Unisex</option>
-                </select>
-            
-
-            
-            <label  for="sub-category">Subategoría</label>
-                <br>
-                <select name="subCategory" id="sub-category" value="<%= product.subCategory %> ">
-                    <option value="clothing">Indumentaria</option>
-                    <option value="accesory">Accesorios</option>
-                    <option value="other">Otros</option>
-                </select>
-            
-
-
-
-            <p>Precio</p>
-                <input type="number" name="price" id="price" class="input-text" value="<%= product.price %> ">
-    
-               
-                <label  for="inSale"> ¿Este producto está en oferta?</label>
-                <br>
-                <select name="inSale" id="inSale" >
-                    <option value = "yes">Sí</option>
-                    <option value = "no">Por ahora no</option>
-        
-                </select>
-             
-
-            
-            <label for="discount">Descuento </label>
-            
-                <input type="number" class="input-text" id="discount" name="discount" value="<%=product.discount %> ">
-
-            <button type="submit" class="boton-registrarme-1">Guardar cambios</button>
-            <button type="reset" class="boton-registrarme-1">Cancelar</button>
-
+                <button type="submit" class="boton-registrarme-1">Guardar cambios</button>
+                <button type="reset" class="boton-registrarme-1">Cancelar</button>
 
         </form>
        </main>

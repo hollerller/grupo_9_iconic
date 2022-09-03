@@ -14,9 +14,7 @@
                                 <p class="product-name"><%=product.name %></p>
                                 <p class="product-gender"><%= product.product_genders.name%></p>
                                 <p class="product-size">Talle: <%= product.product_sizes.name%></p>
-                                <p class="product-brand">Marca: <%= product.product_brands.name%></p>
-
-
+                                <p class="product-brand">Marca: <%= product.product_brands.name%></p>  
                                 <p class="product-price">Precio online:  $<%= product.price %></p>
                                 <p class="product-discount">Ahorrás un <%= product.discount %>%</p>
                                 <p class="product-description"><%= product.description %> </p>
@@ -29,7 +27,9 @@
                             
                             <div class="delete-product-form">
                                 <form action="/products/<%=product.id%>/delete?_method=DELETE" method="POST">
-                                    <button type="submit" class="delete-product-button">Eliminar producto</button>                       
+                                    <a class="edit-product-button" href="<%=product.id%>/edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    <a class="delete-product-button" href="<%=product.id%>/delete"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                                                
                                 </form>
                             </div>
                         </div>

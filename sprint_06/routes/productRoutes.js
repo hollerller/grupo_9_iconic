@@ -46,7 +46,7 @@ router.post('/create',uploadFile.single('image'),createValidations,productContro
 
 router.get('/:id/edit', authMiddleware,productController.editProduct);
 router.put('/:id/edit', uploadFile.single('image'), productController.saveChanges);
-router.delete('/:id/delete',productController.delete);
+router.get('/:id/delete',productController.delete);
 
 
 

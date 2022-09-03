@@ -45,7 +45,12 @@ const productController = {
 
       Promise.all([sizes,genders,brands,categories])
         .then(function([sizes,genders,brands,categories]){
-            res.render('createProducts',{sizes:sizes,genders:genders,brands:brands,categories:categories})
+            res.render('createProducts',{
+                sizes:sizes,
+                genders:genders,
+                brands:brands,
+                categories:categories
+            })
         })
     
     },
@@ -73,44 +78,66 @@ const productController = {
 },
 //Editar productos: GET//
     editProduct: (req,res) => {
+        //pedidos asincrónicos//
+        let product = db.Product.findByPk(req.params.id)
+        let sizes = db.Size.findAll()
+        let genders = db.Gender.findAll()
+        let brands = db.Brand.findAll()
+        let categories = db.Category.findAll()
+        
 
-        let idUrl = req.params.id;
-        let product = products.find(product => product.id == idUrl);
-        res.render('editProducts',{ product:product })
+
+      Promise.all([product,sizes,genders,brands,categories])
+        .then(([product,sizes,genders,brands,categories])=>{
+            res.render('editProducts',{
+                product:product,
+                sizes:sizes,
+                genders:genders,
+                categories:categories,
+                brands:brands
+            })
+        })
+      
 
     },
     //Editar productos: PUT//
     saveChanges: (req,res) =>{
         let idUrl = req.params.id;
+        let errores = validationResult(req);
         
-       let editedList =  products.map(element=>{
-            if(element.id ==idUrl){
-                element.name= req.body.name;
-                element.price= req.body.price;
-                element.discount= req.body.discount;
-                element.category= req.body.category;
-                element.subCategory=req.body.subCategory;
-                element.description= req.body.description;
-                element.image= req.file.filename;
-                element.inSale= req.body.inSale;
-                element.size=req.body.size
-            }
-            return element
-        })
-        fs.writeFileSync(productsFilePath,JSON.stringify(editedList, null, ' '));   
-        const product = editedList.find(element=>element.id == idUrl);
-        if (idUrl != undefined) {
-            res.render('productDetail',{ product: product })
-        }    
+        let file = req.file;
+        if(file && errores.isEmpty()){
+    
+            db.Product.update({
+                name:req.body.prodName,
+                price:req.body.price,
+                description:req.body.description,
+                in_sale:req.body.inSale,
+                discount:req.body.discount,
+                image:req.file.filename,
+                size_id:req.body.size,
+                category_id:req.body.category,
+                gender_id:req.body.gender,
+                brand_id:req.body.brand
+            },{
+                where:{
+                    id:idUrl
+                }
+            })
+              
+        }  
+        res.redirect(`/products/${idUrl}`)
     },
+ 
     //ruta DELETE
     delete:(req,res)=>{
         let idUrl = req.params.id;
 
-        let newList = products.filter(element=>element.id!=idUrl)
-        products =newList;
-        fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' ')); 
-        
+       db.Product.destroy({
+        where:{
+            id: idUrl
+        }
+       })
         res.redirect('/products')
     }
    
