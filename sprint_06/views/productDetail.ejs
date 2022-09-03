@@ -12,8 +12,13 @@
                
                         <div class="product-info">
                                 <p class="product-name"><%=product.name %></p>
+                                <p class="product-gender"><%= product.product_genders.name%></p>
+                                <p class="product-size">Talle: <%= product.product_sizes.name%></p>
+                                <p class="product-brand">Marca: <%= product.product_brands.name%></p>
+
+
                                 <p class="product-price">Precio online:  $<%= product.price %></p>
-                                <p class="product-discount">Ahorrás un <%= product.discount %>&</p>
+                                <p class="product-discount">Ahorrás un <%= product.discount %>%</p>
                                 <p class="product-description"><%= product.description %> </p>
                              <br>
                             <div class="add-product-form">

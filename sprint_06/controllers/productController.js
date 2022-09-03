@@ -3,6 +3,7 @@ const path = require('path');
 const {validationResult} = require('express-validator');
 let db = require("../database/models");
 const { create } = require('domain');
+const Product = require('../database/models/Product');
 
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -12,14 +13,27 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productController = {
     //rutas GET//
     list: (request, response) => {
-        response.render('products',{list : products})
+        db.Product.findAll()
+            .then(products=>{
+                response.render('products',{products:products})
+            })
+
     },
     productID: (req, res) => {
-        let productId = req.params.id;
-        const product = products.find(element=>element.id == productId);
-        if (productId != undefined) {
-           res.render('productDetail', {product:product });
-        }
+
+        db.Product.findByPk(req.params.id,{
+            include:[
+                {association: "product_sizes"},
+                {association: "product_categories"},
+                {association:"product_genders"},
+                {association:"product_brands"}
+            ]
+        })
+            .then(product =>{
+                res.render('productDetail', {product:product})
+            })
+        
+        
     },
     //Crear productos: GET//
     createProduct: (req,res) => {
@@ -41,35 +55,14 @@ const productController = {
         
         let file = req.file;
         if(file && errores.isEmpty()){
-        //     let newProduct = {
-        //         id: (products.length+1),
-        //         name: req.body.name,
-        //         price: req.body.price,
-        //         discount: req.body.discount,
-        //         category: req.body.category,
-        //         subCategory:req.body.subCategory,
-        //         description: req.body.description,
-        //         image: req.file.filename,
-        //         inSale: req.body.inSale
-        //     };
-        //     products.push(newProduct);
-        //     fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ' ')); 
     
-        //     res.redirect("/products");   
-        // }else{
-        //     console.log(errores.mapped());
-        //     return res.render('createProducts', { 
-        //         errorsMessage : errores.mapped(),
-        //         oldData: req.body
-        //     })
-        // }
             db.Product.create({
                 name:req.body.prodName,
                 price:req.body.price,
                 description:req.body.description,
                 in_sale:req.body.inSale,
                 discount:req.body.discount,
-                image:req.body.image,
+                image:req.file.filename,
                 size_id:req.body.size,
                 category_id:req.body.category,
                 gender_id:req.body.gender,

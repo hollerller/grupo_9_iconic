@@ -22,7 +22,7 @@ module.exports = (sequelize,dataTypes) => {
         }
     };
     let config = {
-        tableNme: "order_detail"
+        tableName: "order_detail"
     };
     const OrderDetail = sequelize.define(alias,cols,config);
     return OrderDetail

@@ -43,7 +43,7 @@ module.exports = (sequelize,dataTypes) => {
         }
     };
     let config = {
-        tableNme: "users",
+        tableName: "users",
         timestamps:false
     };
     const User = sequelize.define(alias,cols,config);

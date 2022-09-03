@@ -11,8 +11,8 @@
               
         
             
-                <% for(product of list){%>
-                    <% if(product.inSale === "yes") {%> 
+                <% for(product of products){%>
+                    
                     <div class="product-box">
                                                 <a href="#">
                                                     <img class="product-img" src="/images/products/<%= product.image %> " alt="Imagen de Producto">
@@ -32,7 +32,7 @@
                             </div>  
                                 
                     </div>
-                    <% } %> 
+               
                 <% } %> 
             
             

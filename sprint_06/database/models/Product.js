@@ -53,30 +53,30 @@ module.exports = (sequelize,dataTypes) => {
         }
     };
     let config = {
-        tableNme: "products",
+        tableName: "products",
         timestamps:false
     };
     const Product = sequelize.define(alias,cols,config);
 Product.associate = (models) => {
 
     Product.belongsTo(models.Size,{
-        as: "sizes",
-        foreignKey: "size_id"
+        as: 'product_sizes',
+        foreignKey: 'size_id'
     });
 
     Product.belongsTo(models.Category,{
-        as: "categories",
-        foreignKey: "category_id"
+        as: 'product_categories',
+        foreignKey: 'category_id'
     });
 
     Product.belongsTo(models.Gender,{
-        as: "genders",
-        foreignKey: "gender_id"
+        as: 'product_genders',
+        foreignKey: 'gender_id'
     });
 
     Product.belongsTo(models.Brand,{
-        as: "brands",
-        foreignKey: "brand_id"
+        as: 'product_brands',
+        foreignKey: 'brand_id'
     })
 }
 

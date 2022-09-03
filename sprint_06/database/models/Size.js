@@ -14,15 +14,15 @@ module.exports = (sequelize,dataTypes) => {
         }
     };
     let config = {
-        tableNme: "sizes",
+        tableName: "sizes",
         timestamps: false
     };
     const Size = sequelize.define(alias,cols,config);
 
     Size.associate = (models) => {
         Size.hasMany(models.Product,{
-            as: "products",
-            foreignKey: "size_id"
+            as: 'size_products',
+            foreignKey: 'size_id'
         })
     }
     return Size
