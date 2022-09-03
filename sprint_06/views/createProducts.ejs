@@ -50,10 +50,16 @@ ejs locals.oldData && oneCountry === oldData.country ? 'selected' : null
                                     name="image"
                                     accept=".jpg, .png"> 
                                     
-                        
+                                    <label for="category">Categoría</label>
+                                    <select name="category" id="category">
+                                        <% for (let i = 0; i < categories.length; i++) { %> 
+                                        <option value="<%= categories[i].id %> ">
+                                            <%= categories[i].name %> 
+                                        </option>
+                                        <% } %> 
+                                    </select>
         
-                        
-                                    <label for="size">Géneros</label>
+                                    <label for="gender">Géneros</label>
                                     <select name="gender" id="gender">
                                         <% for (let i = 0; i < genders.length; i++) { %> 
                                         <option value="<%= genders[i].id %> ">
@@ -61,16 +67,26 @@ ejs locals.oldData && oneCountry === oldData.country ? 'selected' : null
                                         </option>
                                         <% } %> 
                                     </select>
+                                 
                         
 
-                            <label for="size">Talle</label>
-                            <select name="size" id="size">
-                                <% for (let i = 0; i < sizes.length; i++) { %> 
-                                <option value="<%= sizes[i].id %> ">
-                                    <%= sizes[i].name %> 
-                                </option>
-                                <% } %> 
-                            </select>
+                                    <label for="size">Talle</label>
+                                    <select name="size" id="size">
+                                        <% for (let i = 0; i < sizes.length; i++) { %> 
+                                        <option value="<%= sizes[i].id %> ">
+                                            <%= sizes[i].name %> 
+                                        </option>
+                                        <% } %> 
+                                    </select>
+                                    
+                                    <label for="brand">Marca</label>
+                                    <select name="brand" id="brand">
+                                        <% for (let i = 0; i < brands.length; i++) { %> 
+                                        <option value="<%= brands[i].id %> ">
+                                            <%= brands[i].name %> 
+                                        </option>
+                                        <% } %> 
+                                    </select>
   
                         <p>Precio</p>
                        
@@ -84,8 +100,8 @@ ejs locals.oldData && oneCountry === oldData.country ? 'selected' : null
                             <label  for="inSale"> ¿Este producto está en oferta?</label>
                             <br>
                             <select name="inSale" id="inSale">
-                                <option value = "yes">Sí</option>
-                                <option value = "no">Por ahora no</option>
+                                <option value = true>Sí</option>
+                                <option value = false>Por ahora no</option>
                     
                             </select>
                          

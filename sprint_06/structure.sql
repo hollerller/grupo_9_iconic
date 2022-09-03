@@ -10,18 +10,18 @@ CREATE TABLE sizes(
 	name VARCHAR(100)
 );
 
-CREATE TABLE category(
+CREATE TABLE categories(
 	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(100)
 );
 
-CREATE TABLE gender(
+CREATE TABLE genders(
 	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(100)
 );
 
 
-CREATE TABLE brand(
+CREATE TABLE brands(
 	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(100)
 );
@@ -42,9 +42,9 @@ CREATE TABLE products (
 	gender_id INT UNSIGNED NOT NULL,
 	brand_id INT UNSIGNED NOT NULL,
 	FOREIGN KEY (size_id) REFERENCES sizes(id),
-	FOREIGN KEY (category_id) REFERENCES category(id),
-	FOREIGN KEY (gender_id) REFERENCES gender(id),
-	FOREIGN KEY (brand_id) REFERENCES brand(id)
+	FOREIGN KEY (category_id) REFERENCES categories(id),
+	FOREIGN KEY (gender_id) REFERENCES genders(id),
+	FOREIGN KEY (brand_id) REFERENCES brands(id)
 );
 
 CREATE TABLE roles(
@@ -104,22 +104,22 @@ INSERT INTO sizes VALUES (4, 'L');
 INSERT INTO sizes VALUES (5, 'XL');
 
 
-INSERT INTO category VALUES (1, 'clothing');
-INSERT INTO category VALUES (2, 'casual-clothing');
-INSERT INTO category VALUES (3, 'accesories');
-INSERT INTO category VALUES (4, 'accesory');
+INSERT INTO categories VALUES (1, 'clothing');
+INSERT INTO categories VALUES (2, 'casual-clothing');
+INSERT INTO categories VALUES (3, 'accesories');
+INSERT INTO categories VALUES (4, 'accesory');
 
 
-INSERT INTO brand VALUES (1, 'Lec lee');
-INSERT INTO brand VALUES (2, 'Only');
-INSERT INTO brand VALUES (3, 'Lafayette');
-INSERT INTO brand VALUES (4, 'Desiderata');
-INSERT INTO brand VALUES (5, 'Levis');
-INSERT INTO brand VALUES (6, 'Americanino');
+INSERT INTO brands VALUES (1, 'Lec lee');
+INSERT INTO brands VALUES (2, 'Only');
+INSERT INTO brands VALUES (3, 'Lafayette');
+INSERT INTO brands VALUES (4, 'Desiderata');
+INSERT INTO brands VALUES (5, 'Levis');
+INSERT INTO brands VALUES (6, 'Americanino');
 
-INSERT INTO gender VALUES (1, 'Men');
-INSERT INTO gender VALUES (2, 'Women');
-INSERT INTO gender VALUES (3, 'Unisex');
+INSERT INTO genders VALUES (1, 'Men');
+INSERT INTO genders VALUES (2, 'Women');
+INSERT INTO genders VALUES (3, 'Unisex');
 
 
 INSERT INTO country VALUES (1, 'Argentina', '+57');

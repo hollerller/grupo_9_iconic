@@ -23,19 +23,24 @@ const productController = {
     },
     //Crear productos: GET//
     createProduct: (req,res) => {
-        db.Size.findAll()
-        .then(sizes=>{
-            return res.render('createProducts', {sizes})
+      let sizes = db.Size.findAll();
+      let genders = db.Gender.findAll();
+      let brands = db.Brand.findAll();
+      let categories = db.Category.findAll();
+
+
+      Promise.all([sizes,genders,brands,categories])
+        .then(function([sizes,genders,brands,categories]){
+            res.render('createProducts',{sizes:sizes,genders:genders,brands:brands,categories:categories})
         })
-        
     
     },
     //Crear productos: POST//
     store: (req,res)=>{
-        // let errores = validationResult(req);
+        let errores = validationResult(req);
         
-        // let file = req.file;
-        // if(file && validationResult.isEmpty()){
+        let file = req.file;
+        if(file && errores.isEmpty()){
         //     let newProduct = {
         //         id: (products.length+1),
         //         name: req.body.name,
@@ -58,8 +63,20 @@ const productController = {
         //         oldData: req.body
         //     })
         // }
-   
-        
+            db.Product.create({
+                name:req.body.prodName,
+                price:req.body.price,
+                description:req.body.description,
+                in_sale:req.body.inSale,
+                discount:req.body.discount,
+                image:req.body.image,
+                size_id:req.body.size,
+                category_id:req.body.category,
+                gender_id:req.body.gender,
+                brand_id:req.body.brand
+            })
+        }  
+        res.redirect('/products')
 },
 //Editar productos: GET//
     editProduct: (req,res) => {
