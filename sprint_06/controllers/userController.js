@@ -17,13 +17,14 @@ const usersController = {
     // Mostrar Formulario de registro
 
     register: (req, res) => {
-        let role = db.Role.findAll();
-        let country = db.Country.findAll();
+        let roles = db.Role.findAll();
+        let countries = db.Country.findAll();
 
-        Promise.all([role, country]).then(function([role, country]){
+        Promise.all([roles, countries])
+            .then(function([roles, countries]){
             res.render('register', {
-                role: role,
-                country: country
+                roles: roles,
+                countries: countries
             })
         })
     },
@@ -125,15 +126,15 @@ const usersController = {
     editUser: (req, res) => {
             //pedidos asincrónicos//
             let user = db.User.findByPk(req.session.id)
-            let role = db.Role.findAll();
-            let country = db.Country.findAll();
+            let roles = db.Role.findAll();
+            let countries = db.Country.findAll();
             
-          Promise.all([user, role, country])
+          Promise.all([user, roles, countries])
             .then(([user, role, country])=>{
                 res.render('userEdit',{
                     user: user,
-                    role: role,
-                    country: country
+                    roles: roles,
+                    countries: countries
                 })
             })
     },

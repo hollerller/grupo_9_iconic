@@ -14,7 +14,7 @@ module.exports = (sequelize,dataTypes) => {
         }
     };
     let config = {
-        tableName: "products",
+        tableName: "roles",
         timestamps:false
     };
     const Role = sequelize.define(alias,cols,config);

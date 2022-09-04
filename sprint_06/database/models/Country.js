@@ -14,7 +14,8 @@ module.exports = (sequelize,dataTypes) => {
         }
     };
     let config = {
-        tableName: "products"
+        tableName: "country",
+        timestamps: false
     };
     const Country = sequelize.define(alias,cols,config);
 
