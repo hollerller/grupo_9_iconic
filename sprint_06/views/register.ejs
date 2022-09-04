@@ -61,18 +61,18 @@
 
                                     <label for="role">Rol</label>
                                     <select name="role" id="role">
-                                        <% for (let i = 0; i < roles.length; i++) { %> 
-                                        <option value="<%= roles[i].id %> ">
-                                            <%= roles[i].name %> 
+                                        <% for (let i = 0; i < role.length; i++) { %> 
+                                        <option value="<%= role[i].id %> ">
+                                            <%= role[i].name %> 
                                         </option>
                                         <% } %> 
                                     </select>
 
                                     <label for="country">Pais</label>
                                     <select name="country" id="country">
-                                        <% for (let i = 0; i < countries.length; i++) { %> 
-                                        <option value="<%= countries[i].id %> ">
-                                            <%= countries[i].name %> 
+                                        <% for (let i = 0; i < country.length; i++) { %> 
+                                        <option value="<%= country[i].id %> ">
+                                            <%= country[i].name %> 
                                         </option>
                                         <% } %> 
                                     </select>
