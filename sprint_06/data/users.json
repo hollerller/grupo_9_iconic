@@ -1153,5 +1153,16 @@
   "birthday": "1991-10-16",
   "terms": "aceptoTerminos",
   "category": "vendedor"
+ },
+ {
+  "id": 112,
+  "fullName": "David",
+  "username": "testUser",
+  "email": "david@testest.com",
+  "avatar": "1662294296666_img_.png",
+  "password": "$2a$10$pqq236hXKG09wln6mUJC6.3s311Bz.y/cvYiC65pP2tfR0L9LyIrm",
+  "birthday": "1881-10-16",
+  "terms": "aceptoTerminos",
+  "category": "vendedor"
  }
 ]

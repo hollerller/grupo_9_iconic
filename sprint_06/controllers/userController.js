@@ -7,35 +7,42 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 
 //Validation result - Express Validator
 const { validationResult } = require('express-validator');
-//const { findByField, findByPk } = require('../data/models/User');
+const db = require('../database/models');
 
 // Multer
 let usersArray = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
-    // user: (req, res) => {
-    //     res.render('userList', {userList: usersArray});
-    // },
 
     // Mostrar Formulario de registro
 
     register: (req, res) => {
-        res.render('register')
+        let role = db.Role.findAll();
+        let country = db.Country.findAll();
+
+        Promise.all([role, country]).then(function([role, country]){
+            res.render('register', {
+                role: role,
+                country: country
+            })
+        })
     },
 
     //Procesar formulario de registro
 
     createUser: (req, res) => {
         const registerValidation = validationResult(req);
-        //console.log(registerValidation.mapped());
         if (registerValidation.errors.length > 0) {
             res.render('register', {
                 registerErrors: registerValidation.mapped(),
                 oldData: req.body
             })
         } else {
-            let userExists = User.findByField('email', req.body.email);
-
+            let userExists = db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
             if (userExists) {
                 res.render('register', {
                     registerErrors: {
@@ -46,20 +53,16 @@ const usersController = {
                     oldData: req.body
                 })
             } else {
-
-                let newUser = {
-                    id: User.generateId(),
-                    fullName: req.body.nombreYApellido,
-                    username: req.body.usuario,
+                db.User.create ({
+                    full_name: req.body.nombreYApellido,
+                    user_name: req.body.usuario,
                     email: req.body.email,
                     avatar: req.file.filename,
                     password: bcryptjs.hashSync(req.body.contrasena, 10),
                     birthday: req.body.fechaNacimiento,
-                    terms: req.body.tyc,
-                    category: 'vendedor'
-                }
-                usersArray.push(newUser);
-                fs.writeFileSync(usersFilePath, JSON.stringify(usersArray, null, ' '));
+                    role_id: req.body.role,
+                    country_id: req.body.country
+                })
                 res.redirect("login");
             };
         }
@@ -82,7 +85,11 @@ const usersController = {
     // Procesar login
 
     processLogin: (req, res) => {
-        let userToLogin = User.findByField('username', req.body.usuario);
+        let userToLogin = db.User.findOne({
+            where: {
+                email: req.body.email
+            }
+        })
 
         if (userToLogin) {
             let validPassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.password);
@@ -91,18 +98,14 @@ const usersController = {
                 req.session.userLogged = userToLogin;
 
                 if (req.body.recordarUsuario) {
-                    res.cookie('usernameCookie', req.body.usuario, { maxAge: 86400000 }); // cookie que dura 24 horas
+                    res.cookie('usernameCookie', req.body.email, { maxAge: 86400000 }); // cookie que dura 24 horas
                 }
-                //console.log(req.session.userLogged);
-                // let userLogged = User.findByPk(userToLogin.id)
-                //  res.render('userDetail', 
-                // {usuario: userLogged});
                 res.redirect('profile')
 
             } else {
                 res.render('login', {
                     loginErrors: {
-                        usuario: {
+                        email: {
                             msg: 'Revisa tus credenciales'
                         }
                     }
@@ -112,7 +115,7 @@ const usersController = {
         } else {
             res.render('login', {
                 loginErrors: {
-                    usuario: {
+                    email: {
                         msg: 'Email incorrecto'
                     }
                 }
@@ -120,49 +123,57 @@ const usersController = {
         }
     },
     editUser: (req, res) => {
-
-        res.render('userEdit', {
-            oldData: req.session.userLogged
-        })
+            //pedidos asincrónicos//
+            let user = db.User.findByPk(req.session.id)
+            let role = db.Role.findAll();
+            let country = db.Country.findAll();
+            
+          Promise.all([user, role, country])
+            .then(([user, role, country])=>{
+                res.render('userEdit',{
+                    user: user,
+                    role: role,
+                    country: country
+                })
+            })
     },
 
     processEdition: (req, res) => {
         const registerValidation = validationResult(req);
-        //console.log(registerValidation.mapped());
+        
         if (registerValidation.errors.length > 0) {
             res.render('register', {
                 registerErrors: registerValidation.mapped(),
                 oldData: req.session.userLogged,
 
             })
+
         } else {
+
             let userToEdit = req.session.userLogged;
-            let edditedUsers = usersArray.map(item => {
-                if (item.id == userToEdit.id){
-                item.id = userToEdit.id;
-                item.fullName = req.body.fullname;
-                item.username = req.body.username;
-                item.email = req.body.email;
-                item.avatar = req.file.filename;
-                item.birthday = req.body.birthday;
-                item.terms = 'aceptoTerminos';
-                item.category = 'vendedor';
+
+            db.User.update({
+                full_name: req.body.nombreYApellido,
+                user_name: req.body.usuario,
+                email: req.body.email,
+                avatar: req.file.filename,
+                password: bcryptjs.hashSync(req.body.contrasena, 10),
+                birthday: req.body.fechaNacimiento,
+                role_id: req.body.role,
+                country_id: req.body.country
+            }, {
+            where: {
+                id: req.session.id
+            }
+        })
+            let user = db.User.findOne({
+                where: {
+                    email: req.session.email
                 }
-                return item;
-            })
-            fs.writeFileSync(usersFilePath,JSON.stringify(edditedUsers, null, ' '));   
-            console.log(req.session.userLogged);
-            let user = edditedUsers.find(element => element.id == userToEdit.id);
+            });
             delete user.password;
             req.session.userLogged = user;
-           
-            console.log(req.session.userLogged)
-           
             res.render('userDetail',{ usuario: user })
-       //     if (userToEdit.id != undefined) {
-                
-         //   }    
-              
     }
         
     },
@@ -176,13 +187,17 @@ const usersController = {
 
     deleteUser: (req, res) => {
         let userToDelete = req.session.userLogged;
-        let newUserData = usersArray.filter(element => element.id != userToDelete.id)
-        usersArray = newUserData;
-        fs.writeFileSync(usersFilePath, JSON.stringify(usersArray, null, ' '));
+        db.User.destroy({
+            where : {
+                id: userToDelete.id
+            }
+        })
         req.session.destroy();
         res.redirect('/');
     }
 
 }
+
+
 
 module.exports = usersController;

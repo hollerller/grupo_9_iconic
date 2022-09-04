@@ -59,6 +59,24 @@
                         <p class="error-message"><%= registerErrors.fechaNacimiento.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
 
+                    <label for="role">Rol</label>
+                                    <select name="role" id="role">
+                                        <% for (let i = 0; i < role.length; i++) { %> 
+                                        <option value="<%= role[i].id %> ">
+                                            <%= role[i].name %> 
+                                        </option>
+                                        <% } %> 
+                                    </select>
+
+                                    <label for="country">Pais</label>
+                                    <select name="country" id="country">
+                                        <% for (let i = 0; i < country.length; i++) { %> 
+                                        <option value="<%= contry[i].id %> ">
+                                            <%= country[i].name %> 
+                                        </option>
+                                        <% } %> 
+                                    </select>
+
                     <label class="terminos" for="aceptoTerminos"> 
                         <input 
                             type="checkbox" 
