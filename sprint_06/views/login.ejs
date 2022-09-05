@@ -7,11 +7,11 @@
             <main>
                 <form class="formulario" action="/users/login" method="POST">
                     <label for="nombreUsuario">Nombre de usuario:</label>
-                    <input class="input-text" type="text" id="nombreUsuario" name="usuario"
-                    value="<%= locals.oldData ? oldData.usuario : null  %>" >
+                    <input class="input-text" type="text" id="nombreUsuario" name="email"
+                    value="<%= locals.oldData ? oldData.email : null  %>" >
 
-                    <% if (locals.loginErrors && loginErrors.usuario) { %>
-                        <p class="error-message"><%= loginErrors.usuario.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% if (locals.loginErrors && loginErrors.email) { %>
+                        <p class="error-message"><%= loginErrors.email.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
 
                     <label for="contrasena">Contraseña:</label>

@@ -10,19 +10,19 @@
                     <h3 class="titulo-formulario"> Edita tu información de perfil </h3>
 
                     <input class="input-text" placeholder="Nombre y Apellido" type="text" name="fullname"
-                        id="nombre-apellido" value="<%= user.full_name  %>" >  
+                        id="nombre-apellido" value="<%= locals.oldData ? oldData.full_name : null  %>" >  
                     <% if (locals.registerErrors && registerErrors.fullName) { %>
                         <p class="error-message"><%= registerErrors.fullName.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
 
                     <input class="input-text" placeholder="Usuario" type="text" id="usuario" name="username"
-                    value="<%= user.user_name  %>">
+                    value="<%= locals.oldData ? oldData.user_name : null  %>">
                     <% if (locals.registerErrors && registerErrors.username) { %>
                         <p class="error-message"><%= registerErrors.username.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
 
                     <input class="input-text" placeholder="Correo electrónico" type="email" id="mail" name="email"
-                    value="<%= user.email  %>">
+                    value="<%= locals.oldData ? oldData.email : null  %>">
                     <% if (locals.registerErrors && registerErrors.email) { %>
                         <p class="error-message"><%= registerErrors.email.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
@@ -34,62 +34,63 @@
                                 type="file"
                                 name="avatar"
                                 accept=".jpg, .png"
-                                value="<%= user.avatar %>  "> 
+                                value="<%= locals.oldData ? oldData.avatar : null %>  "> 
 
                     <% if (locals.registerErrors && registerErrors.avatar) { %>
                             <p class="error-message"><%= registerErrors.avatar.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
 
                     <input class="input-text" placeholder="Contraseña" type="password" name="contrasena" id="contrasena"
-                    value="<%= user.password  %>">
+                    value="<%= locals.oldData ? oldData.password : null  %>">
                     <% if (locals.registerErrors && registerErrors.password) { %>
                         <p class="error-message"><%= registerErrors.password.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
                     <input class="input-text" placeholder="Confirma la contraseña" type="password" name="contrasenaConf"
                         id="contrasenaConfirmada"
-                        value="<%= user.password  %>">
+                        value="<%= locals.oldData ? oldData.password : null  %>">
                         <% if (locals.registerErrors && registerErrors.password) { %>
                             <p class="error-message"><%= registerErrors.password.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                         <% } %>
 
                     <input class="input-text" type="date" id="fechaNacimiento" name="birthday"
-                    value="<%= user.birthday %>">
+                    value="<%= locals.oldData ? oldData.birthday : null  %>">
                     <% if (locals.registerErrors && registerErrors.birthday) { %>
                         <p class="error-message"><%= registerErrors.birthday.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
 
-                    <label for="role">Rol</label>
+                    <label for="role">Categoría</label>
                     <select name="role" id="role">
                         <% for (let i = 0; i < role.length; i++) { %> 
-                            <% if (role[i].id == user.role_id) { %> 
+                            <% if (role[i].id == oldData.role_id) { %> 
                                 <option value="<%= role[i].id %>" selected>
-                                    <%= role[i].name %> 
+                                   <%= role[i].name %> 
                                 </option>
-                            <% } else { %> 
-                                <option value="<%= role[i].id %> ">
+                            <%} else { %>
+                                <option value="<%= role[i].id %>">
                                     <%= role[i].name %> 
-                                </option>
-                            <% } %> 
-                        
+                                 </option>
+
+                            <%}%>
+                       
                         <% } %> 
                     </select>
 
-                    <label for="country">Country</label>
+                    <label for="country">Categoría</label>
                     <select name="country" id="country">
                         <% for (let i = 0; i < country.length; i++) { %> 
-                            <% if (contry[i].id == contry.role_id) { %> 
-                                <option value="<%= contry[i].id %>" selected>
-                                    <%= country[i].name %> 
+                            <% if (role[i].id == oldData.country_id) { %> 
+                                <option value="<%= country[i].id %>" selected>
+                                   <%= country[i].name %> 
                                 </option>
-                            <% } else { %> 
-                                <option value="<%= country[i].id %> ">
+                            <%} else { %>
+                                <option value="<%= country[i].id %>">
                                     <%= country[i].name %> 
-                                </option>
-                            <% } %> 
-                        
+                                 </option>
+
+                            <%}%>
+                       
                         <% } %> 
                     </select>
-
 
 
                     <input class="boton-registrarme" type="submit" value="Editar Perfil">

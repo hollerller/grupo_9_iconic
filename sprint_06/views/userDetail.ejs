@@ -9,7 +9,7 @@
                 <section>
                     <div class="userProfile">
                         <h2>
-                                Hola <%=usuario.fullName%>
+                                Hola <%=usuario.full_name%>
 
                         </h2>
                     </div>
@@ -24,13 +24,13 @@
                     <article>
                         <h3>Nombre:</h3>
                         <p>
-                            <%= usuario.fullName %>
+                            <%= usuario.full_name %>
                         </p>
                     </article>
                     <article>
                         <h3>Usuario:</h3>
                         <p>
-                            <%= usuario.username %>
+                            <%= usuario.user_name %>
                         </p>
                     </article>
                     <article>
@@ -42,7 +42,7 @@
                     <article>
                         <h3>Perfil:</h3>
                         <p>
-                            <%= usuario.category %>
+                            <%= usuario.roles.name %>
                         </p>
                     </article>
                     <article>
