@@ -73,9 +73,9 @@ router.post('/login', loginValidations, usersController.processLogin);
 router.get('/profile', authMiddleware, usersController.userID);
 
 //Editar usuario
-router.get('/edit/', authMiddleware, usersController.editUser)
+router.get('/edit/:id', authMiddleware, usersController.editUser)
 //Procesar la edicion
-router.put('/profile/', uploadFile.single('avatar'), usersController.processEdition);
+router.put('/edit/:id', uploadFile.single('avatar'), usersController.processEdition);
 
 //logout
 router.get('/logout', usersController.logout);

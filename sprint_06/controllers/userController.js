@@ -90,12 +90,12 @@ const usersController = {
                 })
             } else { 
                 db.User.create ({
-                    full_name: req.body.nombreYApellido,
-                    user_name: req.body.usuario,
+                    full_name: req.body.fullname,
+                    user_name: req.body.username,
                     email: req.body.email,
                     avatar: req.file.filename,
                     password: bcryptjs.hashSync(req.body.contrasena, 10),
-                    birthday: req.body.fechaNacimiento,
+                    birthday: req.body.birthday,
                     role_id: req.body.role,
                     country_id: req.body.country
                 })
@@ -158,47 +158,51 @@ const usersController = {
     },
 
     editUser: (req, res) => {
-        let userToEdit = req.session.userLogged;
+        let userToEdit = req.session;
+        let user = db.User.findByPk(req.params.id)
 
         let role = db.Role.findAll();
         let country = db.Country.findAll();
 
-          Promise.all([role, country])
-            .then(([role, country])=>{
+          Promise.all([role, country,user])
+            .then(([role, country,user])=>{
              
               res.render('userEdit',{
                     oldData: userToEdit,
                     role: role,
-                    country: country
+                    country: country,
+                    user:user
                 })
             })
     },
 
     processEdition: (req, res) => {
+        let idUser = req.params.id;
       // const registerValidation = validationResult(req);
    
        db.User.update({
-        full_name: req.body.nombreYApellido,
-        user_name: req.body.usuario,
+        full_name: req.body.fullname,
+        user_name: req.body.username,
         email: req.body.email,
         avatar: req.file.filename,
         password: bcryptjs.hashSync(req.body.contrasena, 10),
-        birthday: req.body.fechaNacimiento,
+        birthday: req.body.birthday,
         role_id: req.body.role,
         country_id: req.body.country
     }, {
-    where: {
-        id: req.session.id
-    }
-})
-   let user = db.User.findOne({
         where: {
-            email: req.session.email
+            id: idUser,
         }
-    });
-    delete user.password;
-    req.session.userLogged = user;
-    res.render('userDetail',{ usuario: user })
+    })
+    //delete user.password; 
+        .then(()=>{
+             res.redirect('/')
+        })
+   
+    
+    // req.session.userLogged = user;
+    
+   
     
 
 },

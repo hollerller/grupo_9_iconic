@@ -6,7 +6,7 @@
         <%- include('./partials/header') %>
             <main>
                 <form class="formulario" action="/users/login" method="POST">
-                    <label for="nombreUsuario">Nombre de usuario:</label>
+                    <label for="nombreUsuario">Email:</label>
                     <input class="input-text" type="text" id="nombreUsuario" name="email"
                     value="<%= locals.oldData ? oldData.email : null  %>" >
 
@@ -22,7 +22,7 @@
                         <p class="error-message"><%= loginErrors.contrasena.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
 
-                    <label>Recordar mi usuario:
+                    <label>Recordar mis datos
                     <input type="checkbox" name="recordarUsuario">
                 </label>
                     <button class="boton-ingresar" type="submit"><a href="/">

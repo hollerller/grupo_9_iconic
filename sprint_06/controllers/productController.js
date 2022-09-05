@@ -99,13 +99,11 @@ const productController = {
 //Editar productos: GET//
     editProduct: (req,res) => {
         //pedidos asincrónicos//
-        let product = db.Product.findByPk(req.params.id)
-        let sizes = db.Size.findAll()
-        let genders = db.Gender.findAll()
-        let brands = db.Brand.findAll()
-        let categories = db.Category.findAll()
-        
-
+        let product = db.Product.findByPk(req.params.id);
+        let sizes = db.Size.findAll();
+        let genders = db.Gender.findAll();
+        let brands = db.Brand.findAll();
+        let categories = db.Category.findAll();
 
       Promise.all([product,sizes,genders,brands,categories])
         .then(([product,sizes,genders,brands,categories])=>{
