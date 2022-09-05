@@ -57,9 +57,15 @@ const productController = {
     //Crear productos: POST//
     store: (req,res)=>{
         let errores = validationResult(req);
+
+        //pedidos asincronicos//
+        let sizes = db.Size.findAll();
+        let genders = db.Gender.findAll();
+        let brands = db.Brand.findAll();
+        let categories = db.Category.findAll();
         
-        let file = req.file;
-        if(file && errores.isEmpty()){
+       
+        if(errores.isEmpty()){
     
             db.Product.create({
                 name:req.body.prodName,
@@ -73,8 +79,22 @@ const productController = {
                 gender_id:req.body.gender,
                 brand_id:req.body.brand
             })
-        }  
-        res.redirect('/products')
+            res.redirect('/products')
+
+        }else{
+            console.log(errores.mapped());
+            Promise.all([sizes,genders,brands,categories])
+                .then(function([sizes,genders,brands,categories]){
+                    res.render('createProducts', { 
+                        errorsMessage : errores.mapped(),
+                        oldData: req.body,
+                        sizes:sizes,
+                        genders:genders,
+                        brands:brands,
+                        categories:categories
+                    })
+                })
+            }
 },
 //Editar productos: GET//
     editProduct: (req,res) => {
