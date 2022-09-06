@@ -69,6 +69,7 @@ CREATE TABLE users (
 	avatar VARCHAR(30) NOT NULL,
 	password VARCHAR(100) NOT NULL,
 	birthday DATE NOT NULL,
+	hidden BOOLEAN NOT NULL DEFAULT false, 
 	role_id INT UNSIGNED NOT NULL,
 	country_id INT UNSIGNED NOT NULL,
 	FOREIGN KEY (role_id) REFERENCES roles(id),
@@ -130,10 +131,10 @@ INSERT INTO roles VALUES (2, 'Vendedor');
 
 INSERT INTO users VALUES (1, 'Belen Lopez', 'blopez123', 'belen@hotmail.com', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP,
                           '1659674713248_img_.png', '$2a$10$mw9KOspWFmItqkur8vVMl.9jiIENSVzMHYUoAG0kIiGcjUfdgr5cC',
-                          '1990-12-21 00:00:00', 1, 1);
+                          '1990-12-21 00:00:00', false, 1, 1);
 INSERT INTO users VALUES (2, 'David Tobasura', 'hollerller', 'david@gmail.com', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP,
                           '1659332407881_img_.png', '$2a$10$23MAxa3BAV61n9EbGUUWO.0NE.MsDQlwzYxU4zHAlioLrmFro8Fry',
-                          '1991-10-16 00:00:00', 1, 2);
+                          '1991-10-16 00:00:00', false, 1, 2);
 
 
 INSERT INTO products VALUES (1, 'Prueba Archivo', 70000, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'test test test test test ', TRUE, 10, '1658697801480_img_.jpg', 1, 1, 2, 1);

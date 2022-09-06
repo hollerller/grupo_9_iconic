@@ -90,12 +90,13 @@ const usersController = {
                 })
             } else { 
                 db.User.create ({
-                    full_name: req.body.fullname,
-                    user_name: req.body.username,
+                    full_name: req.body.nombreYApellido,
+                    user_name: req.body.usuario,
                     email: req.body.email,
                     avatar: req.file.filename,
                     password: bcryptjs.hashSync(req.body.contrasena, 10),
-                    birthday: req.body.birthday,
+                    birthday: req.body.fechaNacimiento,
+                    hidden: false,
                     role_id: req.body.role,
                     country_id: req.body.country
                 })
@@ -123,7 +124,7 @@ const usersController = {
                 email: req.body.email
             }
         }).then(usuario => {
-            if (usuario) {
+            if (usuario && usuario.hidden == false) {
                 let validPassword = bcryptjs.compareSync(req.body.contrasena, usuario.password);
 
                 if (validPassword) {
@@ -178,14 +179,16 @@ const usersController = {
 
     processEdition: (req, res) => {
         let idUser = req.params.id;
-      // const registerValidation = validationResult(req);
-   
+       //const registerValidation = validationResult(req);
+        //console.log(registerValidation);
+        let file = req.file;
+        if (file) {
        db.User.update({
         full_name: req.body.fullname,
         user_name: req.body.username,
         email: req.body.email,
         avatar: req.file.filename,
-        password: bcryptjs.hashSync(req.body.contrasena, 10),
+        //password: contrasena,
         birthday: req.body.birthday,
         role_id: req.body.role,
         country_id: req.body.country
@@ -194,20 +197,38 @@ const usersController = {
             id: idUser,
         }
     })
+
     //delete user.password; 
         .then(()=>{
              res.redirect('/')
         })
-   
-    
+    } else {
+        let userToEdit = req.session;
+        let user = db.User.findByPk(req.params.id)
+
+        let role = db.Role.findAll();
+        let country = db.Country.findAll();
+
+          Promise.all([role, country,user])
+            .then(([role, country,user])=>{
+             
+              res.render('userEdit',{
+                registerErrors: {
+                    avatar: {
+                        msg: 'Sube una foto de perfil'
+                    }
+                },
+                    oldData: userToEdit,
+                    role: role,
+                    country: country,
+                    user:user
+                })
+            })
+
+
+    }
     // req.session.userLogged = user;
-    
-   
-    
-
 },
-          
-
     logout: (req, res) => {
         req.session.destroy();
         res.clearCookie('usernameCookie')
@@ -217,7 +238,9 @@ const usersController = {
 
     deleteUser: (req, res) => {
         let userToDelete = req.session.userLogged;
-        db.User.destroy({
+        db.User.update({  
+            hidden: true
+        },{
             where : {
                 id: userToDelete.id
             }
