@@ -377,6 +377,10 @@ footer .redes-sociales {
 .boton-registrarme-1:hover{
         background-color: #3c3c3c
 }
+.back-link{
+        text-decoration: none;
+        color: white;
+}
 .boton-ingresar p{
         color: white;
 }

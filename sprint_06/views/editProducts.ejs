@@ -5,7 +5,7 @@
     <%- include('./partials/header') %>
     
        <main class="main-create-product">
-        <form class="formulario" class="create-form" action="/products/<%=product.id%>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form class="formulario create-form prod-edition" action="/products/<%=product.id%>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
 
                     
             <h2 class="titulo-formulario">
@@ -43,6 +43,7 @@
                 
 
                 <label for="image">Foto del Producto:</label>
+                    <p>Elegiste la imagen: <%=product.file %> </p>
                     
                     <input 
                             id="image"
@@ -147,7 +148,7 @@
             
 
                 <button type="submit" class="boton-registrarme-1">Guardar cambios</button>
-                <button type="reset" class="boton-registrarme-1">Cancelar</button>
+                <button type="reset" class="boton-registrarme-1"><a class="back-link" href="/products/<%=product.id%>">Cancelar</a></button>
 
         </form>
        </main>
