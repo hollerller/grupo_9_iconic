@@ -30,6 +30,13 @@ module.exports = (sequelize,dataTypes) => {
         },
         birthday:{
             type:dataTypes.DATE,
+            allowNull: false
+
+        },
+        hidden:{
+            type:dataTypes.BOOLEAN,
+            allowNull: false,
+            default: false
 
         },
         role_id:{
