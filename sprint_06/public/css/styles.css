@@ -151,28 +151,34 @@ Futura: https://es.wikipedia.org/wiki/Futura
 .search-button,
 .carrito-compras,
 .login-icon{
-        width: 20%;
         text-align: right;
         color: #7A7474;
-        padding: 9px;
+        padding: 20px;
         align-self: center;
         font-size: 20px;
         text-align: center;
+        
 
 }
 
 .top-bar .carrito-compras a:hover {
-        color: #000;
+        color: #9B0000;
+    
 }
 
 .top-bar .login-icon a:hover {
-        color: #000;
+        color: #9B0000;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5)
 }
 
 .search-button a,
 .login-icon a {
+        width: 45px;
+        right: 9px;
         text-decoration: none;
         color: #7A7474;
+        padding: 10px;
+        border-radius: 5px;
 }
 
 .carrito-compras {
@@ -193,7 +199,7 @@ main {
 /* estilos del banner-home */
 
 .new-arrivals {
-        width: 100vw;
+        width: 90vh;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -226,15 +232,16 @@ main {
 .producto {
         justify-content: center;
         margin: 20px 0px;
-        padding: 10px;
+        padding: 30px;
         width: 100%;
+        align-items: center;
 }
 
 article p {
         display: flex;
-        text-align: right;
+        justify-content: space-around;
         margin: 10px;
-        font-size: 22px;
+        font-size: 30px;
         font-weight: normal;
         color: #7A7474;
 }
@@ -909,7 +916,6 @@ section.editProfile {
        
 
         .producto {
-                padding: 0px;
                 width: 45%;
                 max-width: 210px;
                 margin: 0px;
@@ -975,7 +981,9 @@ section.editProfile {
         .tool-bar a:hover{
                 background-color: #000;
                 color:white;
-
+        }
+        .login-icon a {
+                height: 45px;
         }
         .formulario {
                 width: 70%;
@@ -1242,7 +1250,7 @@ section.editProfile {
                 
                 width: auto;
         }
-        
+
         /* shopping cart */
        
         .form-compra {
