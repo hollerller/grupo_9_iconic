@@ -151,6 +151,8 @@ Futura: https://es.wikipedia.org/wiki/Futura
 .search-button,
 .carrito-compras,
 .login-icon{
+        display: flex;
+        flex-wrap: wrap;
         text-align: right;
         color: #7A7474;
         padding: 20px;
