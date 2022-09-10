@@ -4,19 +4,16 @@ const Order = require("../database/models/Order");
 
 const ordersController = {
 
-    mostrarBoton: (req,res) => {
-        res.render("prueba");
-    },
-
     processCart: (req, res) => {
-        let userID = req.params.id;
-        
-        db.Order.create({
-            order_status: 'PENDING',
-            user_id: 1
+        //let user = req.sesion.userLogged;
+        db.Order.findAll().then(orders=>{
+           res.send(orders)
         })
-    }
 
+            
+
+    }
+    
 }
 
 module.exports = ordersController;

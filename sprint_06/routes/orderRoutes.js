@@ -3,6 +3,8 @@ const express = require('express');
 const router = express.Router();
 
 
-router.get('/boton', ordersController.mostrarBoton);
+router.post('/checkout', ordersController.processCart);
 
 //router.get('/checkout/:id', ordersController.processCart);
+
+module.exports = router;

@@ -8,7 +8,7 @@ module.exports = (sequelize,dataTypes) => {
             primaryKey: true
         
         },
-        date:{
+        created_at:{
             type:dataTypes.DATE,
             allowNull: false
         },
@@ -20,7 +20,7 @@ module.exports = (sequelize,dataTypes) => {
             type: dataTypes.STRING(1500),
 
         },
-        order_adress:{
+        order_address:{
             type:dataTypes.STRING(100),
             allowNull: true
             
@@ -36,7 +36,9 @@ module.exports = (sequelize,dataTypes) => {
     };
     let config = {
         tableName: "orders",
-        timestamps:false
+        timestamps:true,
+        createdAt: 'created_at',
+        updatedAt: false
     };
     const Order = sequelize.define(alias,cols,config);
 
@@ -44,7 +46,15 @@ module.exports = (sequelize,dataTypes) => {
         Order.belongsTo(models.User,{
             as:"users",
             foreignKey:"user_id"
-        })
-    }
+        });
+
+    /*    Order.associate = (models) => {
+            Order.hasMany(models.OrderDetail,{
+                as:"orderDetail",
+                foreignKey:"order_id"
+            })
+
+    }*/
+}
     return Order
 }

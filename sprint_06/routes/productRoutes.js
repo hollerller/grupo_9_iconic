@@ -57,13 +57,6 @@ router.put('/:id/edit', uploadFile.single('image'), productController.saveChange
 router.get('/:id/delete',productController.delete);
 
 
-
-
-
-
-
-
-
 //router.get('/create', productController)
 
 module.exports = router;

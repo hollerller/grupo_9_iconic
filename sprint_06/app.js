@@ -30,6 +30,7 @@ app.set('view engine','ejs');
 const mainRouter = require('./routes/mainRouter');
 const userRoutes = require('./routes/userRoutes');
 const productsRouter = require('./routes/productRoutes');
+const orderRoutes = require('./routes/orderRoutes');
 // rutas
 
 app.use(cookies());
@@ -52,6 +53,10 @@ app.use('/products',productsRouter)
 
 //Confiurando ruta hacia users
 app.use('/users', userRoutes);
+
+//Configurando ruta hacia detalle de ordenes
+
+app.use('/cart', orderRoutes);
 
 //Configurando miiddleware error 404 notfound
 app.use(errorMiddleware);

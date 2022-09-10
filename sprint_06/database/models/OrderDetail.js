@@ -1,4 +1,4 @@
-module.exports = (sequelize,dataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     let alias = "OrderDetail";
     let cols = {
         id: {
@@ -6,15 +6,15 @@ module.exports = (sequelize,dataTypes) => {
             autoIncrement: true,
             allowNull: false,
             primaryKey: true
-        
+
         },
-        order_id:{
-            type:dataTypes.INTEGER,
+        order_id: {
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         product_id: {
             type: dataTypes.INTEGER,
-            allowNull:false
+            allowNull: false
         },
         quantity: {
             type: dataTypes.INTEGER,
@@ -24,6 +24,20 @@ module.exports = (sequelize,dataTypes) => {
     let config = {
         tableName: "order_detail"
     };
-    const OrderDetail = sequelize.define(alias,cols,config);
+    const OrderDetail = sequelize.define(alias, cols, config);
+
+    OrderDetail.associate = (models) => {
+        OrderDetail.belongsTo(models.Order, {
+            as: "orders",
+            foreignKey: "order_id"
+        });
+
+        OrderDetail.belongsTo(models.Product, {
+            as: "prodcuts",
+            foreignKey: "product_id"
+        });
+
+    }
+
     return OrderDetail
 }

@@ -77,7 +77,13 @@ Product.associate = (models) => {
     Product.belongsTo(models.Brand,{
         as: 'product_brands',
         foreignKey: 'brand_id'
-    })
+    });
+
+  /*  Product.belongsTo(models.OrderDetail,{
+        as: 'orderDetail',
+        foreignKey: 'product_id'
+    });*/
+
 }
 
     return Product
