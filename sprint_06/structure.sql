@@ -79,10 +79,10 @@ CREATE TABLE users (
 CREATE TABLE orders(
 	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
- 	total DECIMAL NOT NULL,
- 	status VARCHAR(100),
- 	order_address VARCHAR(100) NOT NULL,
- 	cellphone VARCHAR(15) NOT NULL,
+ 	total DECIMAL,
+ 	order_status VARCHAR(100),
+ 	order_address VARCHAR(100),
+ 	cellphone VARCHAR(15),
  	user_id INT UNSIGNED NOT NULL,
  	FOREIGN KEY (user_id) REFERENCES users(id)
 );

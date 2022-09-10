@@ -14,14 +14,15 @@ module.exports = (sequelize,dataTypes) => {
         },
         total: {
             type: dataTypes.DECIMAL,
-            allowNull:false
+            allowNull:true
         },
-        status: {
+        order_status: {
             type: dataTypes.STRING(1500),
 
         },
         order_adress:{
             type:dataTypes.STRING(100),
+            allowNull: true
             
         },
         user_id:{
@@ -30,7 +31,7 @@ module.exports = (sequelize,dataTypes) => {
         },
         cellphone:{
             type:dataTypes.INTEGER(20),
-            
+            allowNull:true
         }
     };
     let config = {

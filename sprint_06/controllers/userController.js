@@ -250,6 +250,28 @@ const usersController = {
     }
 
 }
+/*
+    processCart: (req, res) => {
+       let user = req.session.userLogged;
+        db.User.findByPk(user.id).then((customer) => {
+            db.Order.create({
+                order_status: 'PENDING',
+                user_id: customer.id
+            })
+           }) 
+           res.redirect("shoppingCart/" + user.id);
+    }
+}
+
+
+   // shoppingCart: (req, res) => {
+        // Hacer pedidos asincronicos:
+
+    //    let user = db.User.findByPk(req.session.id);
+   //     let country = db.Orders.findAll();
+
+*/
+    
 
 
 

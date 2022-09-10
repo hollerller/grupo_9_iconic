@@ -98,6 +98,13 @@ router.get('/logout', usersController.logout);
 //Eliminar Usuario
 router.delete('/:id/delete',usersController.deleteUser);
 
+// Mostrar carrito de compras
+
+//router.get('/checkout/:id',usersController.shoppingCart);
+
+//Procesar orden
+
+
 
 
 module.exports = router;

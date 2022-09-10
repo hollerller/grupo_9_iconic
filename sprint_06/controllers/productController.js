@@ -2,8 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const {validationResult} = require('express-validator');
 let db = require("../database/models");
-const { create } = require('domain');
-const Product = require('../database/models/Product');
+
 
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -30,7 +29,9 @@ const productController = {
             ]
         })
             .then(product =>{
-                res.render('productDetail', {product:product})
+                res.render('productDetail', {product:product,
+                user: req.session.userLogged}
+                )
             })
         
         

@@ -20,8 +20,21 @@
                                 <p class="product-description"><%= product.description %> </p>
                              <br>
                             <div class="add-product-form">
-                                <form action="/add-shopping-cart" method=PUT >
-                                        <input class="add-product-button" type="button" value="Agregar a la bolsa">   
+
+                                <form action="/checkout/<%= user.id %> " method=POST>
+                                    <label for="cantidad">Cantidad</label>
+                                    <select name="cantidad" id="cantidad">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>         
+
+                                        <!--<input class="add-product-button" type="button" value="Agregar a la bolsa">   -->
+                                    <button type="submit" class="add-product-button">Agregar a la bolsa</button>
+                                                                    
+
                                 </form>
                             </div>
                             
