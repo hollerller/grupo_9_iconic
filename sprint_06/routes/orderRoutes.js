@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 
-router.post('/checkout', ordersController.processCart);
+router.post('/checkout/:id', ordersController.processCart);
 
 //router.get('/checkout/:id', ordersController.processCart);
 
