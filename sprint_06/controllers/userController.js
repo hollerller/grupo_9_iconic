@@ -17,8 +17,8 @@ const usersController = {
 
     // Mostrar perfil de usuario
     userID: (req, res) => {
-        //console.log(req.session.userLogged);
         let userToDisplay = req.session.userLogged;
+        console.log(userToDisplay)
         db.User.findByPk(userToDisplay.id,{
             include:[
                 {association: "roles"},
@@ -227,7 +227,6 @@ const usersController = {
 
 
     }
-    // req.session.userLogged = user;
 },
     logout: (req, res) => {
         req.session.destroy();
@@ -250,29 +249,5 @@ const usersController = {
     }
 
 }
-/*
-    processCart: (req, res) => {
-       let user = req.session.userLogged;
-        db.User.findByPk(user.id).then((customer) => {
-            db.Order.create({
-                order_status: 'PENDING',
-                user_id: customer.id
-            })
-           }) 
-           res.redirect("shoppingCart/" + user.id);
-    }
-}
-
-
-   // shoppingCart: (req, res) => {
-        // Hacer pedidos asincronicos:
-
-    //    let user = db.User.findByPk(req.session.id);
-   //     let country = db.Orders.findAll();
-
-*/
-    
-
-
 
 module.exports = usersController;

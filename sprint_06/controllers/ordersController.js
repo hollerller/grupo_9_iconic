@@ -1,12 +1,11 @@
 let db = require("../database/models");
-const Order = require("../database/models/Order");
 
 
 const ordersController = {
 
     processCart: (req, res) => {
-       // let user = req.sesion.userLogged;
-
+       let user = req.session.userLogged;
+        console.log(user);
 
       //  db.Order.findAll().then(orders=>{
        //    res.send(orders)

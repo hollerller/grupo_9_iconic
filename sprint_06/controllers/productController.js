@@ -33,7 +33,7 @@ const productController = {
                 user: req.session.userLogged}
                 )
             })
-        
+        console.log(req.session.userLogged);
         
     },
     //Crear productos: GET//
