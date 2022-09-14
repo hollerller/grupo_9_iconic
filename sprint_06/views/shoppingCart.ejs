@@ -39,7 +39,29 @@
                         
                         <button class="delete-button"><i class="fas fa-trash"></i></button>
                     </form>
-     
+                    <% for(product of products){%>
+                    
+                        <div class="product-box">
+                                                    <a href="#">
+                                                        <img class="product-img" src="/images/products/<%= product.image %> " alt="Imagen de Producto">
+                                                    </a>
+    
+                                              
+                                        
+                                    <div class="product-detail">
+                                        <p class="product-name"><%=product.name %></p>
+                                        <p class="product-price">Precio online:  $<%= product.price %></p>
+                                        <p class="product-discount">Ahorrás un <%= product.discount %>%</p>
+                                        <!--p class="product-description"><%= product.description %> <p-->
+                                        
+                                </div>
+                                <div class="see-box">
+                                    <a class="see-button"  href="/products/<%=product.id %> ">ver</a>
+                                </div>  
+                                    
+                        </div>
+                   
+                    <% } %> 
                 </article>
                 <input type="button" class="boton-continuar" value="Continuar el proceso de compra">
             </main>

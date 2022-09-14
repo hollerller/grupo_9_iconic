@@ -20,7 +20,8 @@ const ordersController = {
                 product_id: req.params.id,
                 quantity: req.body.cantidad
             })
-        } else { //si no esta creada una orden o esta en estado diferente a pending
+        } else { 
+            //si no esta creada una orden o esta en estado diferente a pending
             //crea la orden
             db.Order.create({
                 order_status: 'PENDING',
@@ -35,7 +36,41 @@ const ordersController = {
      }
 
     })
-    res.send("Order e Item agregado")
+
+    //pedidos asincróncos//
+    let order = db.Order.findOne({
+        
+            [Op.and]: 
+                    [
+                        { user_id: user.id },
+                        { status: 'PENDING' }
+                    ]
+               
+        ,
+        include: ["products"]
+    })
+    
+    // .then(order=>{
+    //     console.log(order.products[0].dataValues)
+    // })
+    let sizes = db.Size.findAll();
+    let genders = db.Gender.findAll();
+    let brands = db.Brand.findAll();
+    let categories = db.Category.findAll();
+    let product = db.Order.products[0].datavalues.id
+
+    Promise.all([order,sizes,genders,brands,categories,products])
+    .then(function([sizes,genders,brands,categories,products]){
+        res.render("shoppingCart", { 
+            order:order,
+            sizes:sizes,
+            brands:brands,
+            genders:genders,
+            categories:categories,
+            product:product
+        })
+    })
+     
 }
 }
         ;

@@ -79,10 +79,12 @@ Product.associate = (models) => {
         foreignKey: 'brand_id'
     });
 
-  /*  Product.belongsTo(models.OrderDetail,{
-        as: 'orderDetail',
-        foreignKey: 'product_id'
-    });*/
+    Product.belongsToMany(models.Order,{
+            as:"orders",
+            foreignKey:"product_id",
+            through: "order_detail"
+        });
+
 
 }
 
