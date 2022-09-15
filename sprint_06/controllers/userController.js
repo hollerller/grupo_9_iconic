@@ -18,7 +18,7 @@ const usersController = {
     // Mostrar perfil de usuario
     userID: (req, res) => {
         let userToDisplay = req.session.userLogged;
-        console.log(userToDisplay)
+        //console.log(userToDisplay)
         db.User.findByPk(userToDisplay.id,{
             include:[
                 {association: "roles"},
