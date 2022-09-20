@@ -3,9 +3,9 @@
  ![Logo](./public/images/logo.png "Iconic logo")
 ## Análisis General
 
->En este Sprint pudimos afrontar el trabajo sintiéndonos cómodos y con seguridad. La comunicación, como siempre, fue muy fluída y nos sentimos confiados en que vamos a poder llevar el proyecto a buen fin a pesar de ser solo dos integrantes, aunque a veces se haga pesado!
-> Sobre las consignas en particular, tuvimos algunos problemas para finalizar una de las tareas opcionales (carrito de compras), sobre todo desde el lado del front-end. A pesar de esto, nos sentimos muy a gusto trabajando entre los dos, ya sin incertidumbres sobre la conformación final del grupo.
-> Es muy grato ver que con cada sprint que pasa vamos cumpliendo con los objetivos propuestos, recibiendo buenos feedbacks de parte de los profesores sin perder de vista que podemos mejorar muchos aspectos del sitio. 
+>En este sprint, tuvimos que tomar algunas decisiones importantes para la finalización del proyecto. Estuvimos reunidos con el grupo 1 por sugerencia de los profes, para ver si podíamos integrarnos con ellos y terminar el proyecto. Vimos que su proyecto es muy bueno y van al día, unicamente sentimos que habia algunas diferencias en la metodología de subida de cambios. Igualmente, pensamos que podía ser un poco más difícil organizarnos entre 5 personas, ya que pueden haber diferencias de horario y disponibilidad, por eso tomamos la decisión de continuar con nuestro proyecto Iconic. 
+> Continuamos manteniendo una comunicación permanente y apoyandonos en las dudas que pueden surgir durante la realización del proyecto. 
+> Sobre las consignas de este sprint, cumplimos con los objetivos propuestos, recibimos el feedback como algo positivo, pues tenemos el detalle de lo que debemos mejorar y vemos que son temas más de visualización, que del funcionamiento del e-commerce.
 
 ### 1. Comenzar a hacer
 
