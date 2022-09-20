@@ -5,9 +5,14 @@
     <body>
         <%- include('./partials/header') %>
             <main>
-                <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
+                <form id="register-form" class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
 
                     <h3 class="titulo-formulario"> Crea tu cuenta </h3>
+                    <div class="errors">
+                        <ul>
+                            
+                        </ul>
+                    </div>
 
                     <input class="input-text" placeholder="Nombre y Apellido" type="text" name="nombreYApellido"
                         id="nombre-apellido" value="<%= locals.oldData ? oldData.nombreYApellido : null  %>" >  
