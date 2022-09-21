@@ -5,7 +5,7 @@
     <%- include('./partials/header') %>
     
        <main class="main-create-product">
-        <form class="formulario create-form prod-edition" action="/products/<%=product.id%>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form id="editProduct-form" class="formulario create-form prod-edition" action="/products/<%=product.id%>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
 
                     
             <h2 class="titulo-formulario">
@@ -33,7 +33,7 @@
             
                 <label  for="description">Descripción</label>
                     
-                    <textarea  class="input-text" name="description"><%=product.description%> </textarea>
+                    <textarea  class="input-text" name="description"><%=product.description%></textarea>
                     <% if (locals.errorsMessage && errorsMessage.description) {%> 
                     
                         <p class="error-message"><%= errorsMessage.description.msg %>  <i class="fas fa-exclamation-circle"></i></p>
@@ -152,7 +152,10 @@
 
         </form>
        </main>
-       <script src="/js/js-editProduct.js"></script>
+       
     <%- include('./partials/footer') %>
+
+    <script src="/js/js-editProduct.js"></script>
+
 </body>
 </html>
