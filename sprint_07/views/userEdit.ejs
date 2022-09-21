@@ -5,12 +5,18 @@
     <body>
         <%- include('./partials/header') %>
             <main> 
-                <form class="formulario" action="/users/edit/<%=user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form id="editUser-form" class="formulario" action="/users/edit/<%=user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                     <h3 class="titulo-formulario"> Edita tu información de perfil </h3>
+                    <br>
+                     <div id="errors">
+                        <ul>
+                            
+                        </ul>
+                    </div>
 
-                    <input class="input-text" placeholder="Nombre y Apellido" type="text" name="fullname" value="<%=user.full_name%>"
-                        id="nombre-apellido" value="<%= locals.oldData ? oldData.full_name : null  %>" >  
+                    <input class="input-text" placeholder="Nombre y Apellido" type="text" name="fullname" value="<%="" || user.full_name %>"
+                        id="nombre-apellido" value="<%= locals.oldData ? oldData.user_name : null  %>"> 
                     <% if (locals.registerErrors && registerErrors.fullName) { %>
                         <p class="error-message"><%= registerErrors.fullName.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
@@ -89,11 +95,13 @@
 
                     
                     <button type="submit" class="boton-registrarme-1">Guardar cambios</button>
+                    
 
                 </form>
             </main>
             <%- include('./partials/footer') %>
             <script src="/js/js-editUser.js"></script>
+            
     </body>
 
 </html>
