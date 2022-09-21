@@ -365,6 +365,15 @@ footer .redes-sociales {
         margin: 15px;
 }
 
+.fullname_validations{
+        color: black
+}
+.alarm{
+        color: red;
+}
+.checked{
+        color: green;
+}
 .boton-registrarme,
 .boton-ingresar {
         width: 100%;

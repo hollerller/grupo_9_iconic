@@ -9,29 +9,35 @@
 
                     <h3 class="titulo-formulario"> Edita tu información de perfil </h3>
                     <br>
-                     <div id="errors">
-                        <ul>
-                            
-                        </ul>
-                    </div>
+               
 
                     <input class="input-text" placeholder="Nombre y Apellido" type="text" name="fullname" value="<%="" || user.full_name %>"
                         id="nombre-apellido" value="<%= locals.oldData ? oldData.user_name : null  %>"> 
                     <% if (locals.registerErrors && registerErrors.fullName) { %>
                         <p class="error-message"><%= registerErrors.fullName.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
+                    <div class="fullname_validations">
+
+                    </div>
+                 
 
                     <input class="input-text" placeholder="Usuario" type="text" id="usuario" name="username" value="<%=user.user_name%>"
                     value="<%= locals.oldData ? oldData.user_name : null  %>">
                     <% if (locals.registerErrors && registerErrors.username) { %>
                         <p class="error-message"><%= registerErrors.username.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
+                    <div class="username_validations">
+
+                    </div>
 
                     <input class="input-text" placeholder="Correo electrónico" type="email" id="mail" name="email" value="<%=user.email%>"
                     value="<%= locals.oldData ? oldData.email : null  %>">
                     <% if (locals.registerErrors && registerErrors.email) { %>
                         <p class="error-message"><%= registerErrors.email.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
+                    <div class="email_validations">
+
+                    </div>
                     
                         <label for="avatar">Avatar de usuario:</label>
                             
@@ -46,17 +52,16 @@
                             <p class="error-message"><%= registerErrors.avatar.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
 
-                    <input class="input-text" placeholder="Contraseña" type="password" name="contrasena" id="contrasena" value="<%=user.password%>"
-                    value="<%= locals.oldData ? oldData.password : null  %>">
-                    <% if (locals.registerErrors && registerErrors.password) { %>
-                        <p class="error-message"><%= registerErrors.password.msg %>  <i class="fas fa-exclamation-circle"></i></p>
-                    <% } %>
+                    
          
                     <input class="input-text" type="date" id="fechaNacimiento" name="birthday" value="<%=user.birthday%>"
                     value="<%= locals.oldData ? oldData.birthday : null  %>">
                     <% if (locals.registerErrors && registerErrors.birthday) { %>
                         <p class="error-message"><%= registerErrors.birthday.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
+                    <div class="birthday_validations">
+
+                    </div>
 
                     <label for="role">Categoría</label>
                     <select name="role" id="role">
