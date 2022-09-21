@@ -1,10 +1,16 @@
 window.addEventListener("load",()=>{
     let form = document.querySelector("form#register-form");
-    let errors = [];
+    
     
     form.addEventListener("submit",(e)=>{
-      
+        let errors = [];
+        let ulErrors = document.querySelector("div.errors");
+
+        ulErrors.innerHTML = ""
+
         let fullName = document.querySelector("input#nombre-apellido");
+
+
         if(fullName.value == ""){
             errors.push("El campo Nombre y Apellido está vacío");
         }else if(fullName.value.length < 4){
@@ -51,16 +57,15 @@ window.addEventListener("load",()=>{
         if(birthday.value == ""){
             errors.push("Debes colocar tu fecha de nacimiento")
         }
-
+        //MOSTRAR ERRORES
         if (errors.length > 0){
-       
             e.preventDefault();
     
-            let ulErrors = document.querySelector("div.errors");
+           
             for(let i = 0;i < errors.length; i++){
                 ulErrors.innerHTML += "<li>" + errors[i] + "</li>"
             }
-          
+            
         }
         
     })
