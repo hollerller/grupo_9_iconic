@@ -6,13 +6,14 @@
         <%- include('./partials/header') %>
             <main>
                 <form class="formulario" action="/users/login" method="POST">
-                    <label for="nombreUsuario">Email:</label>
-                    <input class="input-text" type="text" id="nombreUsuario" name="email"
+                    <label for="user_email">Email:</label>
+                    <input class="input-text" type="text" id="user_email" name="email"
                     value="<%= locals.oldData ? oldData.email : null  %>" >
 
                     <% if (locals.loginErrors && loginErrors.email) { %>
                         <p class="error-message"><%= loginErrors.email.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
+                    <div class="email_validations"></div>
 
                     <label for="contrasena">Contraseña:</label>
                     <input class="input-text" type="password" id="contrasena" name="contrasena"
@@ -21,6 +22,7 @@
                     <% if (locals.loginErrors && loginErrors.contrasena) { %>
                         <p class="error-message"><%= loginErrors.contrasena.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
+                    <div class="password_validations"></div>
 
                     <label>Recordar mis datos
                     <input type="checkbox" name="recordarUsuario">
@@ -32,6 +34,7 @@
 
             </main>
             <%- include('./partials/footer') %>
+            <script src="/js/js-login.js "></script>
     </body>
 
 </html>

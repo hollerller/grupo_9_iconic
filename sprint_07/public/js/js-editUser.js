@@ -1,8 +1,8 @@
 window.addEventListener("load",()=>{
+    //let errors = [];
     //Capturamos el formulario//
     let form = document.getElementById("editUser-form");
 
-   
   
             //Capturamos el campo full name y el div de sus errores//
             let fullName = document.getElementById("nombre-apellido");
@@ -11,10 +11,15 @@ window.addEventListener("load",()=>{
 
             //Validaciones del campo Full name//
             fullName.addEventListener("input",()=>{
-                if(fullName.value.length < 6){
+                if(fullName.value == ""){
+                    fullNameValidations.classList.remove("checked")
+                    fullNameValidations.classList.add("alarm")
+                    fullNameValidations.innerHTML = "<p>Recordá que este campo no puede estar vacío</p>"
+                }else if(fullName.value.length < 6){
                     fullNameValidations.classList.remove("checked")
                     fullNameValidations.classList.add("alarm")
                     fullNameValidations.innerHTML = "<p>Recordá usar un mínimo de 6 caracteres</p>"
+
                 }else if(fullName.value.length >= 6){
                     fullNameValidations.classList.remove("alarm")
                     fullNameValidations.classList.add("checked")
@@ -22,14 +27,16 @@ window.addEventListener("load",()=>{
                 }
             })
             fullName.addEventListener("blur",()=>{
-                if(fullName.value == ""){
-                    fullNameValidations.classList.toggle("checked")
+                if(fullName.value == "" || fullName.value == null){
+                    fullNameValidations.classList.remove("checked")
                     fullNameValidations.classList.add("alarm")
                     fullNameValidations = "<p>Recordá que este campo no puede estar vacio</p>"
+                    //errors.push("error en el campo full name")
                 }else if(fullName.value <6){
-                    fullNameValidations.classList.toggle("checked")
+                    fullNameValidations.classList.remove("checked")
                     fullNameValidations.classList.add("alarm")
-                    fullNameValidations = "<p>Recordá usar un mínimo de 6 caracteres</p>"
+                    fullNameValidations.innerHTML = "<p>Recordá usar un mínimo de 6 caracteres</p>"
+                    //errors.push("error en el campo full name")
                 }
             })
             //Capturamos el input user name y su div de validaciones//
@@ -37,10 +44,15 @@ window.addEventListener("load",()=>{
             let userNameValidations = document.querySelector("div.username_validations");
             //Validaciones del campo user name//
             userName.addEventListener("input",()=>{
-                if(userName.value.length < 6){
+                if(userName.value == "" || userName.value == null){
+                    userNameValidations.classList.remove("checked")
+                    userNameValidations.classList.add("alarm")
+                    userNameValidations.innerHTML = "<p>Recordá que este campo no puede estar vacio</p>"
+                }else if(userName.value.length < 6){
                     userNameValidations.classList.remove("checked")
                     userNameValidations.classList.add("alarm")
                     userNameValidations.innerHTML = "<p>Recordá usar un mínimo de 6 caracteres</p>"
+                    
                 }else if(userName.value.length >= 6){
                     userNameValidations.classList.remove("alarm")
                     userNameValidations.classList.add("checked")
@@ -49,13 +61,16 @@ window.addEventListener("load",()=>{
             })
             userName.addEventListener("blur",()=>{
                 if(userName.value == ""){
-                    userNameValidations.classList.toggle("checked")
+                    userNameValidations.classList.remove("checked")
                     userNameValidations.classList.add("alarm")
                     userNameValidations = "<p>Recordá que este campo no puede estar vacio</p>"
+                    //errors.push("error en el campo user name")
+                    
                 }else if(userName.value <6){
-                    userNameValidations.classList.toggle("checked")
+                    userNameValidations.classList.remove("checked")
                     userNameValidations.classList.add("alarm")
                     userNameValidations = "<p>Recordá usar un mínimo de 6 caracteres</p>"
+                    //errors.push("error en el campo user name")
                 }
             })
 
@@ -73,7 +88,7 @@ window.addEventListener("load",()=>{
                     emailValidations.classList.remove("alarm")
                     emailValidations.classList.add("checked")
                     emailValidations.innerHTML = "<p>Perfecto!</p>"
-                }else if(email.value.length<6 || !email.value.includes("@")){
+                }else if(!email.value.includes("@") && !email.value.includes(".")){
                     emailValidations.classList.remove("checked")
                     emailValidations.classList.add("alarm")
                     emailValidations.innerHTML = "<p>Ingresá un email válido</p>"
@@ -81,14 +96,21 @@ window.addEventListener("load",()=>{
             })
             email.addEventListener("blur",()=>{
                 if(email.value == ""){
-                    emailValidations.classList.toggle("checked")
+                    emailValidations.classList.remove("checked")
                     emailValidations.classList.add("alarm")
                     emailValidations = "<p>Recordá que este campo no puede estar vacio</p>"
+                    //errors.push("error en el campo email")
                 }else if(email.value <6){
-                    emailValidations.classList.toggle("checked")
+                    emailValidations.classList.remove("checked")
                     emailValidations.classList.add("alarm")
                     emailValidations = "<p>Recordá usar un mínimo de 6 caracteres</p>"
+                    //errors.push("error en el campo email")
                 }else if(!email.value.includes("@")){
+                    emailValidations.classList.remove("checked")
+                    emailValidations.classList.add("alarm")
+                    emailValidations.innerHTML = "<p>Ingresá un email válido</p>"
+                    //errors.push("error en el campo email")
+                }else if(!(email.value.includes(".com"))){
                     emailValidations.classList.remove("checked")
                     emailValidations.classList.add("alarm")
                     emailValidations.innerHTML = "<p>Ingresá un email válido</p>"
@@ -111,11 +133,12 @@ window.addEventListener("load",()=>{
                     birthdayValidations.classList.remove("checked")
                     birthdayValidations.classList.add("alarm")
                     birthdayValidations.innerHTML = "<p>Por favor, colocá tu fecha de nacimiento</p>"
+                    //errors.push("error en el campo birthday")
                 }else{
                     birthdayValidations.classList.remove("alarm")
                     birthdayValidations.classList.add("checked")
-                    birthdayValidations.innerHTML = "<p>Genial!</p>"
+                    birthdayValidations.innerHTML = "<p>Perfecto!</p>"
                 }
             })
-       
+   
 })
