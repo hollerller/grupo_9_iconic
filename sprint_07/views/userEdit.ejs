@@ -13,8 +13,8 @@
 
                     <input class="input-text" placeholder="Nombre y Apellido" type="text" name="fullname" value="<%="" || user.full_name %>"
                         id="nombre-apellido" value="<%= locals.oldData ? oldData.user_name : null  %>"> 
-                    <% if (locals.registerErrors && registerErrors.fullName) { %>
-                        <p class="error-message"><%= registerErrors.fullName.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% if (locals.registerErrors && registerErrors.fullname) { %>
+                        <p class="error-message"><%= registerErrors.fullname.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
                     <div class="fullname_validations">
 
