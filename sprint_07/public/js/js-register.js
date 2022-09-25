@@ -50,7 +50,7 @@ window.addEventListener("load",()=>{
             errors.push("Debes colocar una contraseña");
         }else if(passwordConfirmation.value.length < 6){
             errors.push("Debes usar al menos 6 caracteres")
-        }else if(password != passwordConfirmation){
+        }else if(password.value != passwordConfirmation.value){
             errors.push("Las contraseñas deben ser iguales")
         }
         let birthday = document.querySelector("input#fechaNacimiento");

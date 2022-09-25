@@ -35,14 +35,11 @@ window.addEventListener("load", () => {
         if (errors.length > 0) {
             e.preventDefault();
 
-
             for (let i = 0; i < errors.length; i++) {
                 ulErrors.innerHTML += "<li>" + errors[i] + "</li>"
             }
 
         }
-
-
     })
 
 })
