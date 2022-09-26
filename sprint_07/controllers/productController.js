@@ -33,7 +33,7 @@ const productController = {
                 user: req.session.userLogged}
                 )
             })
-        console.log(req.session.userLogged);
+       // console.log(req.session.userLogged);
         
     },
     //Crear productos: GET//
@@ -83,7 +83,7 @@ const productController = {
             res.redirect('/products')
 
         }else{
-            console.log(errores.mapped());
+            //console.log(errores.mapped());
             Promise.all([sizes,genders,brands,categories])
                 .then(function([sizes,genders,brands,categories]){
                     res.render('createProducts', { 
@@ -109,24 +109,28 @@ const productController = {
       Promise.all([product,sizes,genders,brands,categories])
         .then(([product,sizes,genders,brands,categories])=>{
             res.render('editProducts',{
-                product:product,
+                oldData:product,
+                product: req.params.id,
                 sizes:sizes,
                 genders:genders,
                 categories:categories,
                 brands:brands
             })
         })
-      
 
     },
     //Editar productos: PUT//
     saveChanges: (req,res) =>{
         let idUrl = req.params.id;
+    //   console.log(idUrl);
         let errores = validationResult(req);
-        
-        let file = req.file;
-        if(file && errores.isEmpty()){
-    
+        let product = db.Product.findByPk(idUrl);
+        let sizes = db.Size.findAll();
+        let genders = db.Gender.findAll();
+        let brands = db.Brand.findAll();
+        let categories = db.Category.findAll();
+
+        if(errores.isEmpty()){
             db.Product.update({
                 name:req.body.prodName,
                 price:req.body.price,
@@ -143,9 +147,22 @@ const productController = {
                     id:idUrl
                 }
             })
-              
-        }  
-        res.redirect(`/products/${idUrl}`)
+            res.redirect('/')
+        }  else {
+
+            Promise.all([sizes,genders, brands, categories, product])
+                .then(function([sizes, genders, brands, categories, product]){
+                    res.render('editProducts', { 
+                        errorsMessage : errores.mapped(),
+                        oldData: product,
+                        sizes:sizes,
+                        genders:genders,
+                        brands:brands,
+                        categories:categories
+                    })
+                })
+        //res.redirect(`/products/${idUrl}`)
+        }
     },
  
     //ruta DELETE

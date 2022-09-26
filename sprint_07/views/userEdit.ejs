@@ -46,7 +46,7 @@
                                 type="file"
                                 name="avatar"
                                 accept=".jpg, .png"
-                                value="<%= locals.oldData ? oldData.avatar : null %>  "> 
+                                value="<%= locals.oldData ? oldData.avatar : null  %>"> 
 
                     <% if (locals.registerErrors && registerErrors.avatar) { %>
                             <p class="error-message"><%= registerErrors.avatar.msg %>  <i class="fas fa-exclamation-circle"></i></p>

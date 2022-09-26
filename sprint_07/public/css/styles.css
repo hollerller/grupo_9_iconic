@@ -374,6 +374,10 @@ footer .redes-sociales {
 .checked{
         color: green;
 }
+.warning {
+        color: blue;
+}
+
 .boton-registrarme,
 .boton-ingresar {
         width: 100%;

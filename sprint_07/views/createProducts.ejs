@@ -23,10 +23,7 @@
 
                     <input class="input-text" id="prod-name" type="text" name="prodName"
                         value="<%= locals.oldData ? oldData.prodName : null%>">
-                    <!-- para elementos con select: 
-selected  
-ejs locals.oldData && oneCountry === oldData.country ? 'selected' : null
--->
+                        
                     <% if (locals.errorsMessage && errorsMessage.prodName) {%>
 
                         <p class="error-message">

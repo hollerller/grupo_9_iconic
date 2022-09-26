@@ -116,7 +116,7 @@ const usersController = {
 
     processLogin: (req, res) => {
         const loginValidations = validationResult(req)
-        console.log(loginValidations);
+        //console.log(loginValidations);
 
         if (loginValidations.errors.length > 0) {
             res.render('login', {
@@ -146,6 +146,7 @@ const usersController = {
 
     editUser: (req, res) => {
         let userToEdit = req.session;
+        //console.log(userToEdit);
         let user = db.User.findByPk(req.params.id)
 
         let role = db.Role.findAll();
@@ -166,9 +167,9 @@ const usersController = {
     processEdition: (req, res) => {
         let idUser = req.params.id;
         const editValidation = validationResult(req);
-        console.log(editValidation);
+      //  console.log(editValidation);
         let userToEdit = req.session;
-        let user = db.User.findByPk(req.params.id)
+        let user = db.User.findByPk(req.params.id);
 
 
         if (editValidation.errors.length > 0) {

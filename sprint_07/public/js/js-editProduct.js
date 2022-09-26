@@ -1,48 +1,52 @@
 window.addEventListener("load", () => {
-    let form = document.querySelector("form#editProduct-form");
+    let form = document.getElementById("editProduct-form");
 
-    form.addEventListener("submit", (e) => {
-        let errors = [];
-        let ulErrors = document.querySelector("div.errors");
+    let productName = document.getElementById("prod-name");
 
-        ulErrors.innerHTML = ''
+    let prodName_validation = document.querySelector('div.prodName_validation');
 
-        let productName = document.querySelector("input#prod-name");
-
+    productName.addEventListener('input', () => {
+        //console.log(productName.value);
         if (productName.value == '') {
-            errors.push("El nombre del producto está vacío");
-        } else if (fullName.value.length < 3) {
-            errors.push("El nombre de producto debe tener al menos 3 caracteres");
+            prodName_validation.classList.remove("checked")
+            prodName_validation.classList.add("alarm")
+            prodName_validation.innerHTML = "<p>El nombre del producto no puede estar vacio</p>"
+        } else {
+
+            prodName_validation.innerHTML = ""
         }
 
-        let productDescrition = document.querySelector("textarea#description");
+})
+ 
+    let prodDescription = document.getElementById("prod-description");
 
-        if (productDescrition.value == '') {
-            errors.push("La descripción del producto está vacía");
-        } else if (productDescrition.value.length < 5) {
-            errors.push("La descripción del producto debe ser de más de 5 caracteres");
+    let prodDescription_validation = document.querySelector('div.prodDescription_validation');
+    
+    prodDescription.addEventListener('input', () => {
+    if (prodDescription.value == '') {
+      prodDescription_validation.classList.remove("checked")
+        prodDescription_validation.classList.add("alarm")
+        prodDescription_validation.innerHTML = "<p>La descripción no puede estar vacia</p>"
+    } else if (prodDescription.value.length > 0 && prodDescription.value.length < 6){
+        prodDescription_validation.classList.remove("alarm")
+        prodDescription_validation.classList.add("warning")
+        prodDescription_validation.innerHTML = "<p>Una descripción mas larga puede incrementar tus ventas!</p>"
+    }
+     else {
+        prodDescription_validation.innerHTML = ""
+    }
+})
+
+    let price = document.getElementById("price");
+
+    let prodPrice_validation = document.querySelector('div.prodPrice_validationn');
+
+    price.addEventListener('input', () => {
+
+        if (price.value < 100) {
+            price.classList.remove("checked")
+            price.classList.add("alarm")
+            prodPrice_validation.innerHTML = "<p>El producto no puede valer menos de $100</p>"
         }
-
-        let productPrice = document.querySelector("input#price");
-
-        if (productPrice.value == '') {
-            errors.push("El precio del producto está vacío");
-        } else if (productPrice.value < 100) {
-            errors.push("El precio del producto no debe ser menor de 100 pesos");
-        }
-
-        //MOSTRAR ERRORES
-        if (errors.length > 0) {
-            e.preventDefault();
-
-
-            for (let i = 0; i < errors.length; i++) {
-                ulErrors.innerHTML += "<li>" + errors[i] + "</li>"
-            }
-
-        }
-
-
     })
-
 })
