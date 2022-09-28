@@ -1,13 +1,59 @@
-const e = require("express");
+//const e = require("express");
 let db = require("../database/models");
 const { productID } = require("./productController");
-const {Op} = require("sequelize")
+const { Op } = require("sequelize");
+const OrderDetail = require("../database/models/OrderDetail");
+const Order = require("../database/models/Order");
 
 
 const ordersController = {
 
-    processCart: (req, res) => {
+    processCart: async (req, res) => {
+      
        let user = req.session.userLogged;
+
+       let order = await db.Order.findOne({
+           where:{
+              [Op.and]: 
+                      [
+                          { user_id: user.id },
+                          { order_status: 'PENDING' }
+                      ]
+           }
+       })
+   
+       let ordenes  = await db.OrderDetail.findAll({
+        include: [
+            {association: "prodcuts"}
+            ],
+            where: {
+                order_id: order.id
+            }
+       })
+    let orderList = [];
+   // console.log(ordenes)
+       ordenes.forEach(element => {
+       //orderList.push(element.id);
+       console.log(element.prodcuts)
+       });
+
+      
+/*
+      let products = await db.Product.findAll({
+            
+            where: {
+                [Op.in]: orderList.map()
+            }
+       })
+
+       /*
+        let products = await db.Product.findAll({
+            where: {
+
+            }
+        })*/
+
+         /*
       // console.log(user.id, "test /")
       //Busca las ordenes actuales
        db.Order.findAll()
@@ -20,6 +66,8 @@ const ordersController = {
                 order_id: orderID.id,
                 product_id: req.params.id,
                 quantity: req.body.cantidad
+            }).then(order => {
+                console.log(order)
             })
         } else { 
             //si no esta creada una orden o esta en estado diferente a pending
@@ -33,13 +81,43 @@ const ordersController = {
                     product_id: req.params.id,
                     quantity: req.body.cantidad
                 })
+            }).then(order => {
+                console.log(order);
             })
      }
 
     })
+ */
 
+////////////////// !!!!!!! /////////////
+
+     /*
+    let products = await db.Product.findAll({
+        where: id = 1,
+        include: [
+            {association: "product_sizes"},
+            {association: "product_categories"},
+            {association:"product_genders"},
+            {association:"product_brands"}
+        ]
+    })
+*/
+//console.log(products)
+
+    /*let orderDetail = await db.OrderDetail.findAll({
+        where:{
+            order_id: order
+        }
+    })
+    if (orderDetail) {
+        console.log(orderDetail);
+    }*/
+
+  //  if (orderDetail) {
+     //   console.log(orderDetail);
+   // }
     //pedidos asincróncos//
-    let order = db.Order.findOne({
+/*    let order = db.Order.findOne({
          where:{
             [Op.and]: 
                     [
@@ -49,12 +127,15 @@ const ordersController = {
          }
         ,
         include: ["products"]
-    })
+    }).then((order) => {
+        console.log(order);
+    })*?
  
-    
+
     // .then(order=>{
     //     console.log(order.products[0].dataValues)
     // })
+    /*
     let sizes = db.Size.findAll();
     let genders = db.Gender.findAll();
     let brands = db.Brand.findAll();
@@ -76,7 +157,7 @@ const ordersController = {
             products:products
         })
     })
-     
+     */
 }
 }
         ;
