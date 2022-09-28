@@ -1,5 +1,5 @@
 #Reuniones semanales
-Se acordó realizar al menos dos reuniones semanales. Durante el sprint 5 las mismas se hicieron de la siguiente forma:
+Se acordó realizar al menos dos reuniones semanales. Durante el sprint 6 las mismas se hicieron de la siguiente forma:
 
 
 - **Lunes 29/08:** Se realizó una reunión con una duración aproximada 30 minutos con el objetivo de ponernos al corriente del estado de avance de esta entrega. Se instaló sequelize.

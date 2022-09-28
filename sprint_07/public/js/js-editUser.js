@@ -172,7 +172,7 @@ window.addEventListener("load",()=>{
     form.addEventListener("submit",(e)=>{
         if(errors.length > 0){
             e.preventDefault()
-            errors = []
+          errors = []
         }
     })
 })

@@ -1,11 +1,15 @@
 #Reuniones semanales
-Se acordó realizar al menos dos reuniones semanales. Durante el sprint 5 las mismas se hicieron de la siguiente forma:
+Se acordó realizar al menos dos reuniones semanales. Durante el sprint 6 las mismas se hicieron de la siguiente forma:
 
 
-- **Lunes 29/08:** Se realizó una reunión con una duración aproximada 30 minutos con el objetivo de ponernos al corriente del estado de avance de esta entrega. Se instaló sequelize.
-- **Martes 30/08:** Nos pusimos en contacto para discutir, en particular, un detalle de las relaciones entre las tablas de sizes con las de products y order_detail.
-- **Domingo 04/09:** Se realizó una reunión extraordinaria de 4 horas para solucionar problemas de conexión a la base de datos que presentaba uno de los integrantes del equipo. Luego de solventar la situación, revisamos los pendientes y continuamos definiendo detalles del CRUD de usuarios.
-- **Lunes 05/09:** En conversaciones por whatsapp se decidió hacer un borrado lógico de los usuarios, para mantener la información del detalle de las ordenes almacenadas en caso de una reclamación.
+- **Jueves 08/09:** Se realizó una reunión para actualizar el tablero de Trello y dividir las tareas a ejecutar durante el sprint.
+Hicimos un repaso de los pendientes opcionales del sprint anterior.
+- **Martes 13/09:** Nos reunimos durante la clase para continuar con el desarrollo del proceso para mostrar los productos del carrito
+de compras en el front y solicitamos ayuda a Franco, para saber como retornar la informacion de las tablas principales e intermedias.
+- **Lunes 19/09:** Durante la reunión, revisamos el avance de las validaciones del front hasta el momento y construimos en conjunto
+la primera versión de la validación del registro en el front.
+- **Domingo 25/09:** En conversaciones por whatsapp, hablamos acerca de las dificultades que se presentaban en algunas validaciones, y
+se logró hacer algunos ajustes que permiten un funcionamiento adecuado de las validaciones.
 
 
 Las reuniones se realizan a través de [este link](https://meet.google.com/zic-frwn-fzj?pli=1&authuser=2)
