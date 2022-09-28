@@ -15,7 +15,9 @@ const productController = {
         db.Product.findAll()
             .then(products=>{
                 response.render('products',{products:products})
+                //console.log(products);
             })
+           
 
     },
     productID: (req, res) => {

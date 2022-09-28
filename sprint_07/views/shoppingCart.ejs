@@ -7,18 +7,15 @@
             <main>
 
                 <h5 class="section-name">Mis compras</h5>
-          <%for(product of products){ %> 
-            <% if(product.id == order.products[0].dataValues.order_detail.dataValues.id) {%> 
-            <article class="articulo-compra">
-                <img src="/images/products/prod5.jpg">
-                <div class="detalle-compra">
-                    <p class="productName"><%=product.name %> </p>
-                    <p class="productPrice">$5.450,00</p>
-                    <p class="productDescription">Buzo canguro de frisa con capucha
+          
+                <%for(product of products){ %> 
+                    <a href="#">
+                        <img class="product-img" src="/images/products/<%= product.image %> " alt="Imagen de Producto">
+                    </a>
 
-                        Cordón fantasía y bolsillos en frente. Puño mangas y cintura en morley a tono. Logo bordado en frente izquierdo. Composición: Frisa50% algodón 50% poliéster</p>
-                </div>
-                <% } %> 
+                    <p class="product-name"><%=product.name %></p>
+                    <p class="product-price">Precio online:  $<%= product.price %></p>
+                    <p class="product-discount">Ahorrás un <%= product.discount %>%</p>
             <% } %> 
            
      

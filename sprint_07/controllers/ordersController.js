@@ -10,51 +10,9 @@ const ordersController = {
 
     processCart: async (req, res) => {
       
-       let user = req.session.userLogged;
-
-       let order = await db.Order.findOne({
-           where:{
-              [Op.and]: 
-                      [
-                          { user_id: user.id },
-                          { order_status: 'PENDING' }
-                      ]
-           }
-       })
-   
-       let ordenes  = await db.OrderDetail.findAll({
-        include: [
-            {association: "prodcuts"}
-            ],
-            where: {
-                order_id: order.id
-            }
-       })
-    let orderList = [];
-   // console.log(ordenes)
-       ordenes.forEach(element => {
-       //orderList.push(element.id);
-       console.log(element.prodcuts)
-       });
-
+              /*
+      ///// ------ LOGICA PARA CREAR ORDENES Y DETALLE DE ORDENES --------- \\\\\\
       
-/*
-      let products = await db.Product.findAll({
-            
-            where: {
-                [Op.in]: orderList.map()
-            }
-       })
-
-       /*
-        let products = await db.Product.findAll({
-            where: {
-
-            }
-        })*/
-
-         /*
-      // console.log(user.id, "test /")
       //Busca las ordenes actuales
        db.Order.findAll()
        .then(orders=> {
@@ -87,9 +45,71 @@ const ordersController = {
      }
 
     })
+
+
+////////////////// !!!FIN!!!! /////////////
+
  */
 
-////////////////// !!!!!!! /////////////
+       let user = req.session.userLogged;
+        //BUSCAR LA ORDEN
+       let order = await db.Order.findOne({
+           where:{
+              [Op.and]: 
+                      [
+                          { user_id: user.id },
+                          { order_status: 'PENDING' }
+                      ]
+           }
+       })
+       //CON LA ORDEN BUSCO EL DETALLE DE LAS ORDENES
+       let ordenes  = await db.OrderDetail.findAll({
+        include: [
+            {association: "prodcuts"}
+            ],
+            where: {
+                order_id: order.id
+            }
+       })
+
+        // IMPRIMO LA LISTA DE PRODUCTOS
+          console.log(ordenes)
+       let productList = [];
+       ordenes.forEach(element => {
+     // orderList.push(element.id);
+    // productList.push(element.prodcuts)
+    console.log(element.prodcuts)
+      });
+
+    //  console.log(productList)
+      // res.render('products',
+      // {products: ordenes.products})
+   
+   // console.log(ordenes)
+     //  ordenes.forEach(element => {
+       //orderList.push(element.id);
+    //   console.log(element.prodcuts)
+     // });
+
+      
+/*
+      let products = await db.Product.findAll({
+            
+            where: {
+                [Op.in]: orderList.map()
+            }
+       })
+
+       /*
+        let products = await db.Product.findAll({
+            where: {
+
+            }
+        })*/
+
+         /*
+      // console.log(user.id, "test /")
+
 
      /*
     let products = await db.Product.findAll({
