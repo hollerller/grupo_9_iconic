@@ -34,7 +34,7 @@ module.exports = (sequelize, dataTypes) => {
         });
 
         OrderDetail.belongsTo(models.Product, {
-            as: "prodcuts",
+            as: "products",
             foreignKey: "product_id"
         });
 
