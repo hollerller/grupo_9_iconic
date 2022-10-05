@@ -45,4 +45,8 @@ router.put('/:id/edit', uploadFile.single('image'), editValidations, productCont
 
 router.get('/:id/delete', productController.delete);
 
+// APIS productos
+
+router.get('/api/products', productController.apiList)
+
 module.exports = router;

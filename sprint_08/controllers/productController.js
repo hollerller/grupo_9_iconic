@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const {validationResult} = require('express-validator');
 let db = require("../database/models");
+const { Op } = require("sequelize");
+const { sequelize } = require('../database/models');
+
 
 
 
@@ -177,6 +180,26 @@ const productController = {
         }
        })
         res.redirect('/products')
+    }, 
+
+    apiList: async (req,res)=>{
+
+        let groupCategories = await db.Product.findAll({
+            group: ['category_id'],
+            attributes: ['category_id', [sequelize.fn('COUNT', 'category_id'), 'count']],
+            order: [
+                ['count', 'DESC']
+            ]
+        })
+
+
+
+       db.Product.findAll().then( productos => {
+            return res.json({
+                total: productos.length,
+                countByCategory: groupCategories
+            })
+    }) 
     }
    
 }

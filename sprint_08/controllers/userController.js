@@ -227,6 +227,47 @@ const usersController = {
         })
         req.session.destroy();
         res.redirect('/');
+    },
+
+
+    userList: (req, res) => {
+        db.User.findAll().then( usuarios => {
+           //
+           let arrayUsuarios = [];
+           
+           for (i = 0;i< usuarios.length;i++){
+            arrayUsuarios.push(
+                {id: usuarios[i].dataValues.id,
+                name:  usuarios[i].dataValues.full_name,
+                email:  usuarios[i].dataValues.email,
+                detail: 'http://localhost:3000/users/api/users/' + usuarios[i].dataValues.id
+            })
+           }
+
+           //console.log(arrayUsuarios);
+            return res.status(200).json({ 
+               total: usuarios.length,
+               data: arrayUsuarios
+               });
+        }
+        )
+
+    },
+
+    userDetail: (req, res) => {
+        db.User.findByPk( req.params.id ).then( usuario => {
+            return res.status(201).json(
+                {id: usuario.id,
+                name: usuario.full_name,
+                username: usuario.user_name,
+                avatar: 'http://localhost:3000/images/users/' + usuario.avatar,
+                birthday: usuario.birthday,
+                country_id: usuario.country_id
+                }
+                );
+        }
+        )
+
     }
 
 }

@@ -51,5 +51,13 @@ router.get('/logout', usersController.logout);
 //Eliminar Usuario
 router.delete('/:id/delete',usersController.deleteUser);
 
+//APIs lista de usuarios
+
+router.get('/api/users', usersController.userList);
+
+//API detalle de usuario
+
+router.get('/api/users/:id',usersController.userDetail);
+
 module.exports = router;
 
