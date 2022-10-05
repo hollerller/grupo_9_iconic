@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Editar Usuario'})  %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main> 
+                <form id="editUser-form" class="formulario" action="/users/edit/<%=user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+                    <h3 class="titulo-formulario"> Edita tu información de perfil </h3>
+                    <br>
+               
+
+                    <input class="input-text" placeholder="Nombre y Apellido" type="text" name="fullname" value="<%="" || user.full_name %>"
+                        id="nombre-apellido" value="<%= locals.oldData ? oldData.user_name : null  %>"> 
+                    <% if (locals.registerErrors && registerErrors.fullname) { %>
+                        <p class="error-message"><%= registerErrors.fullname.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+                    <div class="fullname_validations">
+
+                    </div>
+                 
+
+                    <input class="input-text" placeholder="Usuario" type="text" id="usuario" name="username" value="<%=user.user_name%>"
+                    value="<%= locals.oldData ? oldData.user_name : null  %>">
+                    <% if (locals.registerErrors && registerErrors.username) { %>
+                        <p class="error-message"><%= registerErrors.username.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+                    <div class="username_validations">
+
+                    </div>
+
+                    <input class="input-text" placeholder="Correo electrónico" type="email" id="mail" name="email" value="<%=user.email%>"
+                    value="<%= locals.oldData ? oldData.email : null  %>">
+                    <% if (locals.registerErrors && registerErrors.email) { %>
+                        <p class="error-message"><%= registerErrors.email.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+                    <div class="email_validations">
+
+                    </div>
+                    
+                        <label for="avatar">Avatar de usuario:</label>
+                            
+                        <input 
+                                id="avatar"
+                                type="file"
+                                name="avatar"
+                                accept=".jpg, .png"
+                                value="<%= locals.oldData ? oldData.avatar : null  %>"> 
+
+                    <% if (locals.registerErrors && registerErrors.avatar) { %>
+                            <p class="error-message"><%= registerErrors.avatar.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+
+                    
+         
+                    <input class="input-text" type="date" id="fechaNacimiento" name="birthday" value="<%=user.birthday%>"
+                    value="<%= locals.oldData ? oldData.birthday : null  %>">
+                    <% if (locals.registerErrors && registerErrors.birthday) { %>
+                        <p class="error-message"><%= registerErrors.birthday.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+                    <div class="birthday_validations">
+
+                    </div>
+
+                    <label for="role">Categoría</label>
+                    <select name="role" id="role">
+                        <% for (let i = 0; i < role.length; i++) { %> 
+                            <% if (role[i].id == user.role_id) { %> 
+                                <option value="<%= role[i].id %>" selected>
+                                   <%= role[i].name %> 
+                                </option>
+                            <%} else { %>
+                                <option value="<%= role[i].id %>">
+                                    <%= role[i].name %> 
+                                 </option>
+
+                            <%}%>
+                       
+                        <% } %> 
+                    </select>
+
+                    <label for="country">Categoría</label>
+                    <select name="country" id="country">
+                        <% for (let i = 0; i < country.length; i++) { %> 
+                            <% if (role[i].id == user.country_id) { %> 
+                                <option value="<%= country[i].id %>" selected>
+                                   <%= country[i].name %> 
+                                </option>
+                            <%} else { %>
+                                <option value="<%= country[i].id %>">
+                                    <%= country[i].name %> 
+                                 </option>
+
+                            <%}%>
+                       
+                        <% } %> 
+                    </select>
+
+
+                    
+                    <button type="submit" class="boton-registrarme-1">Guardar cambios</button>
+                    
+                    <div class="front_validation_error"></div>
+
+                </form>
+            </main>
+            <%- include('./partials/footer') %>
+            <script src="/js/js-editUser.js"></script>
+            
+    </body>
+
+</html>

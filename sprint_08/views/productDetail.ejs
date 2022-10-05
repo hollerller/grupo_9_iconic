@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Detalle de Producto'}) %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+               
+                <section  class="prodDetail-box">
+                   
+                    <img src="/images/products/<%= product.image%>" class="img-productDetail">
+               
+                        <div class="product-info">
+                                <p class="product-name"><%=product.name %></p>
+                                <p class="product-gender"><%= product.product_genders.name%></p>
+                                <p class="product-size">Talle: <%= product.product_sizes.name%></p>
+                                <p class="product-brand">Marca: <%= product.product_brands.name%></p>  
+                                <p class="product-price">Precio online:  $<%= product.price %></p>
+                                <p class="product-discount">Ahorrás un <%= product.discount %>%</p>
+                                <p class="product-description"><%= product.description %> </p>
+                             <br>
+                            <div class="add-product-form">
+
+                                <form action="/cart/checkout/<%= product.id %> " method=POST>
+                                    <label for="cantidad">Cantidad</label>
+                                    <select name="cantidad" id="cantidad">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>         
+
+                                        <!--<input class="add-product-button" type="button" value="Agregar a la bolsa">   -->
+                                    <button type="submit" class="add-product-button">Agregar a la bolsa</button>
+                                                                    
+
+                                </form>
+                            </div>
+                            
+                            <div class="delete-product-form">
+                                <form action="/products/<%=product.id%>/delete?_method=DELETE" method="POST">
+                                    <a class="edit-product-button" href="<%=product.id%>/edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    <a class="delete-product-button" href="<%=product.id%>/delete"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                                                
+                                </form>
+                            </div>
+                        </div>
+                       
+                
+                </section>
+                    <!--
+
+            <div class="info-envio">
+                <div class="envio-gratis">
+                    <img src="/images/envio-gratis.svg">
+                    <span>Al comprar <br> esta prenda</span>
+                </div>
+                <div class="cambio-gratis">
+                    <img src="/images/cambio-gratis.svg">
+                    <span>Cambios <br> Gratis</span>
+                </div>
+                <div class="pago-efectivo">
+                    <img src="/images/pago-efectivo.svg">
+                    <span>Pago en <br> efectivo</span>
+                </div>
+            </div>-->
+                
+                <%- include('./partials/newArrivals') %>
+                <section class="vender">
+                    <div>
+                        <h6>Vendé tu marca</h6><i class="far fa-lightbulb"></i>
+                    </div>
+                </section>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
+</html>

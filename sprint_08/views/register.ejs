@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Registro'})  %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <form id="register-form" class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
+
+                    <h3 class="titulo-formulario"> Crea tu cuenta </h3>
+                    <div class="errors">
+                        <ul>
+                            
+                        </ul>
+                    </div>
+
+                    <input class="input-text" placeholder="Nombre y Apellido" type="text" name="nombreYApellido"
+                        id="nombre-apellido" value="<%= locals.oldData ? oldData.nombreYApellido : null  %>" >  
+                    <% if (locals.registerErrors && registerErrors.nombreYApellido) { %>
+                        <p class="error-message"><%= registerErrors.nombreYApellido.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+
+                    <input class="input-text" placeholder="Usuario" type="text" id="usuario" name="usuario"
+                    value="<%= locals.oldData ? oldData.usuario : null  %>">
+                    <% if (locals.registerErrors && registerErrors.usuario) { %>
+                        <p class="error-message"><%= registerErrors.usuario.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+
+                    <input class="input-text" placeholder="Correo electrónico" type="email" id="mail" name="email"
+                    value="<%= locals.oldData ? oldData.email : null  %>">
+                    <% if (locals.registerErrors && registerErrors.email) { %>
+                        <p class="error-message"><%= registerErrors.email.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+                    
+                        <label for="avatar">Avatar de usuario:</label>
+                            
+                        <input 
+                                id="avatar"
+                                type="file"
+                                name="avatar"
+                                accept=".jpg, .png"
+                                value="<%= locals.oldData ? oldData.avatar : null  %>"
+                                > 
+
+                    <% if (locals.registerErrors && registerErrors.avatar) { %>
+                            <p class="error-message"><%= registerErrors.avatar.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+
+                    <input class="input-text" placeholder="Contraseña" type="password" name="contrasena" id="contrasena"
+                    value="<%= locals.oldData ? oldData.contrasena : null  %>">
+                    <% if (locals.registerErrors && registerErrors.contrasena) { %>
+                        <p class="error-message"><%= registerErrors.contrasena.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+                    
+                    <input class="input-text" placeholder="Confirma la contraseña" type="password" name="contrasenaConf"
+                        id="contrasenaConfirmada"
+                        value="<%= locals.oldData ? oldData.contrasenaConf : null  %>">
+                        <% if (locals.registerErrors && registerErrors.contrasenaConf) { %>
+                            <p class="error-message"><%= registerErrors.contrasenaConf.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                        <% } %>
+                    <!--  <input class="input-text" placeholder="Domicilio" type="text" id="domicilio" name="domicilio"> -->
+
+                    <!-- <label  for="fechaNacimiento">Fecha de nacimiento</label>  -->
+                    <input class="input-text" type="date" id="fechaNacimiento" name="fechaNacimiento"
+                    value="<%= locals.oldData ? oldData.fechaNacimiento : null  %>">
+                    <% if (locals.registerErrors && registerErrors.fechaNacimiento) { %>
+                        <p class="error-message"><%= registerErrors.fechaNacimiento.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+
+                                    <label for="role">Rol</label>
+                                    <select name="role" id="role">
+                                        <% for (let i = 0; i < role.length; i++) { %> 
+                                        <option value="<%= role[i].id %> ">
+                                            <%= role[i].name %> 
+                                        </option>
+                                        <% } %> 
+                                    </select>
+
+                                    <label for="country">Pais</label>
+                                    <select name="country" id="country">
+                                        <% for (let i = 0; i < country.length; i++) { %> 
+                                        <option value="<%=  country[i].id %> ">
+                                            <%= country[i].name %> 
+                                        </option>
+                                        <% } %> 
+                                    </select>
+
+                    <label class="terminos" for="aceptoTerminos"> 
+                        <input 
+                            type="checkbox" 
+                            value="aceptoTerminos"
+                            id="aceptoTerminos" 
+                            name="tyc" 
+                            required>
+                            Estoy de acuerdo con los términos y condiciones
+                    </label>
+
+
+                    <input class="boton-registrarme" type="submit" value="Registrarme">
+
+
+
+
+
+                    <!--  <label  for="perfilUsuario">¿Preferís comprar o vender?</label><br>
+                <label>
+                        <input type="radio" id="perfilUsuario" name="perfil" value="Comprar">Comprar</label>
+                <label>
+                    <input type="radio" id="perfilUsuario" name="perfil" value="Vender">Vender</label>
+           <div class="checkbox">
+                <label for="intereses">Seleccioná las categorías de tu interés</label>
+                
+                    <label for="electro"> <input  type="checkbox" value="electro" id="electro" name="intereses" > Electro</label>
+                    <label for="moda"> <input  type="checkbox" value="moda" id="moda" name="intereses" > Moda</label>
+                    <label for="hogar"> <input  type="checkbox" value="hogar" id="hogar" name="intereses" > Hogar</label>
+                    <label for="jugueteria"> <input  type="checkbox" value="jugueteria" id="jugueteria" name="intereses" > Jugueteria</label>
+                    <label for="vidaSana"> <input  type="checkbox" value="vidaSana" id="vidaSana" name="intereses" > Vida sana</label>
+            </div>
+            <br><label for="fotoPerfil">Seleccioná tu foto de perfil</label>
+                <input type="file" name="avatar" id="fotoPerfil"> <br> -->
+
+
+
+
+
+                    <!-- <div class="boton-registro">
+            <button class="boton-registrarme" type="submit" </button>
+        </div> -->
+
+
+
+                </form>
+            </main>
+            <%- include('./partials/footer') %>
+            
+        <script src="/js/js-register.js"></script>
+    </body>
+
+</html>

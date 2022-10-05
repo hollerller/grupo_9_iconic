@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Mi carrito'}) %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+
+                <h5 class="section-name">Mis compras</h5>
+          
+                <%for(product of productsList){ %> 
+                    <a href="#">
+                        <img class="product-img" src="/images/products/<%= product.image %> " alt="Imagen de Producto">
+                    </a>
+
+                    <p class="product-name"><%=product.name %></p>
+                    <p class="product-price">Precio online:  $<%= product.price %></p>
+                    <p class="product-discount">Ahorrás un <%= product.discount %>%</p>
+            <% } %> 
+           
+     
+                
+
+                    <form class="form-compra" action="/compra" method="post">
+                     <!--    <label for="talle">Seleccioná tu talle</label>
+                       <select name="talle-compra" id="talle">
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                            <option value="xxl">XXL</option>
+                            <option value="talles-especiales">Consultar por talles especiales</option>
+                        </select>
+                        <label for="color">Indicanos el color de tu preferencia</label>
+                        <select name="color-compra" id="color">
+                            <option value="verde">Verde</option>
+                            <option value="bordo">Bordo</option>
+                            <option value="marron">Marrón</option>
+                            <option value="gris">Gris</option>
+                        </select>
+                                        -->
+
+                    </form>
+                 
+                    
+                    
+                   
+                
+                </article>
+                <input type="button" class="boton-continuar" value="Continuar el proceso de compra">
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
+</html>

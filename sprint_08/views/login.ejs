@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Login'}) %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <form class="formulario" action="/users/login" method="POST">
+                    <label for="user_email">Email:</label>
+                    <input class="input-text" type="text" id="user_email" name="email"
+                    value="<%= locals.oldData ? oldData.email : null  %>" >
+
+                    <% if (locals.loginErrors && loginErrors.email) { %>
+                        <p class="error-message"><%= loginErrors.email.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+                    <div class="email_validations"></div>
+
+                    <label for="contrasena">Contraseña:</label>
+                    <input class="input-text" type="password" id="contrasena" name="contrasena"
+                    value="<%= locals.oldData ? oldData.contrasena : null  %>" >
+
+                    <% if (locals.loginErrors && loginErrors.contrasena) { %>
+                        <p class="error-message"><%= loginErrors.contrasena.msg %>  <i class="fas fa-exclamation-circle"></i></p>
+                    <% } %>
+                    <div class="password_validations"></div>
+
+                    <label>Recordar mis datos
+                    <input type="checkbox" name="recordarUsuario">
+                </label>
+                    <button class="boton-ingresar" type="submit"><a href="/">
+                            <p>Enviar</p>
+                        </a></button>
+                </form>
+
+            </main>
+            <%- include('./partials/footer') %>
+            <script src="/js/js-login.js "></script>
+    </body>
+
+</html>
