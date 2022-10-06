@@ -49,4 +49,6 @@ router.get('/:id/delete', productController.delete);
 
 router.get('/api/products', productController.apiList)
 
+router.get('/api/products/:id', productController.productDetail)
+
 module.exports = router;

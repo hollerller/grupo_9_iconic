@@ -205,9 +205,9 @@ const productController = {
         let orders = await db.Order.findAll()
         
         let products = await db.Product.findAll({
-            include:['orders']
+          include:['orders']
         });
-        console.log(orders)
+        //console.log(orders)
         let arrayProducts = [];
            
            for (i = 0;i< products.length;i++){
@@ -225,6 +225,37 @@ const productController = {
                 products:arrayProducts
             })
     
+    },
+
+    productDetail: async (req,res)=>{
+
+        let product = await db.Product.findByPk( req.params.id ,{ 
+            include: [
+            {association: "product_sizes"},
+            {association: "product_categories"},
+            {association: "product_genders"},
+            {association: "product_brands"}
+        
+        ]      
+    })
+        
+            return res.status(200).json(
+                {
+                    
+                    name: product.id,
+                    price: product.price,
+                    description: product.description,
+                    in_sale: product.in_sale,
+                    discount: product.discount,
+                    image: "http://localhost:3000/images/products/" + product.filename,
+                    size_id: product.product_sizes.dataValues.name,
+                    category_id: product.product_categories.dataValues.name,
+                    gender_id: product.product_genders.dataValues.name,
+                    brand_id: product.product_brands.dataValues.name
+                }
+                );
+      
+
     }
 
    
