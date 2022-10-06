@@ -185,6 +185,10 @@ const productController = {
     apiList: async (req,res)=>{
 
         let groupCategories = await db.Product.findAll({
+            include: [
+                {association: "product_categories"
+            }
+                ],
             group: ['category_id'],
             attributes: ['category_id', [sequelize.fn('COUNT', 'category_id'), 'count']],
             order: [
@@ -193,14 +197,37 @@ const productController = {
         })
 
 
+        let result = {};
 
-       db.Product.findAll().then( productos => {
-            return res.json({
-                total: productos.length,
-                countByCategory: groupCategories
+        groupCategories.forEach(element => {
+            result[element.product_categories.dataValues.name] = element.dataValues.count
+        });
+        let orders = await db.Order.findAll()
+        
+        let products = await db.Product.findAll({
+            include:['orders']
+        });
+        console.log(orders)
+        let arrayProducts = [];
+           
+           for (i = 0;i< products.length;i++){
+            arrayProducts.push(
+                {id: products[i].dataValues.id,
+                name:  products[i].dataValues.name,
+                description:  products[i].dataValues.description,
+                orders:products[i].orders.dataValues,
+                detail: 'http://localhost:3000/products/api/products/' + products[i].dataValues.id
             })
-    }) 
+           }
+            return res.json({
+                total: products.length,
+                countByCategory: result,
+                products:arrayProducts
+            })
+    
     }
+
+   
    
 }
 

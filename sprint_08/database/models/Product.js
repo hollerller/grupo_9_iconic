@@ -1,3 +1,4 @@
+
 module.exports = (sequelize,dataTypes) => {
     let alias = "Product";
     let cols = {
@@ -87,6 +88,7 @@ Product.associate = (models) => {
 
 
 }
+
 
     return Product
 }
