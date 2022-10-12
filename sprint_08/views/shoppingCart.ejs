@@ -6,56 +6,42 @@
         <%- include('./partials/header') %>
             <main class="cart-main">
                 <div class="cart-title">
-                     <h5 class="section-name">Mis compras</h5>
+                     <h5 class="section-name">MIS COMPRAS</h5>
                 </div>
-               <div class="cart-article">
+          
 
                 <%for(product of productsList){ %> 
+                <div class="cart-article">
                     <div class="product-photo">
                         <img class="product-img" src="/images/products/<%= product.image %> " alt="Imagen de Producto">
                     </div>
                        
                     
+                    <div class="product-info">
 
-                    <p class="product-name"><%=product.name %></p>
-                    <p class="product-price">Precio online:  $<%= product.price %></p>
-                    <p class="product-discount">Ahorrás un <%= product.discount %>%</p>
+                    <div class="product-name"><%=product.name %></div>
+                    <div class="product-price">Precio online:  $<%= product.price %></div>
+                    <div class="product-discount">Ahorrás un <%= product.discount %>%</div>
+                    </div>
+                </div>
             <% } %> 
            
-               </div>
+             
                 
                 
      
                 
-
-                    <form class="form-compra" action="/compra" method="post">
-                     <!--    <label for="talle">Seleccioná tu talle</label>
-                       <select name="talle-compra" id="talle">
-                            <option value="xs">XS</option>
-                            <option value="s">S</option>
-                            <option value="m">M</option>
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
-                            <option value="xxl">XXL</option>
-                            <option value="talles-especiales">Consultar por talles especiales</option>
-                        </select>
-                        <label for="color">Indicanos el color de tu preferencia</label>
-                        <select name="color-compra" id="color">
-                            <option value="verde">Verde</option>
-                            <option value="bordo">Bordo</option>
-                            <option value="marron">Marrón</option>
-                            <option value="gris">Gris</option>
-                        </select>
-                                        -->
-
-                    </form>
+                    
+                   
                  
                     
                     
                    
                 
                 </article>
-                <input type="button" class="boton-continuar" value="Continuar el proceso de compra">
+                <div class="buy-button">
+                    <button type="button" class="boton-continuar">Continuar el proceso de compra</button>
+                </div>
             </main>
             <%- include('./partials/footer') %>
     </body>

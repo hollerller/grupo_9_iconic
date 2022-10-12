@@ -1062,20 +1062,43 @@ section.editProfile {
 }
         /*shopping Cart*/
 
-  
+        .cart-title{
+               width: 90%;
+               margin: auto;
+               padding: 10px;
+               border-bottom: #000 solid 3px;
+                align-items: right;
+        }
+        .cart-title h5{
+                font-size: 40px
+        }
         .cart-main{
-                width: 100vw;
+                width: 100%;
                 display: block;
+                justify-content: center;
+              
         }
         .cart-article{
-                width: 100%;
+                width: 90%;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 20px;
+                margin: auto
+        }
+        .product-photo{
+                width: 40%;
+        }
+        .product-photo{
+                width: 55%;
         }
         .articulo-compra img {
                 width: auto;
                 max-width: 300px;
                 height: 450px;
         }
-
+        .buy-button{
+                
+        }
 
         /*Listado de Productos*/
         .product-detail{
