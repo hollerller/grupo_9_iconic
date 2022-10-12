@@ -1063,7 +1063,13 @@ section.editProfile {
         /*shopping Cart*/
 
   
-        
+        .cart-main{
+                width: 100vw;
+                display: block;
+        }
+        .cart-article{
+                width: 100%;
+        }
         .articulo-compra img {
                 width: auto;
                 max-width: 300px;

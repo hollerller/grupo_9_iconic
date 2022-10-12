@@ -8,6 +8,37 @@ const Order = require("../database/models/Order");
 
 const ordersController = {
 
+    showCart: async(req,res) =>{
+        let user = req.session.userLogged;
+        let order= await db.Order.findOne({
+            where:{
+               [Op.and]: 
+                       [
+                           { user_id: user.id },
+                           { order_status: 'PENDING' }
+                       ]
+            }
+        })
+       
+        let orderDetail = await db.OrderDetail.findAll({
+            include: [
+                {association: "products"}
+                ],
+                where: {
+                    order_id: order.id
+                }
+           })
+        let productsList = [];
+                 for (i = 0;i< orderDetail.length;i++){
+                     productsList.push(orderDetail[i].products)
+                 }
+       res.render("shoppingCart",{
+        user:user,
+        orderDetail : orderDetail,
+        productsList: productsList
+       })
+    },
+
     processCart: async (req, res) => {
       //guardamos la informacion del usuario logeado//
 

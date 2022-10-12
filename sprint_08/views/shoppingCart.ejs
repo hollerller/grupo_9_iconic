@@ -4,20 +4,27 @@
 
     <body>
         <%- include('./partials/header') %>
-            <main>
+            <main class="cart-main">
+                <div class="cart-title">
+                     <h5 class="section-name">Mis compras</h5>
+                </div>
+               <div class="cart-article">
 
-                <h5 class="section-name">Mis compras</h5>
-          
                 <%for(product of productsList){ %> 
-                    <a href="#">
+                    <div class="product-photo">
                         <img class="product-img" src="/images/products/<%= product.image %> " alt="Imagen de Producto">
-                    </a>
+                    </div>
+                       
+                    
 
                     <p class="product-name"><%=product.name %></p>
                     <p class="product-price">Precio online:  $<%= product.price %></p>
                     <p class="product-discount">Ahorrás un <%= product.discount %>%</p>
             <% } %> 
            
+               </div>
+                
+                
      
                 
 
