@@ -6,6 +6,7 @@ const path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
 const cookies = require('cookie-parser');
+const cors = require('cors');
 
 //Llamando a los middlewares a nivel global
 const errorMiddleware = require('./middlewares/error')
@@ -22,6 +23,7 @@ app.use(session({
     resave : false,
     saveUninitialized:false
 }))
+app.use(cors());
 
 //Configuración EJS
 app.set('view engine','ejs');
@@ -56,6 +58,6 @@ app.use(errorMiddleware);
 // Middleware de sesion de usuario loggeado
 
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log('Server Running');
 })
