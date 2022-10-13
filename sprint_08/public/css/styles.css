@@ -1224,6 +1224,18 @@ section.editProfile {
        .product-box{
         width: 45%;
        }
+       .buy-button{
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+       }
+       .buy-button button{
+        margin: auto
+       }
+       .buy-button a{
+        text-decoration: none;
+        color: white;
+       }
         /*DetalleProducto*/
         
         .prodDetail-box{
@@ -1401,5 +1413,32 @@ section.editProfile {
                 max-width: 500px;
         }
 
-       
+       /*nosotros info*/
+       main{
+        padding: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+       }
+       .info {
+        padding: 30px;
+        width: 50%;
+        font-size: 28px;
+        justify-content: center;
+        text-align: justify;
+        line-height: 50px;
+       }
+       .info-logo{
+        display: flex;
+        width: 20%;
+        margin: auto;
+       }
+       .info-logo img{
+        width: 100%;
+       }
+       .message-form{
+        width: 100%;
+        margin-top: 70px;
+        margin: auto;
+       }
 }

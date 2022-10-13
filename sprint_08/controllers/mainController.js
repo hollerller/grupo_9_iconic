@@ -14,10 +14,10 @@ const mainController = {
     },
     shoppingCart:  (request, response) => {
         response.render('shoppingCart')
-    }//,
-    //editProducts: (request, response) => {
-    //    response.render('editProducts')
-    //}
+    },
+    info: (req,res)=>{
+        res.render('info')
+    }
 }
 
 module.exports = mainController;

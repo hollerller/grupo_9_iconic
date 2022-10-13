@@ -56,7 +56,7 @@ window.addEventListener("load",()=>{
         }else{
             passwordValidations.classList.remove("alarm");
             passwordValidations.classList.add("checked");
-            passwordValidations.innerHTML = "<p>Genial!</p>"
+            passwordValidations.innerHTML = ""
         }
     })
     password.addEventListener("blur", ()=>{
