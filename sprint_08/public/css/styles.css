@@ -377,6 +377,12 @@ footer .redes-sociales {
 .warning {
         color: blue;
 }
+.errors{
+        width: 100%;
+        color: red;
+        list-style: none;
+        margin-left: 10px;
+}
 
 .boton-registrarme,
 .boton-ingresar {

@@ -116,6 +116,7 @@ const usersController = {
 
     processLogin: (req, res) => {
         const loginValidations = validationResult(req)
+        
         //console.log(loginValidations);
 
         if (loginValidations.errors.length > 0) {
@@ -138,6 +139,9 @@ const usersController = {
                             res.cookie('usernameCookie', req.body.email, { maxAge: 86400000 }); // cookie que dura 24 horas
                         }
                         res.redirect('profile')
+                    }else{
+                  
+                        res.render('login')
                     }
                 }
             })

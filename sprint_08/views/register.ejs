@@ -8,23 +8,23 @@
                 <form id="register-form" class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
 
                     <h3 class="titulo-formulario"> Crea tu cuenta </h3>
-                   
+                    <div class="errors">
+                        <ul>
+                            
+                        </ul>
+                    </div>
 
                     <input class="input-text" placeholder="Nombre y Apellido" type="text" name="nombreYApellido"
                         id="nombre-apellido" value="<%= locals.oldData ? oldData.nombreYApellido : null  %>" >  
                     <% if (locals.registerErrors && registerErrors.nombreYApellido) { %>
                         <p class="error-message"><%= registerErrors.nombreYApellido.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
-                    <div class="fullname_validations"></div>
 
                     <input class="input-text" placeholder="Usuario" type="text" id="usuario" name="usuario"
                     value="<%= locals.oldData ? oldData.usuario : null  %>">
                     <% if (locals.registerErrors && registerErrors.usuario) { %>
                         <p class="error-message"><%= registerErrors.usuario.msg %>  <i class="fas fa-exclamation-circle"></i></p>
                     <% } %>
-
-                   <div class="username_validations"></div>
-
 
                     <input class="input-text" placeholder="Correo electrónico" type="email" id="mail" name="email"
                     value="<%= locals.oldData ? oldData.email : null  %>">
