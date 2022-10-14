@@ -6,62 +6,61 @@
         <%- include('./partials/header') %>
             <main class="userInfo">
                 <div class="profileBox">
-                <section>
-                    <div class="userProfile">
-                        <h2>
+                    <section>
+                        <div class="userProfile">
+                            <h2>
                                 Hola <%=usuario.full_name%>
+                            </h2>
+                        </div>
+                    </section>
+                    <div class="userDetail">
+                        <div class="userImage">
+                            <img src="/images/users/<%=usuario.avatar%>" class="profilePic">
+                        </div>
 
-                        </h2>
-                    </div>
-                </section>
-                <div class="userDetail">
-                    <div class="userImage">
-                        <img src="/images/users/<%=usuario.avatar%>" class="profilePic">
-                    </div>
-                
 
-                <section id="userData">
-                    <article>
-                        <h3>Nombre:</h3>
-                        <p>
-                            <%= usuario.full_name %>
-                        </p>
-                    </article>
-                    <article>
-                        <h3>Usuario:</h3>
-                        <p>
-                            <%= usuario.user_name %>
-                        </p>
-                    </article>
-                    <article>
-                        <h3>Correo electrónico:</h3>
-                        <p>
-                            <%= usuario.email %>
-                        </p>
-                    </article>
-                    <article>
-                        <h3>Perfil:</h3>
-                        <p>
-                            <%= usuario.roles.name %>
-                        </p>
-                    </article>
-                    <article>
-                        <h3>Fecha de Nacimiento:</h3>
-                        <p>
-                            <%= usuario.birthday %>
-                        </p>
-                    </article>
-                </section>
-            </div>
-                <section class="editProfile">
-                            <a href="/users/edit/<%=usuario.id%> ">Editar perfil</a>
-                </section>
-            </div>
-            <div class="delete-user-form">
-                <form action="/users/<%=usuario.id%>/delete?_method=DELETE" method="POST">
-                    <button type="submit" class="delete-product-button">Eliminar Usuario</button>                       
-                </form>
-            </div>
+                        <section id="userData">
+                            <article>
+                                <h3>Nombre:</h3>
+                                <p>
+                                    <%= usuario.full_name %>
+                                </p>
+                            </article>
+                            <article>
+                                <h3>Usuario:</h3>
+                                <p>
+                                    <%= usuario.user_name %>
+                                </p>
+                            </article>
+                            <article>
+                                <h3>Correo electrónico:</h3>
+                                <p>
+                                    <%= usuario.email %>
+                                </p>
+                            </article>
+                            <article>
+                                <h3>Perfil:</h3>
+                                <p>
+                                    <%= usuario.roles.name %>
+                                </p>
+                            </article>
+                            <article>
+                                <h3>Fecha de Nacimiento:</h3>
+                                <p>
+                                    <%= usuario.birthday %>
+                                </p>
+                            </article>
+                        </section>
+                    </div>
+                    <section class="editProfile">
+                        <a href="/users/edit/<%=usuario.id%> ">Editar perfil</a>
+                    </section>
+                </div>
+                <div class="delete-user-form">
+                    <form action="/users/<%=usuario.id%>/delete?_method=DELETE" method="POST">
+                        <button type="submit" class="delete-product-button">Eliminar Usuario</button>
+                    </form>
+                </div>
 
             </main>
             <%- include('./partials/footer') %>
