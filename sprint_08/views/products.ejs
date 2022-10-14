@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head', {title: 'Listado de Productos'})  %>
+<%- include('./partials/head', {title: 'Listado de Productos' }) %>
 
     <body>
         <%- include('./partials/header') %>
-        <section class="products-list">
-            <div class="section-title">
-                <h2>NUESTROS PRODUCTOS</h2>
-            </div>
-              
-        
-            
-                <% for(product of products){%>
-                    
-                    <div class="product-box">
-                                                <a href="#">
-                                                    <img class="product-img" src="/images/products/<%= product.image %> " alt="Imagen de Producto">
-                                                </a>
-
-                                          
-                                    
-                                <div class="product-detail">
-                                    <p class="product-name"><%=product.name %></p>
-                                    <p class="product-price">Precio online:  $<%= product.price %></p>
-                                    <p class="product-discount">Ahorrás un <%= product.discount %>%</p>
-                                    <!--p class="product-description"><%= product.description %> <p-->
-                                    
-                            </div>
-                            <div class="see-box">
-                                <a class="see-button"  href="/products/<%=product.id %> ">ver</a>
-                            </div>  
-                                
+            <section class="products-list">
+                <div class="section-title">
+                    <h2>NUESTROS PRODUCTOS</h2>
+                    <div class="createProduct">
+                        <a href="/products/create"><i class="fa-regular fa-square-plus"></i>Crea tu producto</a>
                     </div>
-               
-                <% } %> 
-            
-            
-                 
-        </section>
-        
-         <%- include('./partials/footer') %>
+
+                </div>
+
+                <% for(product of products){%>
+
+                    <div class="product-box">
+                        <a href="#">
+                            <img class="product-img" src="/images/products/<%= product.image %> "
+                                alt="Imagen de Producto">
+                        </a>
+                        <div class="product-detail">
+                            <p class="product-name">
+                                <%=product.name %>
+                            </p>
+                            <p class="product-price">Precio online: $<%= product.price %>
+                            </p>
+                            <p class="product-discount">Ahorrás un <%= product.discount %>%</p>
+                            <!--p class="product-description"><%= product.description %> <p-->
+
+                        </div>
+                        <div class="see-box">
+                            <a class="see-button" href="/products/<%=product.id %> ">ver</a>
+                        </div>
+
+                    </div>
+
+                    <% } %>
+
+
+
+            </section>
+
+            <%- include('./partials/footer') %>
     </body>
 
 </html>

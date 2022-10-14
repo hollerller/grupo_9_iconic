@@ -34,6 +34,7 @@ window.addEventListener("load", () => {
         //MOSTRAR ERRORES
         if (errors.length > 0) {
             e.preventDefault();
+            window.scrollTo(0,0);
 
             for (let i = 0; i < errors.length; i++) {
                 ulErrors.innerHTML += "<li>" + errors[i] + "</li>"
