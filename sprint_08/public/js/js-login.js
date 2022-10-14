@@ -23,7 +23,6 @@ window.addEventListener("load",()=>{
             emailValidations.classList.add("alarm")
             emailValidations.innerHTML = "<p>Recordá usar un mínimo de 6 caracteres</p>"
             errors[0] = 1;
-            console.log(errors);
         }else if(email.value.length >= 6 && email.value.includes('@')){
             emailValidations.classList.remove("alarm")
             emailValidations.classList.add("checked")

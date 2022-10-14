@@ -2,7 +2,7 @@ window.addEventListener("load",()=>{
     //let errors = [];
     //Capturamos el formulario//
     let form = document.getElementById("editUser-form");
-    let errors = [];
+    let errors = [1];
     let errorMsg = document.querySelector("div.front_validation_error")
 
   
@@ -17,17 +17,18 @@ window.addEventListener("load",()=>{
                     fullNameValidations.classList.remove("checked")
                     fullNameValidations.classList.add("alarm")
                     fullNameValidations.innerHTML = "<p>Recordá que este campo no puede estar vacío</p>"
-                    errors.push("error en el campo full name")
+                    errors[0] = 1;
                 }else if(fullName.value.length < 6){
                     fullNameValidations.classList.remove("checked")
                     fullNameValidations.classList.add("alarm")
                     fullNameValidations.innerHTML = "<p>Recordá usar un mínimo de 6 caracteres</p>"
-                    errors.push("error en el campo full name")
+                    errors[0] = 1;
 
                 }else if(fullName.value.length >= 6){
                     fullNameValidations.classList.remove("alarm")
                     fullNameValidations.classList.add("checked")
                     fullNameValidations.innerHTML = "<p>Perfecto!</p>"
+                    errors.shift();
                 }
             })
             fullName.addEventListener("blur",()=>{
@@ -35,12 +36,12 @@ window.addEventListener("load",()=>{
                     fullNameValidations.classList.remove("checked")
                     fullNameValidations.classList.add("alarm")
                     fullNameValidations = "<p>Recordá que este campo no puede estar vacio</p>"
-                    errors.push("error en el campo full name")
+                    errors[0] = 1;
                 }else if(fullName.value <6){
                     fullNameValidations.classList.remove("checked")
                     fullNameValidations.classList.add("alarm")
                     fullNameValidations.innerHTML = "<p>Recordá usar un mínimo de 6 caracteres</p>"
-                    errors.push("error en el campo full name")
+                    errors[0] = 1;
                 }
             })
             //Capturamos el input user name y su div de validaciones//
@@ -52,17 +53,18 @@ window.addEventListener("load",()=>{
                     userNameValidations.classList.remove("checked")
                     userNameValidations.classList.add("alarm")
                     userNameValidations.innerHTML = "<p>Recordá que este campo no puede estar vacio</p>"
-                    errors.push("error en el campo user name")
+                    errors[0] = 1;
                 }else if(userName.value.length < 6){
                     userNameValidations.classList.remove("checked")
                     userNameValidations.classList.add("alarm")
                     userNameValidations.innerHTML = "<p>Recordá usar un mínimo de 6 caracteres</p>"
-                    errors.push("error en el campo user name")
+                    errors[0] = 1;
                     
                 }else if(userName.value.length >= 6){
                     userNameValidations.classList.remove("alarm")
                     userNameValidations.classList.add("checked")
                     userNameValidations.innerHTML = "<p>Perfecto!</p>"
+                    errors.shift();
                 }
             })
             userName.addEventListener("blur",()=>{
@@ -70,13 +72,13 @@ window.addEventListener("load",()=>{
                     userNameValidations.classList.remove("checked")
                     userNameValidations.classList.add("alarm")
                     userNameValidations = "<p>Recordá que este campo no puede estar vacio</p>"
-                    errors.push("error en el campo user name")
+                    errors[0] = 1;
                     
                 }else if(userName.value <6){
                     userNameValidations.classList.remove("checked")
                     userNameValidations.classList.add("alarm")
                     userNameValidations = "<p>Recordá usar un mínimo de 6 caracteres</p>"
-                    errors.push("error en el campo user name")
+                    errors[0] = 1;
                 }
             })
 
@@ -90,17 +92,17 @@ window.addEventListener("load",()=>{
                     emailValidations.classList.remove("checked")
                     emailValidations.classList.add("alarm")
                     emailValidations.innerHTML = "<p>Recordá usar un mínimo de 6 caracteres</p>"
-                    errors.push("error en el campo email")
+                    errors[0] = 1;
                 }else if(email.value.length >= 6 && email.value.includes('@')){
                     emailValidations.classList.remove("alarm")
                     emailValidations.classList.add("checked")
                     emailValidations.innerHTML = "<p>Perfecto!</p>"
-                    errors.push("error en el campo email")
+                    errors.shift();
                 }else if(!email.value.includes("@") && !email.value.includes(".")){
                     emailValidations.classList.remove("checked")
                     emailValidations.classList.add("alarm")
                     emailValidations.innerHTML = "<p>Ingresá un email válido</p>"
-                    errors.push("error en el campo email")
+                    errors[0] = 1;
                 }
             })
             email.addEventListener("blur",()=>{
@@ -108,22 +110,22 @@ window.addEventListener("load",()=>{
                     emailValidations.classList.remove("checked")
                     emailValidations.classList.add("alarm")
                     emailValidations = "<p>Recordá que este campo no puede estar vacio</p>"
-                    errors.push("error en el campo email")
+                    errors[0] = 1;
                 }else if(email.value <6){
                     emailValidations.classList.remove("checked")
                     emailValidations.classList.add("alarm")
                     emailValidations = "<p>Recordá usar un mínimo de 6 caracteres</p>"
-                    errors.push("error en el campo email")
+                    errors[0] = 1;
                 }else if(!email.value.includes("@")){
                     emailValidations.classList.remove("checked")
                     emailValidations.classList.add("alarm")
                     emailValidations.innerHTML = "<p>Ingresá un email válido</p>"
-                    errors.push("error en el campo email")
+                    errors[0] = 1;
                 }else if(!(email.value.includes(".com"))){
                     emailValidations.classList.remove("checked")
                     emailValidations.classList.add("alarm")
                     emailValidations.innerHTML = "<p>Ingresá un email válido</p>"
-                    errors.push("error en el campo email")
+                    errors[0] = 1;
                 }
             })
 
@@ -136,7 +138,7 @@ window.addEventListener("load",()=>{
                     birthdayValidations.classList.remove("checked")
                     birthdayValidations.classList.add("alarm")
                     birthdayValidations.innerHTML = "<p>Por favor, colocá tu fecha de nacimiento</p>"
-                    errors.push("error en el campo birthday")
+                    errors[0] = 1;
                 }
             })
             birthday.addEventListener("blur",()=>{
@@ -144,31 +146,15 @@ window.addEventListener("load",()=>{
                     birthdayValidations.classList.remove("checked")
                     birthdayValidations.classList.add("alarm")
                     birthdayValidations.innerHTML = "<p>Por favor, colocá tu fecha de nacimiento</p>"
-                    errors.push("error en el campo birthday")
+                    errors[0] = 1;
                 }else{
                     birthdayValidations.classList.remove("alarm")
                     birthdayValidations.classList.add("checked")
                     birthdayValidations.innerHTML = "<p>Perfecto!</p>"
+                    errors.shift();
                 }
             })
-    
-    
-    // errorMsg.innerHTML = ""
-    // form.addEventListener("submit",(e)=>{
-    //     if(fullNameValidations.classList.contains("alarm")){
-    //         e.preventDefault();
-    //         errorMsg.innerHTML = "<p>Completá correctamente cada uno de los campos</p>"
-    //     }else if(userNameValidations.classList.contains("alarm")){
-    //         e.preventDefault();
-    //         errorMsg.innerHTML = "<p>Completá correctamente cada uno de los campos</p>"
-    //     }else if(emailValidations.classList.contains("alarm")){
-    //         e.preventDefault();
-    //         errorMsg.innerHTML = "<p>Completá correctamente cada uno de los campos</p>"
-    //     }else if(birthdayValidations.classList.contains("alarm")){
-    //         e.preventDefault();
-    //         errorMsg.innerHTML = "<p>Completá correctamente cada uno de los campos</p>"
-    //     }
-    // })
+
     form.addEventListener("submit",(e)=>{
         if(errors.length > 0){
             e.preventDefault()

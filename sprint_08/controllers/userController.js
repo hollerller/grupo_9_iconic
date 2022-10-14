@@ -38,7 +38,7 @@ const usersController = {
                 })
             })
     },
- 
+
     //Procesar formulario de registro
 
     createUser: (req, res) => {
@@ -185,7 +185,6 @@ const usersController = {
     processEdition: (req, res) => {
         let idUser = req.params.id;
         const editValidation = validationResult(req);
-        //  console.log(editValidation);
         let userToEdit = req.session;
         let user = db.User.findByPk(req.params.id);
 
@@ -211,8 +210,8 @@ const usersController = {
                 full_name: req.body.fullname,
                 user_name: req.body.username,
                 email: req.body.email,
-                avatar: req.file.filename,
-                //password: contrasena,
+                avatar: req.file ? req.file.filename : userToEdit.avatar,
+
                 birthday: req.body.birthday,
                 role_id: req.body.role,
                 country_id: req.body.country
@@ -221,7 +220,6 @@ const usersController = {
                     id: idUser,
                 }
             })
-                //delete user.password; 
                 .then(() => {
                     res.redirect('/')
                 })
@@ -237,7 +235,8 @@ const usersController = {
     deleteUser: (req, res) => {
         let userToDelete = req.session.userLogged;
         db.User.update({
-            hidden: true
+            hidden: true,
+            email: userToDelete.email + "_deleted"
         }, {
             where: {
                 id: userToDelete.id
@@ -262,8 +261,6 @@ const usersController = {
                         detail: 'http://localhost:3000/users/api/users/' + usuarios[i].dataValues.id
                     })
             }
-
-            //console.log(arrayUsuarios);
             return res.status(200).json({
                 total: usuarios.length,
                 data: arrayUsuarios
