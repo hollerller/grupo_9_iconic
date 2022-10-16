@@ -258,7 +258,7 @@ const usersController = {
                         id: usuarios[i].dataValues.id,
                         name: usuarios[i].dataValues.full_name,
                         email: usuarios[i].dataValues.email,
-                        detail: 'http://localhost:3000/users/api/users/' + usuarios[i].dataValues.id
+                        detail: 'http://localhost:3001/users/api/users/' + usuarios[i].dataValues.id
                     })
             }
             return res.status(200).json({
@@ -277,7 +277,7 @@ const usersController = {
                     id: usuario.id,
                     name: usuario.full_name,
                     username: usuario.user_name,
-                    avatar: 'http://localhost:3000/images/users/' + usuario.avatar,
+                    avatar: 'http://localhost:3001/images/users/' + usuario.avatar,
                     birthday: usuario.birthday,
                     country_id: usuario.country_id
                 }

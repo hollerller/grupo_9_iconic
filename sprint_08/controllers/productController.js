@@ -217,7 +217,7 @@ const productController = {
                 name:  products[i].dataValues.name,
                 description:  products[i].dataValues.description,
                 orders:products[i].orders.dataValues,
-                detail: 'http://localhost:3000/products/api/products/' + products[i].dataValues.id
+                detail: 'http://localhost:3001/products/api/products/' + products[i].dataValues.id
             })
            }
             return res.json({
@@ -248,7 +248,7 @@ const productController = {
                     description: product.description,
                     in_sale: product.in_sale,
                     discount: product.discount,
-                    image: "http://localhost:3000/images/products/" + product.filename,
+                    image: "http://localhost:3001/images/products/" + product.image,
                     size_id: product.product_sizes.dataValues.name,
                     category_id: product.product_categories.dataValues.name,
                     gender_id: product.product_genders.dataValues.name,
