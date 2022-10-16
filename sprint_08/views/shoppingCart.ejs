@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head', {title: 'Mi carrito'}) %>
+<%- include('./partials/head', {title: 'Mi carrito' }) %>
 
     <body>
         <%- include('./partials/header') %>
             <main class="cart-main">
                 <div class="cart-title">
-                     <h5 class="section-name">MIS COMPRAS</h5>
+                    <h5 class="section-name">MIS COMPRAS</h5>  <h2 class="totalCompra">Total Compra: $<%= total %></h2>
                 </div>
-          
 
-                <%for(product of productsList){ %> 
-                <div class="cart-article">
-                    <div class="product-photo">
-                        <img class="product-img" src="/images/products/<%= product.image %> " alt="Imagen de Producto">
-                    </div>
-                       
-                    
-                    <div class="product-info">
+                <%for(detail of orderDetail){ %>
+                    <div class="cart-article">
+                        <div class="product-photo">
+                            <img class="product-img" src="/images/products/<%= detail.products.image %> "
+                                alt="Imagen de Producto">
+                        </div>
 
-                    <div class="product-name"><%=product.name %></div>
-                    <div class="product-price">Precio online:  $<%= product.price %></div>
-                    <div class="product-discount">Ahorrás un <%= product.discount %>%</div>
+                        <div class="product-info">
+
+                            <div class="product-name">
+                                <%=detail.products.name %>
+                            </div>
+                            <div class="product-price">Precio online: $<%= detail.products.price %>
+                            </div>
+                            <div class="product-qty">Cantidad: <%= detail.quantity %>
+                            </div>
+                            <div class="product-discount">Ahorrás un <%= detail.products.discount %>%</div>
+                            <div>
+                                <form action="/cart/<%=detail.id%>/delete?_method=DELETE" method="POST">
+                                    <a class="delete-product-button" href="<%=detail.id%>/delete"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                                </form>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
-            <% } %> 
-           
-             
-                
-                
-     
-                
-                    
-                   
-                 
-                    
-                    
-                   
-                
-                </article>
-                <div class="buy-button">
-                    <button type="button" class="boton-continuar"><a href="#">Continuar el proceso de compra</a></button>
-                </div>
+                    <% } %>
+                        </article>
+                        <div class="buy-button">
+                            <button type="button" class="boton-continuar"><a href="#">Continuar el proceso de
+                                    compra</a></button>
+                        </div>
             </main>
             <%- include('./partials/footer') %>
     </body>

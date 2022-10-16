@@ -766,6 +766,10 @@ div.div-button {
                 text-align: justify;
                 font-size: 10px;
        }
+       .product-qty {
+                font-size: 20px;
+                font-weight: 400;
+       }
 /*BOTON REDIRECCIONANDO A DETALLE PRODUCTO*/
        .see-box{
         display: inline-block;
@@ -793,11 +797,17 @@ div.div-button {
         padding: 0%;
        }
        
-div.createProduct {
-        margin-top: 10px;
+       div.createProduct{
+        margin-top: 20px;
+        margin-left: 20px;
+       }
+
+div.createProduct a {
+        text-decoration: none;
         margin-bottom: 0;
-        color:  #7A7474 ;
+        color:  black ;
 }
+
 
 /* css usuarios */
 
@@ -1078,11 +1088,16 @@ section.editProfile {
                margin: auto;
                padding: 10px;
                border-bottom: #000 solid 3px;
-                align-items: right;
+               align-items: right;
+               display: flex;
+               justify-content: space-between;
         }
         .cart-title h5{
                 font-size: 40px
         }
+
+
+
         .cart-main{
                 width: 100%;
                 display: block;

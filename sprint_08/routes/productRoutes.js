@@ -43,11 +43,11 @@ router.post('/create', uploadFile.single('image'), createValidations, productCon
 router.get('/:id/edit', authMiddleware, productController.editProduct);
 router.put('/:id/edit', uploadFile.single('image'), editValidations, productController.saveChanges);
 
-router.get('/:id/delete', productController.delete);
+router.get('/:id/delete', authMiddleware,productController.delete);
 
 // APIS productos
 
-router.get('/api/products', productController.apiList)
+router.get('/api/products',productController.apiList)
 
 router.get('/api/products/:id', productController.productDetail)
 
