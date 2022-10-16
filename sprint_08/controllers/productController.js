@@ -114,7 +114,7 @@ const productController = {
       Promise.all([product,sizes,genders,brands,categories])
         .then(([product,sizes,genders,brands,categories])=>{
             res.render('editProducts',{
-                oldData:product,
+                oldData: product,
                 product: req.params.id,
                 sizes:sizes,
                 genders:genders,
@@ -142,7 +142,7 @@ const productController = {
                 description:req.body.description,
                 in_sale:req.body.inSale,
                 discount:req.body.discount,
-                image:req.file.filename,
+                //image:req.file.filename,
                 size_id:req.body.size,
                 category_id:req.body.category,
                 gender_id:req.body.gender,
@@ -163,7 +163,8 @@ const productController = {
                         sizes:sizes,
                         genders:genders,
                         brands:brands,
-                        categories:categories
+                        categories:categories,
+                        product: req.params.id
                     })
                 })
         //res.redirect(`/products/${idUrl}`)

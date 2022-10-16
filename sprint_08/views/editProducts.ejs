@@ -19,7 +19,8 @@
                         type="text" 
                         name="prodName"
                         value="<%= oldData.name %>"
-                    >
+                        value="<%= locals.oldData ? oldData.name : null  %>">
+                    
         <!-- para elementos con select: selected  ejs locals.oldData && oneCountry === oldData.country ? 'selected' : null-->
                     <% if (locals.errorsMessage && errorsMessage.prodName) {%> 
                     
