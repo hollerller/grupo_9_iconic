@@ -217,6 +217,7 @@ const productController = {
                 name:  products[i].dataValues.name,
                 description:  products[i].dataValues.description,
                 orders:products[i].orders.dataValues,
+                image: "http://localhost:3001/images/products/" + products[i].image,
                 detail: 'http://localhost:3001/products/api/products/' + products[i].dataValues.id
             })
            }
