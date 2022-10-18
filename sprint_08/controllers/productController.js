@@ -216,19 +216,23 @@ const productController = {
            
            for (i = 0;i< products.length;i++){
             let orderDetail = await db.OrderDetail.findAll({
-                include:['orders','products'],
+                // include:['orders','products'],
                 where:{
                     product_id: products[i].id
                 }
+        
             });
+          
             arrayProducts.push(
                 {id: products[i].dataValues.id,
                 name:  products[i].dataValues.name,
                 description:  products[i].dataValues.description,
-                orders: orderDetail,
+                orders: orderDetail[0],
                 image: "http://localhost:3001/images/products/" + products[i].image,
                 detail: 'http://localhost:3001/products/api/products/' + products[i].dataValues.id
+               
             })
+         
            }
            
             return res.json({
