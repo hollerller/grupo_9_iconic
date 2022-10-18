@@ -3,31 +3,13 @@
  ![Logo](./public/images/logo.png "Iconic logo")
 ## Análisis General
 
->En este Sprint pudimos afrontar el trabajo sintiéndonos cómodos y con seguridad. La comunicación, como siempre, fue muy fluída y nos sentimos confiados en que vamos a poder llevar el proyecto a buen fin a pesar de ser solo dos integrantes, aunque a veces se haga pesado!
-> Sobre las consignas en particular, tuvimos algunos problemas para finalizar una de las tareas opcionales (carrito de compras), sobre todo desde el lado del front-end. A pesar de esto, nos sentimos muy a gusto trabajando entre los dos, ya sin incertidumbres sobre la conformación final del grupo.
-> Es muy grato ver que con cada sprint que pasa vamos cumpliendo con los objetivos propuestos, recibiendo buenos feedbacks de parte de los profesores sin perder de vista que podemos mejorar muchos aspectos del sitio. 
-
-### 1. Comenzar a hacer
-
-- Si los integrantes del equipo han intentado hacer algo en el código que no funciona como debería, requerir la ayuda de los profes para no bloquear el desarrollo del proyecto.
-- Empezar a hacer un cronograma para trazarnos metas de cumplimiento de objetivos.
-- Revisar contenido extra, que pueda servir como material de apoyo en las consignas del sprint.
-
-### 2. Hacer más
-
-- Reunirnos a lo largo del sprint para ver nuestro progreso y estar en contacto para resolver las dudas que vayan surgiendo.
-
-### 3. Continuar haciendo
-
-- Hacer reuniones periódicas tanto al inicio como al final del sprint, así podemos hacer seguimiento al trabajo y apoyarnos en los pendientes.
-- Mantener una buena comunicación, sin importar la diferencia horaria. 
-
-### 4. Hacer menos
-
-- Subir cambios sin probar y duplicar la carpeta del sprint nuevo, sin antes haber hecho algunos ajustes al sprint actual.
+>En este último sprint (y el último tiempo en general), el cúmulo y la complejidad de las tareas a realizar se hicieron sentir con mayor intensidad. Todo esto, con el agravante de un problema de salud que nos retrasó y entorpeció el trabajo.  Además, como crítica constructiva hacia nosotros mismos, pudimos ver la importancia de cumplir con los pendientes en tiempo y forma, y no dejar para último momento detalles que tal vez pueden ser solucionados en el momento en el que los conocimientos están frescos.
 
 
-### 5. Dejar de hacer
+>No obstante, como en los Sprints anteriores, el trabajo en equipo tuvo un mayor protagonismo. Logramos organizarnos bajo presión y poder resolver todos aquellos obstáculos que se nos presentaron, a la vez que ibamos sintiéndonos cada vez más orgullosos del trabajo logrado sin dejar de ser conscientes de las posibles mejoras que podrían implementarse en el sitio.
 
-- Seguimos postergando mejoras en el front que se van haciendo más visibles en la medida que el proyecto crece.
+
+>Como reflexión final, a la satisfacción personal -y grupal- por lo que logramos en estos meses nos gustaría sumar el agradecimiento a los profesores, al grupo de alumnos y al espacio otorgado por Digital House, ya que gracias a todo ello tuvimos la oportunidad de poner a prueba nestras capacidades, nuestra resiliencia y, como si fuera poco, pudimos hacer amigos y sentirnos cómodos inlcuso en la virtualidad.
+
+ ![timeline](./public/images/timeline.jpg "Iconic timeline")
 
