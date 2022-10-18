@@ -51,4 +51,8 @@ router.get('/api/products',productController.apiList)
 
 router.get('/api/products/:id', productController.productDetail)
 
+// Search
+
+router.post('/search', productController.search)
+
 module.exports = router;

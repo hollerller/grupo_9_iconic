@@ -258,6 +258,26 @@ const productController = {
                 );
       
 
+    }, 
+
+    search: (req, res) => {
+        let key = req.body.busqueda;
+        db.Product.findAll({
+            where: {
+                name: {
+                    [Op.substring]: key
+                }
+            }, 
+            include:[
+                {association: "product_sizes"},
+                {association: "product_categories"},
+                {association:"product_genders"},
+                {association:"product_brands"}
+            ]
+        })
+            .then(product =>{
+                res.render('products',{products:product})
+            })
     }
 
    
