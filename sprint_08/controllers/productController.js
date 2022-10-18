@@ -187,8 +187,7 @@ const productController = {
 
         let groupCategories = await db.Product.findAll({
             include: [
-                {association: "product_categories"
-            }
+                 "product_categories"
                 ],
             group: ['category_id'],
             attributes: ['category_id', [sequelize.fn('COUNT', 'category_id'), 'count']],
@@ -203,24 +202,35 @@ const productController = {
         groupCategories.forEach(element => {
             result[element.product_categories.dataValues.name] = element.dataValues.count
         });
-        let orders = await db.Order.findAll()
+        let orders = await db.Order.findAll({
+            include:['products']
+        });
+        
         
         let products = await db.Product.findAll({
           include:['orders']
         });
-        //console.log(orders)
+
+        // console.log(orderDetail[0].dataValues.product_id)
         let arrayProducts = [];
            
            for (i = 0;i< products.length;i++){
+            let orderDetail = await db.OrderDetail.findAll({
+                include:['orders','products'],
+                where:{
+                    product_id: products[i].id
+                }
+            });
             arrayProducts.push(
                 {id: products[i].dataValues.id,
                 name:  products[i].dataValues.name,
                 description:  products[i].dataValues.description,
-                orders:products[i].orders.dataValues,
+                orders: orderDetail,
                 image: "http://localhost:3001/images/products/" + products[i].image,
                 detail: 'http://localhost:3001/products/api/products/' + products[i].dataValues.id
             })
            }
+           
             return res.json({
                 total: products.length,
                 countByCategory: result,
