@@ -85,7 +85,7 @@ const productController = {
                 gender_id:req.body.gender,
                 brand_id:req.body.brand
             })
-            res.redirect('/products')
+            res.redirect('/')
 
         }else{
             //console.log(errores.mapped());

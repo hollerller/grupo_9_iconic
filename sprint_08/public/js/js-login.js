@@ -26,7 +26,7 @@ window.addEventListener("load",()=>{
         }else if(email.value.length >= 6 && email.value.includes('@')){
             emailValidations.classList.remove("alarm")
             emailValidations.classList.add("checked")
-            emailValidations.innerHTML = "<p>Perfecto!</p>"
+            emailValidations.innerHTML = ""
             errors.shift();
         }else if(!email.value.includes("@") && !email.value.includes(".")){
             emailValidations.classList.remove("checked")
@@ -73,7 +73,7 @@ window.addEventListener("load",()=>{
         }else{
             passwordValidations.classList.remove("alarm");
             passwordValidations.classList.add("checked");
-            passwordValidations.innerHTML = "<p>Genial!</p>"
+            passwordValidations.innerHTML = ""
             errors.shift();
         }
     })

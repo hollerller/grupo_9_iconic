@@ -42,6 +42,11 @@ window.addEventListener("load", () => {
             fullNameValidations.classList.add("alarm")
             fullNameValidations.innerHTML = "<p>Recordá usar un mínimo de 6 caracteres</p>"
             errors[0] = 1;
+        }else if (fullName.value.length >= 6) {
+            fullNameValidations.classList.remove("alarm")
+            fullNameValidations.classList.add("checked")
+            fullNameValidations.innerHTML = "<p>Perfecto!</p>"
+            errors.shift();
         }
     })
     //Capturamos el input user name y su div de validaciones//
